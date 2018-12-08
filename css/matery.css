@@ -162,11 +162,11 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #b61bbf 0%, #9d358d 100%);
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #77129d !important;
 }
 
 /*头部导航栏样式*/
@@ -189,7 +189,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #bf108e 0%, #901b9d 100%);
     opacity: 0.8;
 }
 
@@ -647,7 +647,7 @@ article a {
 
 article a:hover {
     font-weight: bold;
-    color: #42b983;
+    color: #b91e52;
     text-decoration: underline;
 }
 
@@ -825,7 +825,7 @@ article .article-tags .chip {
 
 #artDetail .post-info .post-category:hover {
     font-weight: bold;
-    color: #42b983;
+    color: #be37bf;
     text-decoration: underline;
 }
 
@@ -873,7 +873,7 @@ article .article-tags .chip {
 
 #artDetail .reprint a {
     font-size: 1.05rem;
-    color: #42b983;
+    color: #b965b3;
     font-weight: 500;
 }
 
@@ -889,7 +889,7 @@ article .article-tags .chip {
 
 #articleContent a {
     padding: 0 2px;
-    color: #42b983;
+    color: #a357b9;
     font-weight: 500;
     text-decoration: underline;
 }
@@ -1009,7 +1009,7 @@ table tr:nth-child(2n), thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #b22bbf 0%, #9d0d8b 100%) !important;
 }
 
 .chip .tag-length {
@@ -1496,8 +1496,8 @@ table tr:nth-child(2n), thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);;
-    border: 1px solid #4cbf30;
+    background: linear-gradient(to right, #b111bf 0%, #992e9d 100%);;
+    border: 1px solid #bf10b7;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
