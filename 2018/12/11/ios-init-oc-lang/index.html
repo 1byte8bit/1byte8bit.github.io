@@ -5,8 +5,16 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: 技术, 1BYTE8BIT">
-    <meta name="description" content="标签: 技术 | 1BYTE8BIT">
+    <meta name="keywords" content="iOS开发基础之学习Objective-C笔记一, 1BYTE8BIT">
+    <meta name="description" content="前言背景
+学习一门新的手艺。
+做个小的Demo，解决自己对于现有的某些工具不能满足自己需求的痛点。
+Apple Store一些应用需要花钱。
+
+计划
+第一、先看书。重点关注一下指针这块。
+第二、照着实例写一写UI。画一画界面。
+第三、写一写">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +22,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>标签: 技术 | 1BYTE8BIT</title>
+    <title>iOS开发基础之学习Objective-C笔记一 | 1BYTE8BIT</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -243,102 +251,321 @@
     </nav>
 </header>
 
-<div class="bg-cover  about-cover" style="background-image: url('/medias/cover.jpg')">
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
-            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+            <div class="col s12 m12 l12">
                 <div class="brand">
-                    <div class="title center-align">
-                    
-                        1byte = 8bit
-                    
-                    </div>
-
-                    <div class="description center-align">
-                    
-                        1byte8bit
-                    
+                    <div class="description center-align post-title">
+                        iOS开发基础之学习Objective-C笔记一
                     </div>
                 </div>
             </div>
         </div>
-        
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/iOS-Objective-C/" target="_blank">
+                    <span class="chip bg-color">iOS,Objective-C</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-11
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h5 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h5><ul>
+<li>学习一门新的手艺。</li>
+<li>做个小的Demo，解决自己对于现有的某些工具不能满足自己需求的痛点。</li>
+<li>Apple Store一些应用需要花钱。</li>
+</ul>
+<h5 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h5><ul>
+<li>第一、先看书。重点关注一下指针这块。</li>
+<li>第二、照着实例写一写UI。画一画界面。</li>
+<li>第三、写一写后台的逻辑。实现一些小的功能。</li>
+<li>第四、整合记录一下笔记和发布一下源码。提升一下。</li>
+<li>第五、规划一个tools的功能，写计划书，准备开发。</li>
+</ul>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-// Dynamically switch banner pictures every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
+
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
 </script>
+            
 
-<main class="content">
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
+<div id="article-share">
     
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
 
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">文章标签</div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/iOS-Objective-C/" title="iOS,Objective-C: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="iOS,Objective-C" style="background-color: #F9EBEA;">iOS,Objective-C
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/技术/" title="技术: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active " data-tagname="技术" style="background-color: #F5EEF8;">技术
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://1byte8bit.com" class="b-link-green">1BYTE8BIT</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2018/12/11/ios-init-oc-lang/" class="b-link-green">iOS开发基础之学习Objective-C笔记一</a>
+                </p>
             </div>
         </div>
     </div>
-</div>
 
-    <div class="container">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
         
-
-        <article>
-            <div class="row tags-posts">
-                
-                
-                <div class="article tag-post col s12 m6 l4" data-tags="技术" data-aos="fade-up">
-                    <div class="card">
-                        <a href="/2018/12/08/hello-world/">
-                            <div class="card-image tag-image">
-                                
-                                
-                                <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="前言">
-                                
-                                <span class="card-title">前言</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-08
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fa fa-user fa-fw"></i>
-                                    腰静
-                                    
-                                </span>
-                            </div>
-                        </div>
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">本篇</div>
+            <div class="card">
+                <a href="/2018/12/11/ios-init-oc-lang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="iOS开发基础之学习Objective-C笔记一">
+                        
+                        <span class="card-title">iOS开发基础之学习Objective-C笔记一</span>
                     </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">前言背景
+学习一门新的手艺。
+做个小的Demo，解决自己对于现有的某些工具不能满足自己需求的痛点。
+Apple Store一些应用需要花钱。
+
+计划
+第一、先看书。重点关注一下指针这块。
+第二、照着实例写一写UI。画一画界面。
+第三、写一写</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            腰静
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/iOS-Objective-C/" target="_blank">
+                        <span class="chip bg-color">iOS,Objective-C</span>
+                    </a>
+                    
                 </div>
                 
             </div>
-        </article>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/2018/12/08/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="前言">
+                        
+                        <span class="card-title">前言</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+这是我的新博客，是我的维护的第五个网站(博客)
+背景博客这是第二个。但是我想尝试一下hexo搭建的博客，故有此。更想建一个知识库，并将我维护的这些网站或者博客，串联起来，平时能够用到。
+实现目前业余做的事情：
+
+写一部分简单的系列教程。
+</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            腰静
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/技术/" target="_blank">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
+</article>
+</div>
+    
+
 </main>
 
 
