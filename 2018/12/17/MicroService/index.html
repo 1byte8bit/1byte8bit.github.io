@@ -5,8 +5,22 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="1BYTE8BIT">
-    <meta name="description" content="1BYTE8BIT">
+    <meta name="keywords" content="微服务模块的理解, 1BYTE8BIT">
+    <meta name="description" content="项目微服务结构整体理解背景
+各司其职、集中管理、存在单向或多向调用关系；
+
+意义
+提高迭代效率；
+降低开发黏连性；
+节约成本
+
+实现结构
+项目启动的入口CenterBootstrap
+各项服务的注册、管理中心。
+微服务请求转发。
+
+
+鉴权（">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +28,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>1BYTE8BIT</title>
+    <title>微服务模块的理解 | 1BYTE8BIT</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -243,96 +257,257 @@
     </nav>
 </header>
 
-<style type="text/css">
-    /* don't remove. */
-    .index-cover {
-        height: 100vh;
-    }
-</style>
 
-<div class="bg-cover index-cover about-cover" style="background-image: url('/medias/cover.jpg')">
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
-            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+            <div class="col s12 m12 l12">
                 <div class="brand">
-                    <div class="title center-align">
-                    
-                        1byte = 8bit
-                    
-                    </div>
-
-                    <div class="description center-align">
-                    
-                        1byte8bit
-                    
+                    <div class="description center-align post-title">
+                        微服务模块的理解
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="cover-btns">
-            <a href="#recommend-sections" class="waves-effect waves-light btn">
-                <i class="fa fa-angle-double-down"></i>继续阅读
-            </a>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/微服务/" target="_blank">
+                    <span class="chip bg-color">微服务</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-17
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="项目微服务结构整体理解"><a href="#项目微服务结构整体理解" class="headerlink" title="项目微服务结构整体理解"></a>项目微服务结构整体理解</h2><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><ul>
+<li>各司其职、集中管理、存在单向或多向调用关系；</li>
+</ul>
+<h4 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h4><ul>
+<li>提高迭代效率；</li>
+<li>降低开发黏连性；</li>
+<li>节约成本</li>
+</ul>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><h5 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h5><ul>
+<li>项目启动的入口<code>CenterBootstrap</code><ul>
+<li>各项服务的注册、管理中心。</li>
+<li>微服务请求转发。</li>
+</ul>
+</li>
+<li>鉴权（权限）服务<code>AuthBootstrap</code><ul>
+<li><code>JWT</code>处理权限</li>
+</ul>
+</li>
+<li>字典服务<code>DictBootstrap</code><ul>
+<li>管理项目的数据字典。</li>
+</ul>
+</li>
+<li>后台管理服务<code>AdminBootstrap</code><ul>
+<li>连接数据库、处理数据。</li>
+</ul>
+</li>
+<li>网关服务<code>GateBootstrap</code><ul>
+<li>接收前端的请求并转发至其他服务。</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <hr>
 
             
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
-                <i class="fa fa-github-alt"></i>Github
-            </a>
-            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="cover-social-link"><a href="https://github.com/2tree" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github"></i>
-</a>
-<a href="mailto:2binarytree@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-    <i class="fa fa-envelope-open"></i>
-</a>
-<a href="#!" class="tooltipped" data-tooltip="Twitter联系我: 1byte8bit1" data-position="top" data-delay="50">
-    <i class="fa fa-qq"></i>
-</a>
-</div>
-        
     </div>
 </div>
 
 <script>
-// Dynamically switch banner pictures every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
+
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
 </script>
+            
 
-<main class="content">
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
+<div id="article-share">
     
-
-    <div id="recommend-sections">
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
     
-    
+</div>
 
+<script src="/libs/share/js/social-share.min.js"></script>
 
-
-    
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://1byte8bit.com" class="b-link-green">1BYTE8BIT</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2018/12/17/MicroService/" class="b-link-green">微服务模块的理解</a>
+                </p>
+            </div>
+        </div>
     </div>
 
     
 
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/17/MicroService/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="微服务模块的理解">
-                            
-                            <span class="card-title">微服务模块的理解</span>
-                        </div>
-                    </a>
+    
 
-                    <div class="card-content article-content">
-                        <div class="summary">项目微服务结构整体理解背景
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">本篇</div>
+            <div class="card">
+                <a href="/2018/12/17/MicroService/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="微服务模块的理解">
+                        
+                        <span class="card-title">微服务模块的理解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">项目微服务结构整体理解背景
 各司其职、集中管理、存在单向或多向调用关系；
 
 意义
@@ -341,120 +516,90 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 节约成本
 
 实现结构
-项</div>
-                        <div class="publish-info">
+项目启动的入口CenterBootstrap
+各项服务的注册、管理中心。
+微服务请求转发。
+
+
+鉴权（</div>
+                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-17
                             </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                腰静
-                                
-                            </span>
-                        </div>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            腰静
+                            
+                        </span>
                     </div>
+                </div>
 
+                
+                <div class="card-action article-tags">
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/微服务/" target="_blank">
-                            <span class="chip bg-color">微服务</span>
-                        </a>
-                        
-                    </div>
+                    <a href="/tags/微服务/" target="_blank">
+                        <span class="chip bg-color">微服务</span>
+                    </a>
                     
                 </div>
+                
             </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/11/ios-init-oc-lang/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="iOS开发基础之学习Objective-C笔记一">
-                            
-                            <span class="card-title">iOS开发基础之学习Objective-C笔记一</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">前言背景
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/2018/12/11/ios-init-oc-lang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="iOS开发基础之学习Objective-C笔记一">
+                        
+                        <span class="card-title">iOS开发基础之学习Objective-C笔记一</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">前言背景
 学习一门新的手艺。
 做个小的Demo，解决自己对于现有的某些工具不能满足自己需求的痛点。
-Apple Store一些应用需要花钱。</div>
-                        <div class="publish-info">
+Apple Store一些应用需要花钱。
+
+计划
+第一、先看书。重点关注一下指针这块。
+第二、照着实例写一写UI。画一画界面。
+第三、写一写</div>
+                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
                             </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                腰静
-                                
-                            </span>
-                        </div>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            腰静
+                            
+                        </span>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/iOS-Objective-C/" target="_blank">
-                            <span class="chip bg-color">iOS,Objective-C</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/08/hello-world/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="前言">
-                            
-                            <span class="card-title">前言</span>
-                        </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/iOS-Objective-C/" target="_blank">
+                        <span class="chip bg-color">iOS,Objective-C</span>
                     </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">
-这是我的新博客，是我的维护的第五个网站(博客)
-背景博客这是第二个。但是我想尝试一下hexo搭建的博客，故有此。更想建一个知识库，并将我维</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                腰静
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/技术/" target="_blank">
-                            <span class="chip bg-color">技术</span>
-                        </a>
-                        
-                    </div>
                     
                 </div>
+                
             </div>
-            
         </div>
-    </article>
+        
+    </div>
+</article>
+</div>
+    
 
 </main>
-
 
 
 <footer class="page-footer bg-color">
