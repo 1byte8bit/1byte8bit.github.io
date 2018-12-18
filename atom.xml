@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>1BYTE8BIT</title>
+  
+  <subtitle>1byte = 8bit</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://1byte8bit.com/"/>
+  <updated>2018-12-17T06:57:12.978Z</updated>
+  <id>https://1byte8bit.com/</id>
+  
+  <author>
+    <name>腰静</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微服务模块的理解</title>
+    <link href="https://1byte8bit.com/2018/12/17/MicroService/"/>
+    <id>https://1byte8bit.com/2018/12/17/MicroService/</id>
+    <published>2018-12-17T06:16:51.000Z</published>
+    <updated>2018-12-17T06:57:12.978Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="项目微服务结构整体理解"><a href="#项目微服务结构整体理解" class="headerlink" title="项目微服务结构整体理解"></a>项目微服务结构整体理解</h2><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><ul><li>各司其职、集中管理、存在单向或多向调用关系；</li></ul><h4 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h4><ul><li>提高迭代效率；</li><li>降低开发黏连性；</li><li>节约成本</li></ul><h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><h5 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h5><ul><li>项目启动的入口<code>CenterBootstrap</code><ul><li>各项服务的注册、管理中心。</li><li>微服务请求转发。</li></ul></li><li>鉴权（权限）服务<code>AuthBootstrap</code><ul><li><code>JWT</code>处理权限</li></ul></li><li>字典服务<code>DictBootstrap</code><ul><li>管理项目的数据字典。</li></ul></li><li>后台管理服务<code>AdminBootstrap</code><ul><li>连接数据库、处理数据。</li></ul></li><li>网关服务<code>GateBootstrap</code><ul><li>接收前端的请求并转发至其他服务。</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;项目微服务结构整体理解&quot;&gt;&lt;a href=&quot;#项目微服务结构整体理解&quot; class=&quot;headerlink&quot; title=&quot;项目微服务结构整体理解&quot;&gt;&lt;/a&gt;项目微服务结构整体理解&lt;/h2&gt;&lt;h4 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;head
+      
+    
+    </summary>
+    
+    
+      <category term="微服务" scheme="https://1byte8bit.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS开发基础之学习Objective-C笔记一</title>
+    <link href="https://1byte8bit.com/2018/12/11/ios-init-oc-lang/"/>
+    <id>https://1byte8bit.com/2018/12/11/ios-init-oc-lang/</id>
+    <published>2018-12-11T13:11:22.000Z</published>
+    <updated>2018-12-12T00:38:12.146Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h5 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h5><ul><li>学习一门新的手艺。</li><li>做个小的Demo，解决自己对于现有的某些工具不能满足自己需求的痛点。</li><li>Apple Store一些应用需要花钱。</li></ul><h5 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h5><ul><li>第一、先看书。重点关注一下指针这块。</li><li>第二、照着实例写一写UI。画一画界面。</li><li>第三、写一写后台的逻辑。实现一些小的功能。</li><li>第四、整合记录一下笔记和发布一下源码。提升一下。</li><li>第五、规划一个tools的功能，写计划书，准备开发。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;h5 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h5&gt;&lt;ul&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="iOS,Objective-C" scheme="https://1byte8bit.com/tags/iOS-Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前言</title>
+    <link href="https://1byte8bit.com/2018/12/08/hello-world/"/>
+    <id>https://1byte8bit.com/2018/12/08/hello-world/</id>
+    <published>2018-12-08T09:29:06.000Z</published>
+    <updated>2018-12-11T05:11:44.407Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><pre><code>这是我的新博客，是我的维护的第五个网站(博客)</code></pre><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>博客这是第二个。但是我想尝试一下hexo搭建的博客，故有此。<br>更想建一个知识库，并将我维护的这些网站或者博客，串联起来，平时能够用到。</p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>目前业余做的事情：</p><ul><li>写一部分简单的系列教程。</li><li>写平时遇到的问题、攻克的技术难关等等。</li><li>维护一下其余的博客。</li></ul><h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><p>因为平时做域名交易，自己也抢注好的域名，本身做开发，对这些业内的单词，编程等等的单词尤其敏感。<code>1byte8bit.com</code>是个杂米，对其他行业来讲，价值不大，但是于我来讲，够好了。</p><h3 id="愿景"><a href="#愿景" class="headerlink" title="愿景"></a>愿景</h3><ul><li>希望我的知识库能够在两年只能健全</li><li>希望将来能够用这个ID在圈内小有影响。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;pre&gt;&lt;code&gt;这是我的新博客，是我的维护的第五个网站(博客)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;博客这是
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://1byte8bit.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+</feed>
