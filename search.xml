@@ -3,6 +3,23 @@
   
     
     <entry>
+      <title>前端开发Vue.js问题整理与总结</title>
+      <link href="/2018/12/18/front-vue-js-qa-and-summary/"/>
+      <url>/2018/12/18/front-vue-js-qa-and-summary/</url>
+      
+        <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul><li>所在的项目上前端开发使用技术栈为Vue.js。</li><li>本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。</li><li>思路。</li></ul><h3 id="测试代码高亮"><a href="#测试代码高亮" class="headerlink" title="测试代码高亮"></a>测试代码高亮</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 简单语法</span>Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'props-demo-simple'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>  props<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'size'</span><span class="token punctuation">,</span> <span class="token string">'myMessage'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 对象语法，提供校验</span>Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'props-demo-advanced'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>  props<span class="token punctuation">:</span> <span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">// 检测类型</span>    height<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// 检测类型 + 其他验证</span>    age<span class="token punctuation">:</span> <span class="token punctuation">{</span>      type<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>      <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>      required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>      validator<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> value <span class="token operator">>=</span> <span class="token number">0</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Vue.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>微服务模块的理解</title>
       <link href="/2018/12/17/MicroService/"/>
       <url>/2018/12/17/MicroService/</url>
