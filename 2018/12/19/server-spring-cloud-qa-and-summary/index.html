@@ -18,18 +18,18 @@
   
   
   <title>后端开发之微服务开发遇到的问题和总结 | 1Byte = 8bit</title>
-  <meta name="description" content="背景微服务开发中基础知识整理和技巧整理。 生日跨年查询代码：     &amp;lt;select id=&quot;selectByBirthday&quot; parameterType=&quot;com.savor.security.common.entity.PageExample&quot; resultMap=&quot;BaseResultMap&quot;&amp;gt;         select a.* from (         SELECT">
+  <meta name="description" content="背景微服务开发中基础知识整理和技巧整理。 生日跨年查询代码：     &amp;lt;select id=&quot;selectByBirthday&quot; parameterType=&quot;com.security.common.entity.PageExample&quot; resultMap=&quot;BaseResultMap&quot;&amp;gt;         select a.* from (         SELECT         t">
 <meta name="keywords" content="Spring Cloud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="后端开发之微服务开发遇到的问题和总结">
 <meta property="og:url" content="https://1byte8bit.com/2018/12/19/server-spring-cloud-qa-and-summary/index.html">
 <meta property="og:site_name" content="1BYTE8BIT">
-<meta property="og:description" content="背景微服务开发中基础知识整理和技巧整理。 生日跨年查询代码：     &amp;lt;select id=&quot;selectByBirthday&quot; parameterType=&quot;com.savor.security.common.entity.PageExample&quot; resultMap=&quot;BaseResultMap&quot;&amp;gt;         select a.* from (         SELECT">
+<meta property="og:description" content="背景微服务开发中基础知识整理和技巧整理。 生日跨年查询代码：     &amp;lt;select id=&quot;selectByBirthday&quot; parameterType=&quot;com.security.common.entity.PageExample&quot; resultMap=&quot;BaseResultMap&quot;&amp;gt;         select a.* from (         SELECT         t">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T12:09:02.957Z">
+<meta property="og:updated_time" content="2018-12-25T13:43:51.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="后端开发之微服务开发遇到的问题和总结">
-<meta name="twitter:description" content="背景微服务开发中基础知识整理和技巧整理。 生日跨年查询代码：     &amp;lt;select id=&quot;selectByBirthday&quot; parameterType=&quot;com.savor.security.common.entity.PageExample&quot; resultMap=&quot;BaseResultMap&quot;&amp;gt;         select a.* from (         SELECT">
+<meta name="twitter:description" content="背景微服务开发中基础知识整理和技巧整理。 生日跨年查询代码：     &amp;lt;select id=&quot;selectByBirthday&quot; parameterType=&quot;com.security.common.entity.PageExample&quot; resultMap=&quot;BaseResultMap&quot;&amp;gt;         select a.* from (         SELECT         t">
   <!-- Canonical links -->
   <link rel="canonical" href="https://1byte8bit.com/2018/12/19/server-spring-cloud-qa-and-summary/index.html">
   
@@ -374,7 +374,7 @@
       
         <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>微服务开发中基础知识整理和技巧整理。</p>
 <h3 id="生日跨年查询"><a href="#生日跨年查询" class="headerlink" title="生日跨年查询"></a>生日跨年查询</h3><p>代码：</p>
-<pre class=" language-java"><code class="language-java">    <span class="token operator">&lt;</span>select id<span class="token operator">=</span><span class="token string">"selectByBirthday"</span> parameterType<span class="token operator">=</span><span class="token string">"com.savor.security.common.entity.PageExample"</span> resultMap<span class="token operator">=</span><span class="token string">"BaseResultMap"</span><span class="token operator">></span>
+<pre class=" language-java"><code class="language-java">    <span class="token operator">&lt;</span>select id<span class="token operator">=</span><span class="token string">"selectByBirthday"</span> parameterType<span class="token operator">=</span><span class="token string">"com.security.common.entity.PageExample"</span> resultMap<span class="token operator">=</span><span class="token string">"BaseResultMap"</span><span class="token operator">></span>
         select a<span class="token punctuation">.</span>* <span class="token function">from</span> <span class="token punctuation">(</span>
         SELECT
         t<span class="token punctuation">.</span>*<span class="token punctuation">,</span> y<span class="token punctuation">.</span>position_name
@@ -423,7 +423,6 @@ FROM
     BETWEEN <span class="token string">'2018-12-01'</span> AND <span class="token string">'2019-01-15'</span>
 <span class="token function">OR</span><span class="token punctuation">(</span><span class="token function">date_add</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>employee_birthday <span class="token punctuation">,</span>INTERVAL <span class="token function">TIMESTAMPDIFF</span><span class="token punctuation">(</span>YEAR <span class="token punctuation">,</span>t<span class="token punctuation">.</span>employee_birthday <span class="token punctuation">,</span><span class="token function">DATE_FORMAT</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">,</span> <span class="token string">'%Y-%m-%d'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span> YEAR<span class="token punctuation">)</span><span class="token punctuation">)</span>
     BETWEEN <span class="token string">'2018-12-01'</span> AND <span class="token string">'2019-01-15'</span>
-`
 </code></pre>
 <ul>
 <li><p><code>上述代码使用Navicat的Beautify SQL功能美化整理</code></p>
