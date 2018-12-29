@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目微服务结构整体理解"><span class="toc-text">项目微服务结构整体理解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#意义"><span class="toc-text">意义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#结构"><span class="toc-text">结构</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目微服务结构整体理解"><span class="toc-text">项目微服务结构整体理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#意义"><span class="toc-text">意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#结构"><span class="toc-text">结构</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -137,15 +137,15 @@
 
     </div>
     <div class="post-content ">
-        <h2 id="项目微服务结构整体理解"><a href="#项目微服务结构整体理解" class="headerlink" title="项目微服务结构整体理解"></a>项目微服务结构整体理解</h2><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><ul>
+        <h2 id="项目微服务结构整体理解"><a href="#项目微服务结构整体理解" class="headerlink" title="项目微服务结构整体理解"></a>项目微服务结构整体理解</h2><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
 <li>各司其职、集中管理、存在单向或多向调用关系；</li>
 </ul>
-<h4 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h4><ul>
+<h2 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h2><ul>
 <li>提高迭代效率；</li>
 <li>降低开发黏连性；</li>
 <li>节约成本</li>
 </ul>
-<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><h5 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h5><ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><ul>
 <li><p>项目启动的入口<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  *  各项服务的注册、管理中心。</span><br><span class="line">  *  微服务请求转发。</span><br><span class="line">* 鉴权（权限）服务```AuthBootstrap</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 字典服务```DictBootstrap</span><br></pre></td></tr></table></figure>
