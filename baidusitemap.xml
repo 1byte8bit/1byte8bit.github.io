@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://1byte8bit.com/2018/12/19/server-spring-cloud-qa-and-summary/</loc>
+    <lastmod>2018-12-29T06:51:57.700Z</lastmod>
+  </url>  <url>
     <loc>https://1byte8bit.com/2018/12/17/micro-service/</loc>
     <lastmod>2018-12-29T05:53:45.103Z</lastmod>
-  </url>  <url>
-    <loc>https://1byte8bit.com/2018/12/19/server-spring-cloud-qa-and-summary/</loc>
-    <lastmod>2018-12-29T05:38:25.982Z</lastmod>
   </url>  <url>
     <loc>https://1byte8bit.com/2018/12/25/issues-reminders/</loc>
     <lastmod>2018-12-29T05:37:48.573Z</lastmod>
