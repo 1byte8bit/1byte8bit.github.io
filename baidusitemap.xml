@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://1byte8bit.com/2018/12/18/front-vue-js-qa-and-summary/</loc>
+    <lastmod>2018-12-29T09:20:37.620Z</lastmod>
+  </url>  <url>
+    <loc>https://1byte8bit.com/2018/12/29/debugger-skills/</loc>
+    <lastmod>2018-12-29T07:46:07.707Z</lastmod>
+  </url>  <url>
     <loc>https://1byte8bit.com/2018/12/19/server-spring-cloud-qa-and-summary/</loc>
     <lastmod>2018-12-29T06:51:57.700Z</lastmod>
   </url>  <url>
@@ -12,8 +18,5 @@
   </url>  <url>
     <loc>https://1byte8bit.com/2018/12/11/ios-init-oc-lang/</loc>
     <lastmod>2018-12-29T05:37:40.837Z</lastmod>
-  </url>  <url>
-    <loc>https://1byte8bit.com/2018/12/18/front-vue-js-qa-and-summary/</loc>
-    <lastmod>2018-12-25T11:42:00.465Z</lastmod>
   </url>
 </urlset>
