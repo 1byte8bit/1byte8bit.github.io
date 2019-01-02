@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://1byte8bit.com/"/>
-  <updated>2019-01-02T07:51:25.371Z</updated>
+  <updated>2019-01-02T10:10:00.070Z</updated>
   <id>https://1byte8bit.com/</id>
   
   <author>
@@ -17,16 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vue-life-cycle</title>
-    <link href="https://1byte8bit.com/2019/01/02/vue-life-cycle/"/>
-    <id>https://1byte8bit.com/2019/01/02/vue-life-cycle/</id>
-    <published>2019-01-02T07:51:25.000Z</published>
-    <updated>2019-01-02T07:51:25.371Z</updated>
+    <title>MyBatis语法总结</title>
+    <link href="https://1byte8bit.com/2019/01/02/mybatis-exc/"/>
+    <id>https://1byte8bit.com/2019/01/02/mybatis-exc/</id>
+    <published>2019-01-02T10:09:31.000Z</published>
+    <updated>2019-01-02T10:10:00.070Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+      <category term="MyBatis" scheme="https://1byte8bit.com/tags/MyBatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue.js生命周期理解</title>
+    <link href="https://1byte8bit.com/2019/01/02/vue-life-cycle/"/>
+    <id>https://1byte8bit.com/2019/01/02/vue-life-cycle/</id>
+    <published>2019-01-02T07:51:25.000Z</published>
+    <updated>2019-01-02T10:10:13.830Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Vue.js" scheme="https://1byte8bit.com/tags/Vue-js/"/>
     
   </entry>
   
