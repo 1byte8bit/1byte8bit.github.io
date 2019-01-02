@@ -1,636 +1,948 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-  
+<html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <meta name="author" content="董沅鑫, yuanxin.me@gmail.com">
-  
-  
-  
-  <title>友链 | 1BYTE = 8 BIT</title>
+    <meta charset="utf-8">
+<title>friends - 1BYTE = 8 BIT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-    <meta name="keywords" content="Hexo, theme-bmw">
-  
 
-  <script>
-    console.log('\n%c Hexo-theme-bmw v4.0 ' + '%c 🎉 https://github.com/dongyuanxin/theme-bmw 🎉\n' + '\n%c View demo online ' + '%c 🔍 https://godbmw.com/ 🔍  \n' , 'color: #fadfa3; background: #030307; padding:3px 0;', '', 'color: #fadfa3; background: #030307; padding:3px 0;', '');
-  </script>
-
-  
     <meta name="description" content="1byte8bit的博客">
-  
+<meta property="og:type" content="website">
+<meta property="og:title" content="friends">
+<meta property="og:url" content="https://1byte8bit.com/friends/index.html">
+<meta property="og:site_name" content="1BYTE = 8 BIT">
+<meta property="og:description" content="1byte8bit的博客">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2018-12-29T06:11:59.735Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="friends">
+<meta name="twitter:description" content="1byte8bit的博客">
 
-  
 
-  
-    <link rel="icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/touch-icon.png">
-  
 
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/icon/iconfont.css">
-<link rel="stylesheet" href="/css/github-markdown.css">
-<link rel="stylesheet" href="/css/highlight.css">
 
-  <script src="/js/util.js"></script>
-<script src="/js/valine.min.js"></script>
 
-  
+<link rel="icon" href="/images/favicon.svg">
 
-  
-    <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js" async></script>
-  
 
-  
-    <link href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" rel="stylesheet">
-  
-  
-  <script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js" async></script>
-  
-  
-    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
-  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
 
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="friends" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                friends
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+        
+        
+        
+    </div>
+</div>
 
-  <body>
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                    
+                    <p class="is-size-4 is-block">
+                        Your name
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Your title
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Your location</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        6
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/ppoffice">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
 
     
-
-    <div id="app">
-
-      <div class="header-wrap">
-  <header>
-    <div class="site-brand">
-      <div class="site-title">
-        <a href="/">1byte = 8bit</a>
-      </div>
-    </div>
-    <nav class="site-navigation">
-      <ul class="nav-menu">
-      
-        <li class="nav-item" data-path="/">
-          
-            <a href="/" target="_self">
-              主页
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/archive/">
-          
-            <a href="/archive/" target="_self">
-              归档
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/categories/">
-          
-            <a href="/categories/" target="_self">
-              分类
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/tags/">
-          
-            <a href="/tags/" target="_self">
-              标签
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/friends/">
-          
-            <a href="/friends/" target="_self">
-              友链
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="/about/">
-          
-            <a href="/about/" target="_self">
-              关于
-            </a>
-          
-        </li>
-      
-        <li class="nav-item" data-path="">
-          
-            <a href="javascript:void(0);" v-else="">抓到我</a>
-            <ul class="nav-menu--dropdown">
-              
-                <li>
-                  <a href="https://github.com/2tree" target="_blank">
-                    Github
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://www.twitter.com/1byte8bit1" target="_blank">
-                    Twitter
-                  </a>
-                </li>
-              
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            
             </ul>
-          
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Spring-Cloud/" style="font-size: 10px;">Spring Cloud</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/微服务/" style="font-size: 10px;">微服务</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2018/12/29/debugger-skills/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="前端后端数据交互过程例解与调试">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-29T06:53:48.000Z">2018-12-29</time></div>
+                    <a href="/2018/12/29/debugger-skills/" class="has-link-black-ter is-size-6">前端后端数据交互过程例解与调试</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/25/issues-reminders/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="方案解决与思路提示">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-25T12:08:43.000Z">2018-12-25</time></div>
+                    <a href="/2018/12/25/issues-reminders/" class="has-link-black-ter is-size-6">方案解决与思路提示</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/19/server-spring-cloud-qa-and-summary/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="后端开发之微服务开发遇到的问题和总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-19T00:26:48.000Z">2018-12-19</time></div>
+                    <a href="/2018/12/19/server-spring-cloud-qa-and-summary/" class="has-link-black-ter is-size-6">后端开发之微服务开发遇到的问题和总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/18/front-vue-js-qa-and-summary/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="前端开发Vue.js问题整理与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-18T05:37:16.000Z">2018-12-18</time></div>
+                    <a href="/2018/12/18/front-vue-js-qa-and-summary/" class="has-link-black-ter is-size-6">前端开发Vue.js问题整理与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/17/micro-service/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="微服务模块的理解">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-17T06:16:51.000Z">2018-12-17</time></div>
+                    <a href="/2018/12/17/micro-service/" class="has-link-black-ter is-size-6">微服务模块的理解</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archive/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
         </li>
-      
-      </ul>
-    </nav>
-    <i class="iconfont icon-menu"></i>
-  </header>
-</div>
-
-<script>
-  let links = document.querySelectorAll('.nav-item');
-  for(let link of links){
-    let childrenLink = link.querySelector('ul');
-    link.addEventListener('mouseenter', () => {
-      if(childrenLink) {
-        childrenLink.className = "nav-menu--dropdown active";
-      }
-    })
-    link.addEventListener('mouseleave', () => {
-      if(childrenLink) {
-        childrenLink.className = "nav-menu--dropdown";
-      }
-    })
-  }
-  let rootRealPath = getRealPath(window.location.pathname, true);
-  for(let link of links) {
-    let linkPath = link.getAttribute("data-path");
-    if(linkPath && getRealPath(linkPath, true) === rootRealPath) {
-      link.className = "nav-item hover";
-    }
-  }
-
-  let iconMenu = document.querySelector("i.iconfont.icon-menu"),
-    iconMenuClicked = false;
-  let navDOM = document.querySelector("nav.site-navigation");
-  iconMenu.addEventListener("click", () => {
-    iconMenuClicked 
-      ? navDOM.className = "site-navigation active"
-      : navDOM.className = "site-navigation";
-    iconMenuClicked = !iconMenuClicked;
-  })
-</script>
-
-      
-
-
-
-
-
-
-
-
-<div class="container post-index">
-
-  
-
-<div class="post">
-  <h1 class="article-title">
-    <span>friends</span>
-  </h1>
-  <div class="article-top-meta">
-    <span>
-      发布 : 
-      2018-12-29
-    </span>
-    
-    
-      <span>
-        浏览 : <span class="article-timer" data-identity="friends"></span>
-      </span>
-    
-  </div>
-
-  
-
-  <div class="article-content">
-    <div class="markdown-body">
-      
-    </div>
-  </div>
-  
-    <div class="copy-right">
-      <div class="markdown-body">
-        <blockquote>
         
-        
-          本文作者 : 1byte8bit <br>
-        
-        原文链接 : <a href="">https://1byte8bit.com/friends/index.html</a><br>
-        版权声明 : 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-        </blockquote>
-      </div>
+        </ul>
+        </div>
     </div>
-  
-  
-  
-    <div class="social-share" style="margin-top: -2rem" data-wechat-qrcode-title="<p>微信扫一扫</p>" data-wechat-qrcode-helper="<p>微信右上角, 扫一扫分享</p>" data-sites="qzone, qq, weibo, wechat, douban, google, facebook, twitter">
-  <span style="color: #6b7487; font-size: 1.4rem;">分享到: </span>
 </div>
-<script src="https://cdn.bootcss.com/social-share.js/1.0.16/js/social-share.min.js" async></script>
-  
-
-  
-    <div id="reward">
-  
-    <p id="reward-meta">知识 & 情怀 | 二者兼得</p>
-  
-  <button id="reward-btn">
-    
-    <span>投食</span>
-  </button>
-  <div id="reward-qrcode">
-    
-      <div class="reward-qrcode--container">
-        <img class="qrcode-img" src="/images/wechat.png" alt="微信扫一扫, 向我投食">
-        <p class="qrcode-meta">微信扫一扫, 向我投食</p>
-      </div>
-    
-      <div class="reward-qrcode--container">
-        <img class="qrcode-img" src="/images/alipay.png" alt="支付宝扫一扫, 向我投食">
-        <p class="qrcode-meta">支付宝扫一扫, 向我投食</p>
-      </div>
-    
-  </div>
-
-</div>
-
-<script>
-  (() => {
-    let button = document.querySelector('#reward-btn'),
-      qrcode = document.querySelector('#reward-qrcode'),
-      display = false;
-    
-    button.addEventListener('click', () => {
-      qrcode.style.display = display ? 'none' : 'block'
-      display = !display
-    }, false)
-  })()
-</script>
-  
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-      <span>
         
-      </span>
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Objective-C/">
+                        <span class="level-start">
+                            <span class="level-item">Objective-C</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Spring-Cloud/">
+                        <span class="level-start">
+                            <span class="level-item">Spring Cloud</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Vue-js/">
+                        <span class="level-start">
+                            <span class="level-item">Vue.js</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微服务/">
+                        <span class="level-start">
+                            <span class="level-item">微服务</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/技术/">
+                        <span class="level-start">
+                            <span class="level-item">技术</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
     </div>
-    <div class="article-meta pull-right">
-    </div>
-  </div>
+</div>
+        
+        </div>
+    
 </div>
 
-
-  <aside id="sidebar">
-    <p id="sidebar-header"></p>
-    <ol id="sidebar-toc"></ol>
-  </aside>
-  <script async>setTimeout(generateToc, 10);</script>
+                
 
 
-  <nav class="post-navigation">
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
-    
-  </nav>
-
-  
-    <a href="#comment" class="comment-anchor"></a>
-<div class="comment-title"><i class="iconfont icon-footprint"></i> 留下足迹 <i class="iconfont icon-footprint"></i></div>
-<div id="vcomments"></div>
-
-<script defer>
-  if( true ) {
-    let path = getRealPath()
-    new Valine({
-      el: "#vcomments",
-      appId: "Hyq9wkH495DgNHWhDQCOfQSp-gzGzoHsz",
-      appKey: "WaR7nrzhliHj9aVwdQzkdlGd",
-      notify: false,
-      verify: false,
-      avatar: "robohash",
-      placeholder: "正确填写邮箱, 才能及时收到回复哦♪(^∇^*)",
-      path
-    });
-  }
-</script>
-   
-
-  
-    <script defer>
-const valineAPI = (() => {
-  try {
-    AV.init("Hyq9wkH495DgNHWhDQCOfQSp-gzGzoHsz", "WaR7nrzhliHj9aVwdQzkdlGd");
-  } catch(error) {}
-  const isExist = (identity) => {
-    identity = identity || getRealPath();
-    let query = new AV.Query('Timer');
-    return new Promise((resolve, reject) => {
-      query.equalTo("identity", identity);
-      query.find().then(results => {
-        resolve(results.length > 0);
-      }, error => reject(error));
-    })
-  }
-
-  const _get = (identity) => {
-    let query = null;
-    if(identity && identity instanceof Array){
-      let querys = [];
-      for(let i = 0; i < identity.length; ++i) {
-        querys[i] = new AV.Query('Timer');
-        querys[i].equalTo('identity', identity[i]);
-      }
-      query = AV.Query.or.apply(null ,querys);
-    } else {
-      identity = identity || getRealPath();
-      query = new AV.Query("Timer");
-      query.equalTo("identity", identity);
-    }
-
-    return new Promise((resolve, reject) => {
-      query.find()
-      .then(results => resolve(results))
-      .catch(error => reject(error))
-    })
-  }
-
-  const create = (identity) => {
-    identity = identity || getRealPath();
-    return new Promise((resolve, reject) => {
-      let Todo = AV.Object.extend('Timer');
-      let todo = new Todo();
-      todo.set("times", 1);
-      todo.set("identity", identity);
-      todo.save().then(res => resolve(true), error => reject(error));
-    })
-  }
-
-  const update = (identity) => {
-    identity = identity || getRealPath();
-    return new Promise((resolve, reject) => {
-      let query = new AV.Query('Timer');
-      query.equalTo("identity", identity);
-      query.find().then(todos => {
-        todos.forEach(todo => {
-          todo.set("times", todo.attributes.times + 1);
-        });
-        return AV.Object.saveAll(todos);
-      }).then(todos => resolve(true), error => reject(error));
-    })
-  }
-
-  return {
-    isExist,
-    _get,
-    update,
-    create
-  }
-})()
-
-const calcAndWriteTimes = () => {
-  let isPost = false;
-
-  let timerAllDOM = document.querySelectorAll(".article-timer");
-
-  if(isPost) {
-    let identity = timerAllDOM[0].getAttribute("data-identity");
-    valineAPI.isExist(identity)
-    .then(exist => {
-      if(exist) {
-        return valineAPI.update(identity);
-      }
-      return new Promise(resolve => resolve(true));
-    })
-    .then( succuess => valineAPI._get(identity))
-    .then( result => timerAllDOM[0].innerText = result[0].attributes.times)
-    .catch(error => console.log(error.message))
-    return ;
-  }
-
-  let timerDOMCache = {};
-
-  for(let timerDOM of timerAllDOM) {
-    let identity = timerDOM.getAttribute("data-identity");
-    if(timerDOMCache.hasOwnProperty(identity)){
-      timerDOMCache[identity].dom.push(timerDOM);
-    }else{
-      timerDOMCache[identity] = {
-        dom: [timerDOM],
-        times: undefined
-      };
-    }
-  }
-
-  let identities = Object.keys(timerDOMCache);
-  valineAPI._get(identities).then(results => {
-    for(let result of results) {
-      let {identity, times} = result.attributes;
-      timerDOMCache[identity].times = times;
-      timerDOMCache[identity].dom.map(item => item.innerText = times);
-    }
-    for(let identity of identities) {
-      if(timerDOMCache[identity].times){
-        continue;
-      }
-      timerDOMCache[identity].dom.map(item => item.innerText = 1);
-      valineAPI.create(identity);
-    }
-  }).catch(error => console.log(error.message))
-}
-
-if(true){
-  calcAndWriteTimes();
-}
-</script>
-   
-
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2018/12/29/debugger-skills/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="前端后端数据交互过程例解与调试">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-29T06:53:48.000Z">2018-12-29</time></div>
+                    <a href="/2018/12/29/debugger-skills/" class="has-link-black-ter is-size-6">前端后端数据交互过程例解与调试</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/25/issues-reminders/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="方案解决与思路提示">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-25T12:08:43.000Z">2018-12-25</time></div>
+                    <a href="/2018/12/25/issues-reminders/" class="has-link-black-ter is-size-6">方案解决与思路提示</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/19/server-spring-cloud-qa-and-summary/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="后端开发之微服务开发遇到的问题和总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-19T00:26:48.000Z">2018-12-19</time></div>
+                    <a href="/2018/12/19/server-spring-cloud-qa-and-summary/" class="has-link-black-ter is-size-6">后端开发之微服务开发遇到的问题和总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/18/front-vue-js-qa-and-summary/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="前端开发Vue.js问题整理与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-18T05:37:16.000Z">2018-12-18</time></div>
+                    <a href="/2018/12/18/front-vue-js-qa-and-summary/" class="has-link-black-ter is-size-6">前端开发Vue.js问题整理与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/17/micro-service/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="微服务模块的理解">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-17T06:16:51.000Z">2018-12-17</time></div>
+                    <a href="/2018/12/17/micro-service/" class="has-link-black-ter is-size-6">微服务模块的理解</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
 </div>
 
-
-      <footer>
-  <p class="site-info">
-    博客已运行<span id="time-to-now"></span><span class="my-face"></span>
-    <br>
-    Theme - <a href="https://github.com/dongyuanxin/theme-bmw">BMW</a> | Made With 💗 | Powered by <a href="https://godbmw.com/">GodBMW</a>
-    <br>
     
-  </p>
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archive/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Objective-C/">
+                        <span class="level-start">
+                            <span class="level-item">Objective-C</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Spring-Cloud/">
+                        <span class="level-start">
+                            <span class="level-item">Spring Cloud</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Vue-js/">
+                        <span class="level-start">
+                            <span class="level-item">Vue.js</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微服务/">
+                        <span class="level-start">
+                            <span class="level-item">微服务</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/技术/">
+                        <span class="level-start">
+                            <span class="level-item">技术</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="friends" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 腰静&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
 </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh");</script>
 
 
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
 
-<script>
-const timeToNowDOM = document.querySelector("#time-to-now");
-const startTimestamp = new Date(2018, 1, 10).getTime();
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
 
-const updateTimeStr = () => {
-  let offset = parseInt(
-      (new Date().getTime() - startTimestamp) / 1000,
-      10
-    ),
-    day = Math.floor(offset / 86400),
-    hour = Math.floor((offset % 86400) / 3600),
-    minute = Math.floor(((offset % 86400) % 3600) / 60),
-    second = Math.floor(((offset % 86400) % 3600) % 60);
-  timeToNowDOM.innerHTML =
-    day + "天" + hour + "小时" + minute + "分钟" + second + "秒";
-  setTimeout(updateTimeStr, 500);
-}
+    
+    
 
-setTimeout(updateTimeStr, 500);
-</script>
-
-
-      <div class="back-to-top hidden">
-  <span>
-    <i class="iconfont icon-60"></i><span></span>%
-  </span>
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
 <script>
-const updateIconToTop = percent => {
-  let dom = document.querySelector(".back-to-top span span");
-  dom.innerText = percent;
-  if(percent < 1) {
-    document.querySelector(".back-to-top").className = "back-to-top hidden";
-  } else {
-    document.querySelector(".back-to-top").className = "back-to-top";
-  }
-}
-
-const handleScoll = () => {
-  let isRunning = false;
-  return () => {
-    if (isRunning) return;
-    isRunning = true;
-    window.requestAnimationFrame(timestamp => {
-      let scrollTop =
-          document.documentElement.scrollTop || document.body.scrollTop,
-        scrollHeight =
-          document.documentElement.scrollHeight ||
-          document.body.scrollHeight,
-        clientHeight =
-          document.documentElement.clientHeight ||
-          document.body.clientHeight;
-      isRunning = false;
-      if (scrollTop <= 1) {
-        updateIconToTop(0);
-        return;
-      }
-      if (scrollTop + clientHeight >= scrollHeight) {
-        updateIconToTop(100);
-      } else {
-        updateIconToTop(parseInt(
-          100 * scrollTop / (scrollHeight - clientHeight),
-          10
-        ));
-      }
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
     });
-  };
-}
-
-const backToTop = () => {
-  let scrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop,
-    delay = 10,
-    time = 200;
-  if (scrollTop <= 20) {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    return;
-  }
-  let step = Math.ceil(scrollTop * delay / time);
-  let timer = setInterval(() => {
-    scrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollTop - step <= 0) {
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-      clearInterval(timer);
-    } else {
-      document.documentElement.scrollTop = scrollTop - step;
-      document.body.scrollTop = scrollTop - step;
-    }
-  }, delay);
-}
-
-document.addEventListener("scroll", handleScoll(), false);
-
-document.querySelector(".back-to-top").addEventListener("click", backToTop, false);
-
 </script>
 
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
     </div>
-
-    
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</div>
 <script>
-  (() => {
-    const mathjaxConfig = {
-      showProcessingMessages: false, //关闭js加载过程信息
-      messageStyle: "none", //不显示信息
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [["$", "$"], ["\\(", "\\)"]], //行内公式选择符
-        displayMath: [["$$", "$$"], ["\\[", "\\]"]], //段内公式选择符
-        skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
-      },
-      "HTML-CSS": {
-        availableFonts: ["STIX", "TeX"], //可选字体
-        showMathMenu: false //关闭右击菜单显示
-      }
-    }
-
-    let mathjaxInterval = setInterval(() => {
-      if(!window.MathJax){
-        return;
-      }
-      window.MathJax.Hub.Config(mathjaxConfig)
-      window.MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('app')])
-
-      clearInterval(mathjaxInterval)
-    }, 10)    
-  })()
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
 </script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
     
-
-    <script src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script>
-<script async>
-  let fancyTimer = setInterval(function(){
-    if(!window.$){
-      return;
-    }
-    $(document).ready(function() {
-      $(".post img").each(function () {
-        if($(this).parent().get(0).tagName.toLowerCase() === "a") {
-          return;
-        }
-        // $(this).attr("data-fancybox", "gallery"); // if you add 'data-fancybox', img will display after showed
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "gallery");
-        $(element).attr("href", $(this).attr("src"));
-        $(this).wrap(element);
-      });
-      
-      clearInterval(fancyTimer);
-    });
-  }, 10);
-</script>
-
-    
-  </body>
-
+</body>
 </html>
