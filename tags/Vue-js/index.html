@@ -1,228 +1,471 @@
 <!DOCTYPE html>
-<html lang="zh">
-
-
+<html lang=zh>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>
-    1BYTE = 8 BIT
-  </title>
-  <meta name="description" content="1byte8bit的博客">
+  <meta charset="utf-8">
   
-  <meta name="author" content="腰静">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-transform">
   <meta http-equiv="Cache-Control" content="no-siteapp">
-
-  <link rel="icon" type="image/x-icon" href="">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
   
-
   
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+  <title>Tag: Vue.js | 1byte=8bit</title>
+  <meta name="description" content="1byte8bit的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1BYTE = 8 BIT">
+<meta property="og:url" content="https://1byte8bit.com/tags/Vue-js/index.html">
+<meta property="og:site_name" content="1BYTE = 8 BIT">
+<meta property="og:description" content="1byte8bit的博客">
+<meta property="og:locale" content="zh">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1BYTE = 8 BIT">
+<meta name="twitter:description" content="1byte8bit的博客">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://1byte8bit.com/tags/Vue-js/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="1BYTE = 8 BIT" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
 <link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
-<body id="replica-app">
 
-<nav class="navbar-wrapper">
-  <div class="navbar">
-    <div class="container clearfix">
-      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
-
-      <div class="navbar-search float-left desktop-only">
-        <div class="navbar-search-form">
-          <label for="gsc-i-id1">This website</label>
-          <div id="google-search">
-            <gcse:search></gcse:search>
-          </div>
-        </div>
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/2tree" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">腰静</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Qingdao, China</small>
       </div>
+      
+      <div class="search" id="search-form-wrap">
 
-      <ul class="navbar-nav float-left">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search">
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech="">
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope="" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
         
-        <li><a href="/archives">Archives</a></li>
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
         
         
-        <li><a href="/categories">Categories</a></li>
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
         
         
-        <li><a href="/tags">Tags</a></li>
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
         
         
-        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
         
       </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/2tree" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/1byte8bit1" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
 
-      <ul class="navbar-nav user-nav float-right desktop-only">
-        <li class="user-nav-notification">
-          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
-        </li>
-        <li>
-          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li class="user-nav-logo">
-          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></a>
-        </li>
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope="" itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>学如逆水行舟。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MyBatis/">MyBatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective-C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-Cloud/">Spring Cloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/MyBatis/" style="font-size: 13px;">MyBatis</a> <a href="/tags/Objective-C/" style="font-size: 13px;">Objective-C</a> <a href="/tags/Spring-Cloud/" style="font-size: 13px;">Spring Cloud</a> <a href="/tags/Vue-js/" style="font-size: 14px;">Vue.js</a> <a href="/tags/微服务/" style="font-size: 13px;">微服务</a> <a href="/tags/技术/" style="font-size: 14px;">技术</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/01/04/test4/" class="title">test4</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-01-04T12:48:20.000Z" itemprop="datePublished">2019-01-04</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/01/04/test3/" class="title">test3</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-01-04T12:46:32.000Z" itemprop="datePublished">2019-01-04</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/01/02/test2/" class="title">test2</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-01-02T10:18:51.000Z" itemprop="datePublished">2019-01-02</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/01/02/test/" class="title">test</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-01-02T10:13:26.000Z" itemprop="datePublished">2019-01-02</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/01/02/mybatis-exc/" class="title">MyBatis语法总结</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-01-02T10:09:31.000Z" itemprop="datePublished">2019-01-02</time>
+              </p>
+            </div>
+          </li>
+          
       </ul>
     </div>
   </div>
-</nav>
-
-<div class="main-container">
   
 
-<div class="container-lg">
+    
+  </div>
+</aside>
+
   
+  <main class="main" role="main">
+  <article class="content article article-tags post-type-list" itemscope="">
+    <header class="article-header">
+      <h1 itemprop="name" class="hidden-xs">Tag: Vue.js</h1>
+      <p class="text-muted hidden-xs">Total 2 articles</p>
+      <nav role="navigation" id="nav-main" class="okayNav">
+        <ul>
+          <li><a href="/tags">All</a></li>
+          
+          <li><a href="/tags/Objective-C/">Objective-C</a></li>
+          
+          <li><a href="/tags/Vue-js/">Vue.js</a></li>
+          
+          <li><a href="/tags/技术/">技术</a></li>
+          
+          <li><a href="/tags/微服务/">微服务</a></li>
+          
+          <li><a href="/tags/MyBatis/">MyBatis</a></li>
+          
+          <li><a href="/tags/Spring-Cloud/">Spring Cloud</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <!-- /header -->
+    <div class="article-body">
+      <div class="row">
+        
+<div class="col-md-6">
+    
+<article class="panel panel-default hover-shadow hover-grow" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="panel-body">
+     <div class="article-meta">
+       <time datetime="2019-01-02T07:51:25.000Z" itemprop="datePublished">2019-01-02</time>
+     </div>
+     <h3 class="article-title" itemprop="name">
+       <a class="article-link" href="/2019/01/02/vue-life-cycle/">Vue.js生命周期理解</a>
+     </h3>
+   </div>
+   
+   <div class="panel-footer">
+     
+      <a href="/tags/Vue-js/" class="label label-default mb">Vue.js</a>
+     
+     
+   </div>
+   
+</article>
 
-<div class="blog-intro">
-  <div class="blog-intro-user">
-    <img class="avatar" src="https://octodex.github.com/images/baracktocat.jpg">
-    <div class="user-name">
-      <div class="blog-title">1BYTE = 8 BIT</div>
-      <div class="blog-author">腰静</div>
-        <ul class="user-detail mobile-only">
+
+</div>
+
+<div class="col-md-6">
     
-    <li>
-      <i class="fa fa-envelope-o"></i>
-      <a href="mailto:2binarytree@gmail.com">2binarytree@gmail.com</a>
-    </li>
-    
-    <li>
-      <i class="fa fa-link"></i>
-      <a href="https://1byte8bit.com">https://1byte8bit.com</a>
-    </li>
-  </ul>
+<article class="panel panel-default hover-shadow hover-grow" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="panel-body">
+     <div class="article-meta">
+       <time datetime="2018-12-18T05:37:16.000Z" itemprop="datePublished">2018-12-18</time>
+     </div>
+     <h3 class="article-title" itemprop="name">
+       <a class="article-link" href="/2018/12/18/front-vue-js-qa-and-summary/">前端开发Vue.js问题整理与总结</a>
+     </h3>
+   </div>
+   
+   <div class="panel-footer">
+     
+      <a href="/tags/Vue-js/" class="label label-default mb">Vue.js</a>
+     
+     
+   </div>
+   
+</article>
+
+
+</div>
+
+      </div>
     </div>
-    <div class="blog-description">
-      1byte8bit的博客
-    </div>
-  </div>
+  </article>
+   
+</main>
 
-  <ul class="user-detail desktop-only">
-    
-    <li>
-      <i class="fa fa-envelope-o"></i>
-      <a href="mailto:2binarytree@gmail.com">2binarytree@gmail.com</a>
-    </li>
-    
-    <li>
-      <i class="fa fa-link"></i>
-      <a href="https://1byte8bit.com">https://1byte8bit.com</a>
-    </li>
-  </ul>
-
-  <div class="social-media desktop-only">
-    <h4>Social Media</h4>
-    <ul>
-      
+  <footer class="footer" itemscope="" itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/2tree" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/1byte8bit1" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
     </ul>
-  </div>
-</div>
 
-
-  <div class="blog-detail">
-    
-<nav class="blog-detail-nav desktop-only">
-  <ul class="clearfix">
-    <li class="">
-      <a href="/">Overview</a></li>
-    <li class="">
-      <a href="/archives">Posts <span class="counter">10</span></a>
-    </li>
-    <li class="">
-      <a href="/categories">Categories <span class="counter">0</span></a></li>
-    <li class="selected">
-      <a href="/tags">Tags <span class="counter">6</span></a></li>
-  </ul>
-</nav>
-
-    <div class="body-secondary">
-      <ul class="archive-list">
-        
-        <li class="archive-list-item">
-          <h2><a href="/2019/01/02/vue-life-cycle/">Vue.js生命周期理解</a></h2>
-          <p>
-            ...
-          </p>
-          <ul class="tag-list clearfix">
-            
-            <li class="tag-list-item"><a href="/tags/Vue-js/">Vue.js</a></li>
-            
-          </ul>
-          <div class="post-info">
-            <span>
-              
-              <i class="fa fa-folder-open"></i> Uncategorized
-              
-            </span>
-            <span><i class="fa fa-tag"></i> 1 </span>
-            <span>Published {{moment(1546415485000).fromNow()}}</span>
-          </div>
-        </li>
-        
-        <li class="archive-list-item">
-          <h2><a href="/2018/12/18/front-vue-js-qa-and-summary/">前端开发Vue.js问题整理与总结</a></h2>
-          <p>
-               背景  
- 所在的项目上前端开发使用技术栈为Vue.js。 
- 本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。 
- 思路。  
-   测试代码高亮  
- 
-      1   2   3   4   5   6   7   8   9   10   11   12   13  ...
-          </p>
-          <ul class="tag-list clearfix">
-            
-            <li class="tag-list-item"><a href="/tags/Vue-js/">Vue.js</a></li>
-            
-          </ul>
-          <div class="post-info">
-            <span>
-              
-              <i class="fa fa-folder-open"></i> Uncategorized
-              
-            </span>
-            <span><i class="fa fa-tag"></i> 1 </span>
-            <span>Published {{moment(1545111436000).fromNow()}}</span>
-          </div>
-        </li>
-        
-      </ul>
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
     </div>
-  </div>
-</div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
 
-</div>
-
-<div class="footer-wrapper container">
-  <footer class="footer clearfix">
-    <div class="clearfix">
-    <a href="https://1byte8bit.com" class="footer-logo">
-      <i class="fa fa-github"></i>
-    </a>
-    <ul class="footer-social-link">
-      <li>© 2018 腰静</li>
-      <li><a href="https://1byte8bit.com">Home</a></li>
-      
-    </ul>
-    <div class="footer-theme-info">
-      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
-      by <a href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
-    </div>
-    </div>
-    
-  </footer>
-</div>
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
 
 
 
 
-<script src="/js/main.js"></script>
+
+
+
+
+
+
 
 </body>
 </html>
