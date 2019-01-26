@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://mvpinfo.com/2018/12/25/issues-reminders/</loc>
+    <lastmod>2019-01-26T13:11:13.495Z</lastmod>
+  </url>  <url>
     <loc>https://mvpinfo.com/2019/01/26/lslsl/</loc>
     <lastmod>2019-01-26T03:35:45.041Z</lastmod>
   </url>  <url>
@@ -24,9 +27,6 @@
   </url>  <url>
     <loc>https://mvpinfo.com/2018/12/17/micro-service/</loc>
     <lastmod>2019-01-03T05:58:35.318Z</lastmod>
-  </url>  <url>
-    <loc>https://mvpinfo.com/2018/12/25/issues-reminders/</loc>
-    <lastmod>2019-01-03T05:58:31.984Z</lastmod>
   </url>  <url>
     <loc>https://mvpinfo.com/2018/12/11/ios-init-oc-lang/</loc>
     <lastmod>2019-01-03T05:58:26.454Z</lastmod>
