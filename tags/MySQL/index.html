@@ -98,11 +98,15 @@
     </header>
     <div>
       
-        <h2 id="MySQL的优化方案有哪一些？"><a href="#MySQL的优化方案有哪一些？" class="headerlink" title="MySQL的优化方案有哪一些？"></a>MySQL的优化方案有哪一些？</h2><p><code>本文介绍一下优化SQL语句和优化索引。</code></p>
-<h3 id="本文记录MySQL-本文梗概如下"><a href="#本文记录MySQL-本文梗概如下" class="headerlink" title="本文记录MySQL 本文梗概如下:"></a>本文记录MySQL 本文梗概如下:</h3><ul>
-<li>优化SQL</li>
-<li>优化索引</li>
+        <h2 id="MySQL的优化方案有哪一些？"><a href="#MySQL的优化方案有哪一些？" class="headerlink" title="MySQL的优化方案有哪一些？"></a>MySQL的优化方案有哪一些？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 本文记录MySQL 本文梗概如下:</span><br><span class="line">* 优化SQL</span><br><span class="line">* 优化索引</span><br><span class="line">* 开启查询缓存</span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">* 配合使用Redis</span><br><span class="line">* MySQL主从复制</span><br><span class="line">* 优化MySQL自带的分区表</span><br><span class="line">* 垂直拆分,分解大系统,成为小系统,分布式系统</span><br><span class="line">* 水平拆分</span><br><span class="line">* 硬件上的升级、存储引擎、MySQL本身的配置文件</span><br><span class="line"></span><br><span class="line">## （一）优化SQL</span><br><span class="line">#### 1、通过MySQL自有的优化语句</span><br><span class="line">```优化SQL语句，通过脚本命令来了解执行率较低的语句，显示一下状态等。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>SHOW命令</li>
 </ul>
+<p>SHOW Status可以了解SQL的执行频率。可以显示日志，显示特定的数据库、表、索引以及进程还有权限表中的信息等等。<br>介绍一些常见的字段</p>
+<p>Innodb_rows_read:Select查询返回的行数。</p>
+<p>Innodb_rows_inserted:执行INSERT操作插入的行数。</p>
+<p>Innodb_rows_updated:执行UPDATE操作更新的行数。</p>
+<p>Innodb_rows_deleted:执行DELETE操作删除的行数。</p>
 
       
     </div>
