@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>by0b</title>
+  <title>优秀</title>
   <icon>https://www.gravatar.com/avatar/3563d1ddc1457652131bef3aa9d25ab0</icon>
   <subtitle>烦恼会飞</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://by0b.com/"/>
-  <updated>2019-03-07T11:21:53.390Z</updated>
+  <updated>2019-03-07T11:38:41.917Z</updated>
   <id>https://by0b.com/</id>
   
   <author>
-    <name>腰静</name>
+    <name>腰静.赵</name>
     <email>2binarytree@gmail.com</email>
   </author>
   
@@ -21,9 +21,9 @@
     <link href="https://by0b.com/2019/03/07/specification-dev/"/>
     <id>https://by0b.com/2019/03/07/specification-dev/</id>
     <published>2019-03-07T08:59:03.000Z</published>
-    <updated>2019-03-07T11:21:53.390Z</updated>
+    <updated>2019-03-07T11:38:41.917Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；<br><a id="more"></a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；<br><a id="more"></a><br>1、公共类中的方法最好不要动；<br>2、uuid要谨慎使用；<br>3、</p>]]></content>
     
     <summary type="html">
     
