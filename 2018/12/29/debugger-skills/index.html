@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://by0b.com">
-  <title>微服务模块的理解 | 优秀</title>
+  <title>前端后端数据交互过程例解与调试 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="项目微服务结构整体理解背景 各司其职、集中管理、存在单向或多向调用关系；">
-<meta name="keywords" content="微服务">
+  <meta name="description" content="背景前后端分离项目进行数据交互的时候，出现错误改如何快速定位调试。">
+<meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微服务模块的理解">
-<meta property="og:url" content="https://by0b.com/micro-service/index.html">
+<meta property="og:title" content="前端后端数据交互过程例解与调试">
+<meta property="og:url" content="https://by0b.com/2018/12/29/debugger-skills/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="项目微服务结构整体理解背景 各司其职、集中管理、存在单向或多向调用关系；">
+<meta property="og:description" content="背景前后端分离项目进行数据交互的时候，出现错误改如何快速定位调试。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-01-03T05:58:35.318Z">
+<meta property="og:updated_time" content="2019-01-03T05:58:08.294Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微服务模块的理解">
-<meta name="twitter:description" content="项目微服务结构整体理解背景 各司其职、集中管理、存在单向或多向调用关系；">
+<meta name="twitter:title" content="前端后端数据交互过程例解与调试">
+<meta name="twitter:description" content="背景前后端分离项目进行数据交互的时候，出现错误改如何快速定位调试。">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -147,44 +147,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-micro-service" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-debugger-skills" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      微服务模块的理解
+      前端后端数据交互过程例解与调试
     </h1>
   
 
         
-        <a href="/micro-service/" class="archive-article-date">
-  	<time datetime="2018-12-17T06:16:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-17</time>
+        <a href="/2018/12/29/debugger-skills/" class="archive-article-date">
+  	<time datetime="2018-12-29T06:53:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="项目微服务结构整体理解"><a href="#项目微服务结构整体理解" class="headerlink" title="项目微服务结构整体理解"></a>项目微服务结构整体理解</h2><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>各司其职、集中管理、存在单向或多向调用关系；<a id="more"></a>
-</li>
-</ul>
-<h2 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h2><ul>
-<li>提高迭代效率；</li>
-<li>降低开发黏连性；</li>
-<li>节约成本</li>
-</ul>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><h4 id="项目启动的入口CenterBootstrap"><a href="#项目启动的入口CenterBootstrap" class="headerlink" title="项目启动的入口CenterBootstrap"></a>项目启动的入口CenterBootstrap</h4><ul>
-<li>各项服务的注册、管理中心。</li>
-<li>微服务请求转发。<h4 id="鉴权（权限）服务AuthBootstrap"><a href="#鉴权（权限）服务AuthBootstrap" class="headerlink" title="鉴权（权限）服务AuthBootstrap"></a>鉴权（权限）服务AuthBootstrap</h4></li>
-<li>JWT处理权限<h4 id="字典服务DictBootstrap"><a href="#字典服务DictBootstrap" class="headerlink" title="字典服务DictBootstrap"></a>字典服务DictBootstrap</h4></li>
-<li>管理项目的数据字典。<h4 id="后台管理服务AdminBootstrap"><a href="#后台管理服务AdminBootstrap" class="headerlink" title="后台管理服务AdminBootstrap"></a>后台管理服务AdminBootstrap</h4></li>
-<li>连接数据库、处理数据。<h4 id="网关服务GateBootstrap"><a href="#网关服务GateBootstrap" class="headerlink" title="网关服务GateBootstrap"></a>网关服务GateBootstrap</h4></li>
-<li>接收前端的请求并转发至其他服务。</li>
-</ul>
-
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前后端分离项目进行数据交互的时候，出现错误改如何快速定位调试。<br><a id="more"></a></p>
+<h2 id="前后交互数据的过程"><a href="#前后交互数据的过程" class="headerlink" title="前后交互数据的过程"></a>前后交互数据的过程</h2>
       
 
       
@@ -197,7 +181,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微服务</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -216,18 +200,18 @@
   
 <nav id="article-nav">
   
-    <a href="/front-vue-js-qa-and-summary/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/01/02/vue-life-cycle/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          前端开发Vue.js问题整理与总结
+          Vue.js生命周期理解
         
       </div>
     </a>
   
   
-    <a href="/ios-init-oc-lang/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iOS开发基础之学习Objective-C笔记一</div>
+    <a href="/2018/12/25/issues-reminders/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">方案解决与思路提示</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -353,6 +337,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
@@ -361,7 +349,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
+                <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -369,7 +357,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -378,10 +366,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Spring Cloud</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
             
             <div class="clearfix"></div>
