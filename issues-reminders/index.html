@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://by0b.com">
-  <title>前后端开发中对数据类型的理解和笔记 | 优秀</title>
+  <title>方案解决与思路提示 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概要总结一下基础知识，关于最近前后端的开发中，对基础知识点的理解和重新认识；主要包括Java的List/Map、以及JSON格式的数据与数组转换的总结；">
-<meta name="keywords" content="总结">
+  <meta name="description" content="背景旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。">
+<meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前后端开发中对数据类型的理解和笔记">
-<meta property="og:url" content="https://by0b.com/2019/03/07/data-type-in-full-stack/index.html">
+<meta property="og:title" content="方案解决与思路提示">
+<meta property="og:url" content="https://by0b.com/issues-reminders/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="概要总结一下基础知识，关于最近前后端的开发中，对基础知识点的理解和重新认识；主要包括Java的List/Map、以及JSON格式的数据与数组转换的总结；">
+<meta property="og:description" content="背景旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-03-07T11:18:35.206Z">
+<meta property="og:updated_time" content="2019-01-26T13:11:13.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前后端开发中对数据类型的理解和笔记">
-<meta name="twitter:description" content="概要总结一下基础知识，关于最近前后端的开发中，对基础知识点的理解和重新认识；主要包括Java的List/Map、以及JSON格式的数据与数组转换的总结；">
+<meta name="twitter:title" content="方案解决与思路提示">
+<meta name="twitter:description" content="背景旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -147,81 +147,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-data-type-in-full-stack" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-issues-reminders" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      前后端开发中对数据类型的理解和笔记
+      方案解决与思路提示
     </h1>
   
 
         
-        <a href="/2019/03/07/data-type-in-full-stack/" class="archive-article-date">
-  	<time datetime="2019-03-07T07:55:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
+        <a href="/issues-reminders/" class="archive-article-date">
+  	<time datetime="2018-12-25T12:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>总结一下基础知识，关于最近前后端的开发中，对基础知识点的理解和重新认识；主要包括Java的List/Map、以及JSON格式的数据与数组转换的总结；<br><a id="more"></a></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>首先根据开发中的两个需求，描述记录；<br>1、在EHR系统开发中，对员工的特种作业证书进行筛选统计，筛选规则：将同一证书类型、同一证书名字、同一登记时间的，取变动时间最新的一条数据展示；<br>2、前台报表显示列项目，前端Vue使用ElementUI的穿梭器实现；用户可以[自定义显示]要显示的列项目；每个用户的设置不一样；</p>
-<h3 id="EHR中的解决描述记录"><a href="#EHR中的解决描述记录" class="headerlink" title="EHR中的解决描述记录"></a>EHR中的解决描述记录</h3><h5 id="思路和具体实现"><a href="#思路和具体实现" class="headerlink" title="思路和具体实现"></a>思路和具体实现</h5><p>员工的特种证书表中，冗余的数据太多，维护的太乱，一个证书可能有多次变动时间；数据的来源是从SAP生产800数据库中拉取过来，最新的记录没有标记；为了取数准确，每为员工的数据分两步取数：<br>1、先取出<b>不包括</b>在【同一证书名称、类型、登记时间】这个条件的数据。用<b>GROUP BY</b>分组语句查询出来；<br>2、再取出范围在【同一证书名称、类型、登记时间】这个条件的数据；<br>看下表结构（仅仅罗列了关键的字段）：</p>
-<table>
-<thead>
-<tr>
-<th>字段名称</th>
-<th>类型</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>employee_special_uuid</td>
-<td>varchar</td>
-<td>uuid</td>
-</tr>
-<tr>
-<td>employee_id</td>
-<td>varchar</td>
-<td>员工ID</td>
-</tr>
-<tr>
-<td>special_operations_type</td>
-<td>varchar</td>
-<td>证书类型</td>
-</tr>
-<tr>
-<td>special_operations_project</td>
-<td>varchar</td>
-<td>证书项目（名字）</td>
-</tr>
-<tr>
-<td>special_operations_record_date</td>
-<td>date</td>
-<td>登记日期</td>
-</tr>
-<tr>
-<td>sp_begin_date</td>
-<td>date</td>
-<td>变动日期</td>
-</tr>
-<tr>
-<td>sp_end_date</td>
-<td>date</td>
-<td>结束日期</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	 t.employee_id  ,</span><br><span class="line">	 t.special_operations_type  ,</span><br><span class="line">	 t.special_operations_project  ,</span><br><span class="line">	 t.special_operations_cert_code  ,</span><br><span class="line">	 t.special_operations_cert_date  ,</span><br><span class="line">	 t.special_operations_cert_end_date  ,</span><br><span class="line">	 t.special_operations_expire_date  ,</span><br><span class="line">	 t.special_operations_part_time  ,</span><br><span class="line">	 t.special_operations_status  ,</span><br><span class="line">	 t.special_operations_record_date  ,</span><br><span class="line">	 t.employee_special_uuid  ,</span><br><span class="line">	 t.special_operations_status_text  ,</span><br><span class="line">	 t.special_operations_part_time_text  ,</span><br><span class="line">	 t.special_operations_cert_org  ,</span><br><span class="line">	 t.special_operations_type_text  ,</span><br><span class="line">	 t.special_operations_project_text  ,</span><br><span class="line">	 t.sp_remark  ,</span><br><span class="line">	 t.sp_begin_date  ,</span><br><span class="line">	 t.sp_end_date</span><br><span class="line">FROM</span><br><span class="line">	m_special_operations t</span><br><span class="line">WHERE</span><br><span class="line">	(t.special_operations_type IN(</span><br><span class="line">		(</span><br><span class="line">			SELECT</span><br><span class="line">				t.special_operations_type</span><br><span class="line">			FROM</span><br><span class="line">				m_special_operations t</span><br><span class="line">			WHERE</span><br><span class="line">				t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">			AND t.special_operations_status = '01'</span><br><span class="line">			GROUP BY</span><br><span class="line">				t.special_operations_type</span><br><span class="line">			HAVING</span><br><span class="line">				count(t.special_operations_type) = 1</span><br><span class="line">		)</span><br><span class="line">	)</span><br><span class="line">or t.special_operations_project IN(</span><br><span class="line">	(</span><br><span class="line">		SELECT</span><br><span class="line">			t.special_operations_project</span><br><span class="line">		FROM</span><br><span class="line">			m_special_operations t</span><br><span class="line">		WHERE</span><br><span class="line">			t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">		AND t.special_operations_status = '01'</span><br><span class="line">		GROUP BY</span><br><span class="line">			t.special_operations_project</span><br><span class="line">		HAVING</span><br><span class="line">			count(t.special_operations_project) = 1</span><br><span class="line">	)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">or t.special_operations_record_date IN(</span><br><span class="line">	(</span><br><span class="line">		SELECT</span><br><span class="line">			t.special_operations_record_date</span><br><span class="line">		FROM</span><br><span class="line">			m_special_operations t</span><br><span class="line">		WHERE</span><br><span class="line">			t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">		AND t.special_operations_status = '01'</span><br><span class="line">		GROUP BY</span><br><span class="line">			t.special_operations_record_date</span><br><span class="line">		HAVING</span><br><span class="line">			count(t.special_operations_record_date) = 1</span><br><span class="line">	)</span><br><span class="line">)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">AND t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">AND t.special_operations_status = '01'</span><br><span class="line">group by </span><br><span class="line">	 t.employee_id  ,</span><br><span class="line">	 t.special_operations_type  ,</span><br><span class="line">	 t.special_operations_project  ,</span><br><span class="line">	 t.special_operations_cert_code  ,</span><br><span class="line">	 t.special_operations_cert_date  ,</span><br><span class="line">	 t.special_operations_cert_end_date  ,</span><br><span class="line">	 t.special_operations_expire_date  ,</span><br><span class="line">	 t.special_operations_part_time ,</span><br><span class="line">	 t.special_operations_status  ,</span><br><span class="line">	 t.special_operations_record_date  ,</span><br><span class="line">	 t.employee_special_uuid  ,</span><br><span class="line">	 t.special_operations_status_text  ,</span><br><span class="line">	 t.special_operations_part_time_text  ,</span><br><span class="line">	 t.special_operations_cert_org  ,</span><br><span class="line">	 t.special_operations_type_text  ,</span><br><span class="line">	 t.special_operations_project_text  ,</span><br><span class="line">	 t.sp_remark  ,</span><br><span class="line">	 t.sp_begin_date  ,</span><br><span class="line">	 t.sp_end_date</span><br><span class="line"></span><br><span class="line">order by t.sp_begin_date desc</span><br></pre></td></tr></table></figure>
-<p>上述语句能够将<b>不包括</b>在【同一证书名称、类型、登记时间】这个条件的数据。<b>GROUP BY</b>的用法不记录笔记；<br><b>取出范围在【同一证书名称、类型、登记时间】这个条件的数据</b>只要稍微改动一下查询条件即可，这样，先把要求的数据集先取出来，然后在通过Java代码去处理List即可；<br><b>最后一个order by t.sp_begin_date desc其实用处很大的，group by已经分组了，然后将最新的时间排在了结果集的最上面，对于后边的List处理起到了很方便的作用；</b><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	 t.employee_id  ,</span><br><span class="line">	 t.special_operations_type  ,</span><br><span class="line">	 t.special_operations_project  ,</span><br><span class="line">	 t.special_operations_cert_code  ,</span><br><span class="line">	 t.special_operations_cert_date  ,</span><br><span class="line">	 t.special_operations_cert_end_date  ,</span><br><span class="line">	 t.special_operations_expire_date  ,</span><br><span class="line">	 t.special_operations_part_time  ,</span><br><span class="line">	 t.special_operations_status  ,</span><br><span class="line">	 t.special_operations_record_date  ,</span><br><span class="line">	 t.employee_special_uuid  ,</span><br><span class="line">	 t.special_operations_status_text  ,</span><br><span class="line">	 t.special_operations_part_time_text  ,</span><br><span class="line">	 t.special_operations_cert_org  ,</span><br><span class="line">	 t.special_operations_type_text  ,</span><br><span class="line">	 t.special_operations_project_text  ,</span><br><span class="line">	 t.sp_remark  ,</span><br><span class="line">	 t.sp_begin_date  ,</span><br><span class="line">	 t.sp_end_date</span><br><span class="line">FROM</span><br><span class="line">	m_special_operations t</span><br><span class="line">WHERE</span><br><span class="line">	(t.special_operations_type IN(</span><br><span class="line">		(</span><br><span class="line">			SELECT</span><br><span class="line">				t.special_operations_type</span><br><span class="line">			FROM</span><br><span class="line">				m_special_operations t</span><br><span class="line">			WHERE</span><br><span class="line">				t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">			AND t.special_operations_status = '01'</span><br><span class="line">			GROUP BY</span><br><span class="line">				t.special_operations_type</span><br><span class="line">			HAVING</span><br><span class="line">				count(t.special_operations_type) &gt; 1</span><br><span class="line">		)</span><br><span class="line">	)</span><br><span class="line">and t.special_operations_project IN(</span><br><span class="line">	(</span><br><span class="line">		SELECT</span><br><span class="line">			t.special_operations_project</span><br><span class="line">		FROM</span><br><span class="line">			m_special_operations t</span><br><span class="line">		WHERE</span><br><span class="line">			t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">		AND t.special_operations_status = '01'</span><br><span class="line">		GROUP BY</span><br><span class="line">			t.special_operations_project</span><br><span class="line">		HAVING</span><br><span class="line">			count(t.special_operations_project) &gt; 1</span><br><span class="line">	)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">and t.special_operations_record_date IN(</span><br><span class="line">	(</span><br><span class="line">		SELECT</span><br><span class="line">			t.special_operations_record_date</span><br><span class="line">		FROM</span><br><span class="line">			m_special_operations t</span><br><span class="line">		WHERE</span><br><span class="line">			t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">		AND t.special_operations_status = '01'</span><br><span class="line">		GROUP BY</span><br><span class="line">			t.special_operations_record_date</span><br><span class="line">		HAVING</span><br><span class="line">			count(t.special_operations_record_date) &gt; 1</span><br><span class="line">	)</span><br><span class="line">)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">AND t.employee_id = #&#123;employeeId&#125;</span><br><span class="line">AND t.special_operations_status = '01'</span><br><span class="line">group by </span><br><span class="line">	 t.employee_id  ,</span><br><span class="line">	 t.special_operations_type  ,</span><br><span class="line">	 t.special_operations_project  ,</span><br><span class="line">	 t.special_operations_cert_code  ,</span><br><span class="line">	 t.special_operations_cert_date  ,</span><br><span class="line">	 t.special_operations_cert_end_date  ,</span><br><span class="line">	 t.special_operations_expire_date  ,</span><br><span class="line">	 t.special_operations_part_time ,</span><br><span class="line">	 t.special_operations_status  ,</span><br><span class="line">	 t.special_operations_record_date  ,</span><br><span class="line">	 t.employee_special_uuid  ,</span><br><span class="line">	 t.special_operations_status_text  ,</span><br><span class="line">	 t.special_operations_part_time_text  ,</span><br><span class="line">	 t.special_operations_cert_org  ,</span><br><span class="line">	 t.special_operations_type_text  ,</span><br><span class="line">	 t.special_operations_project_text  ,</span><br><span class="line">	 t.sp_remark  ,</span><br><span class="line">	 t.sp_begin_date  ,</span><br><span class="line">	 t.sp_end_date</span><br><span class="line"></span><br><span class="line">order by t.sp_begin_date desc</span><br></pre></td></tr></table></figure></p>
-<h5 id="Java代码的实现；"><a href="#Java代码的实现；" class="headerlink" title="Java代码的实现；"></a>Java代码的实现；</h5><p>先放上代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取资质信息（1、职称信息 2、职业资格 3、特种证书）</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> employeeId</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="meta">@GetMapping</span>(value = <span class="string">"/getPostionTitleData/&#123;employeeId&#125;"</span>)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ObjectRestResponse <span class="title">getPostionTitleData</span><span class="params">(@PathVariable String employeeId)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">    List&lt;MPostionTitle&gt; list1 = mPostionTitleBiz.selectPostionTitleByEmpId(employeeId);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 职业资格重复的记录</span></span><br><span class="line">    List&lt;MProQualifications&gt; mProQualificationsList = mProQualificationsBiz.selectProQuaById(employeeId);</span><br><span class="line">    <span class="comment">// 职业资格不重复的记录；</span></span><br><span class="line">    List&lt;MProQualifications&gt; notRepeatMpqList = mProQualificationsBiz.selectMProQuaNotRepeat(employeeId);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 特种证书重复的记录</span></span><br><span class="line">    List&lt;MSpecialOperations&gt; mSpecialOperationsList = mSpecialOperationsBiz.selectSpecOperationById(employeeId);</span><br><span class="line">    <span class="comment">// 特种证书不重复的记录</span></span><br><span class="line">    List&lt;MSpecialOperations&gt; notRepeatMsoList = mSpecialOperationsBiz.selectSpecOPerationNotRepeat(employeeId);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 处理职业资格重复的记录；</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mProQualificationsList.size() - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">        DateFormat df = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">        <span class="keyword">if</span> (mProQualificationsList.get(i).getEmployeeProType().equals(mProQualificationsList.get(i + <span class="number">1</span>))</span><br><span class="line">                &amp;&amp; mProQualificationsList.get(i).getEmployeeProLevel().equals(mProQualificationsList.get(i + <span class="number">1</span>))</span><br><span class="line">                &amp;&amp; mProQualificationsList.get(i).getEmployeeProDate().equals(mProQualificationsList.get(i + <span class="number">1</span>))) &#123;</span><br><span class="line">            <span class="keyword">if</span> (mProQualificationsList.get(i).getEmployeeProDate().getTime() &gt; mProQualificationsList.get(i + <span class="number">1</span>).getEmployeeProDate().getTime()) &#123;</span><br><span class="line">                mProQualificationsList.set((i + <span class="number">1</span>), mProQualificationsList.get(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 去除重复的记录</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mProQualificationsList.size() - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = mProQualificationsList.size() - <span class="number">1</span>; j &gt; i; j--) &#123;</span><br><span class="line">            mProQualificationsList.remove(j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    mProQualificationsList.addAll(notRepeatMpqList);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 处理特种证书重复的记录；</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mSpecialOperationsList.size() - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">        DateFormat df = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">        <span class="keyword">if</span> (mSpecialOperationsList.get(i).getSpecialOperationsType().equals(mSpecialOperationsList.get(i + <span class="number">1</span>).getSpecialOperationsType())</span><br><span class="line">                &amp;&amp; mSpecialOperationsList.get(i).getSpecialOperationsProject().equals(mSpecialOperationsList.get(i + <span class="number">1</span>).getSpecialOperationsProject())</span><br><span class="line">                &amp;&amp; mSpecialOperationsList.get(i).getSpecialOperationsRecordDate().equals(mSpecialOperationsList.get(i + <span class="number">1</span>).getSpecialOperationsRecordDate())) &#123;</span><br><span class="line">            <span class="keyword">if</span> (mSpecialOperationsList.get(i).getSpBeginDate().getTime() &gt; mSpecialOperationsList.get(i + <span class="number">1</span>).getSpBeginDate().getTime()) &#123;</span><br><span class="line">                mSpecialOperationsList.set((i + <span class="number">1</span>), mSpecialOperationsList.get(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 去除重复的msList</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mSpecialOperationsList.size() - <span class="number">1</span>; i ++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = mSpecialOperationsList.size() - <span class="number">1</span>;j &gt; i; j-- ) &#123;</span><br><span class="line">            <span class="keyword">if</span> (mSpecialOperationsList.get(i).equals(mSpecialOperationsList.get(j))) &#123;</span><br><span class="line">                mSpecialOperationsList.remove(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    mSpecialOperationsList.addAll(notRepeatMsoList);</span><br><span class="line"></span><br><span class="line">    Map map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    map.put(<span class="string">"titleData"</span>, list1);</span><br><span class="line">    map.put(<span class="string">"proQualificationsData"</span>, mProQualificationsList);</span><br><span class="line">    map.put(<span class="string">"specialWorkData"</span>, mSpecialOperationsList);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ObjectRestResponse().data(map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>拿特种证书来说，用for()循环，将List循环，for()的作用是将List中的元素全部设置为同一个元素，if条件语句是限定第i个元素和i+1个元素，如果相同，则是一样的，将i+1个元素设置为跟i一样，刚才上面说了，<b>最后一个order by t.sp_begin_date desc其实用处很大的，group by已经分组了，然后将最新的时间排在了结果集的最上面，对于List处理起到了很方便的作用；</b>处理之后的list，数据永远是符合要求的那一条；</p>
-<p>第二个for()循环的作用是出去list的重复值，其实只留下一个即可；用for()一个一个的remove()处理掉；这样剩余的就符合条件了；</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>总结上述的过程，操作List;</p>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。<br><a id="more"></a></p>
+<h3 id="微服务分机部署"><a href="#微服务分机部署" class="headerlink" title="微服务分机部署"></a>微服务分机部署</h3><ul>
+<li>分机部署，如果是不同服务商的服务器，加载速度会变得很慢。可以使用CDN加速。即使是同一个运营商不同地域的，也会这样。</li>
+<li>记得开放端口和设置安全组规则（比如阿里云的），想当于设置白名单。</li>
+<li>微服务的占用性能比较大，如果在出现线程被自动kill的现象，要即使查看是不是内存不足导致，从而出发了kill最大内存的进程。</li>
+</ul>
+<h3 id="整理自己的资料"><a href="#整理自己的资料" class="headerlink" title="整理自己的资料"></a>整理自己的资料</h3><ul>
+<li>学会使用标签。</li>
+<li>Notes是个好东西。</li>
+<li>之后每份重要的文件都要放上标签，便于查找。</li>
+<li>自己的资料库要形成索引。</li>
+</ul>
 
       
 
@@ -235,7 +192,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -254,18 +211,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/07/specification-dev/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/debugger-skills/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          开发规范笔记
+          前端后端数据交互过程例解与调试
         
       </div>
     </a>
   
   
-    <a href="/2019/01/26/mysql-comtimization/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MySQL常见问题及优化</div>
+    <a href="/server-spring-cloud-qa-and-summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">后端开发开发遇到的问题和总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -391,15 +348,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技术</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -407,11 +356,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
+                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Spring Cloud</a>
+                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -420,6 +369,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Spring Cloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
             
             <div class="clearfix"></div>

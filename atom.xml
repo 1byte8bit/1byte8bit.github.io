@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://by0b.com/"/>
-  <updated>2019-03-07T11:38:41.917Z</updated>
+  <updated>2019-03-07T14:24:04.448Z</updated>
   <id>https://by0b.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>开发规范笔记</title>
-    <link href="https://by0b.com/2019/03/07/specification-dev/"/>
-    <id>https://by0b.com/2019/03/07/specification-dev/</id>
+    <link href="https://by0b.com/specification-dev/"/>
+    <id>https://by0b.com/specification-dev/</id>
     <published>2019-03-07T08:59:03.000Z</published>
-    <updated>2019-03-07T11:38:41.917Z</updated>
+    <updated>2019-03-07T14:24:04.448Z</updated>
     
     <content type="html"><![CDATA[<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；<br><a id="more"></a><br>1、公共类中的方法最好不要动；<br>2、uuid要谨慎使用；<br>3、</p>]]></content>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>前后端开发中对数据类型的理解和笔记</title>
-    <link href="https://by0b.com/2019/03/07/data-type-in-full-stack/"/>
-    <id>https://by0b.com/2019/03/07/data-type-in-full-stack/</id>
+    <link href="https://by0b.com/data-type-in-full-stack/"/>
+    <id>https://by0b.com/data-type-in-full-stack/</id>
     <published>2019-03-07T07:55:31.000Z</published>
     <updated>2019-03-07T11:18:35.206Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>MySQL常见问题及优化</title>
-    <link href="https://by0b.com/2019/01/26/mysql-comtimization/"/>
-    <id>https://by0b.com/2019/01/26/mysql-comtimization/</id>
+    <link href="https://by0b.com/mysql-comtimization/"/>
+    <id>https://by0b.com/mysql-comtimization/</id>
     <published>2019-01-26T03:35:45.000Z</published>
     <updated>2019-02-09T18:07:27.485Z</updated>
     
@@ -82,8 +82,8 @@
   
   <entry>
     <title>MyBatis语法总结</title>
-    <link href="https://by0b.com/2019/01/02/mybatis-exc/"/>
-    <id>https://by0b.com/2019/01/02/mybatis-exc/</id>
+    <link href="https://by0b.com/mybatis-exc/"/>
+    <id>https://by0b.com/mybatis-exc/</id>
     <published>2019-01-02T10:09:31.000Z</published>
     <updated>2019-01-03T05:58:37.774Z</updated>
     
@@ -103,8 +103,8 @@
   
   <entry>
     <title>Vue.js生命周期理解</title>
-    <link href="https://by0b.com/2019/01/02/vue-life-cycle/"/>
-    <id>https://by0b.com/2019/01/02/vue-life-cycle/</id>
+    <link href="https://by0b.com/vue-life-cycle/"/>
+    <id>https://by0b.com/vue-life-cycle/</id>
     <published>2019-01-02T07:51:25.000Z</published>
     <updated>2019-01-02T10:10:13.830Z</updated>
     
@@ -119,8 +119,8 @@
   
   <entry>
     <title>前端后端数据交互过程例解与调试</title>
-    <link href="https://by0b.com/2018/12/29/debugger-skills/"/>
-    <id>https://by0b.com/2018/12/29/debugger-skills/</id>
+    <link href="https://by0b.com/debugger-skills/"/>
+    <id>https://by0b.com/debugger-skills/</id>
     <published>2018-12-29T06:53:48.000Z</published>
     <updated>2019-01-03T05:58:08.294Z</updated>
     
@@ -139,8 +139,8 @@
   
   <entry>
     <title>方案解决与思路提示</title>
-    <link href="https://by0b.com/2018/12/25/issues-reminders/"/>
-    <id>https://by0b.com/2018/12/25/issues-reminders/</id>
+    <link href="https://by0b.com/issues-reminders/"/>
+    <id>https://by0b.com/issues-reminders/</id>
     <published>2018-12-25T12:08:43.000Z</published>
     <updated>2019-01-26T13:11:13.495Z</updated>
     
@@ -159,8 +159,8 @@
   
   <entry>
     <title>后端开发开发遇到的问题和总结</title>
-    <link href="https://by0b.com/2018/12/19/server-spring-cloud-qa-and-summary/"/>
-    <id>https://by0b.com/2018/12/19/server-spring-cloud-qa-and-summary/</id>
+    <link href="https://by0b.com/server-spring-cloud-qa-and-summary/"/>
+    <id>https://by0b.com/server-spring-cloud-qa-and-summary/</id>
     <published>2018-12-19T00:26:48.000Z</published>
     <updated>2019-02-27T09:10:33.655Z</updated>
     
@@ -179,8 +179,8 @@
   
   <entry>
     <title>前端开发Vue.js问题整理与总结</title>
-    <link href="https://by0b.com/2018/12/18/front-vue-js-qa-and-summary/"/>
-    <id>https://by0b.com/2018/12/18/front-vue-js-qa-and-summary/</id>
+    <link href="https://by0b.com/front-vue-js-qa-and-summary/"/>
+    <id>https://by0b.com/front-vue-js-qa-and-summary/</id>
     <published>2018-12-18T05:37:16.000Z</published>
     <updated>2019-01-03T05:58:14.529Z</updated>
     
@@ -202,8 +202,8 @@
   
   <entry>
     <title>微服务模块的理解</title>
-    <link href="https://by0b.com/2018/12/17/micro-service/"/>
-    <id>https://by0b.com/2018/12/17/micro-service/</id>
+    <link href="https://by0b.com/micro-service/"/>
+    <id>https://by0b.com/micro-service/</id>
     <published>2018-12-17T06:16:51.000Z</published>
     <updated>2019-01-03T05:58:35.318Z</updated>
     
@@ -223,8 +223,8 @@
   
   <entry>
     <title>iOS开发基础之学习Objective-C笔记一</title>
-    <link href="https://by0b.com/2018/12/11/ios-init-oc-lang/"/>
-    <id>https://by0b.com/2018/12/11/ios-init-oc-lang/</id>
+    <link href="https://by0b.com/ios-init-oc-lang/"/>
+    <id>https://by0b.com/ios-init-oc-lang/</id>
     <published>2018-12-11T13:11:22.000Z</published>
     <updated>2019-01-03T05:58:26.454Z</updated>
     

@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://by0b.com">
-  <title>MyBatis语法总结 | 优秀</title>
+  <title>后端开发开发遇到的问题和总结 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
-<meta name="keywords" content="MyBatis">
+  <meta name="description" content="背景微服务开发中基础知识整理和技巧整理。">
+<meta name="keywords" content="Spring Cloud">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MyBatis语法总结">
-<meta property="og:url" content="https://by0b.com/2019/01/02/mybatis-exc/index.html">
+<meta property="og:title" content="后端开发开发遇到的问题和总结">
+<meta property="og:url" content="https://by0b.com/server-spring-cloud-qa-and-summary/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
+<meta property="og:description" content="背景微服务开发中基础知识整理和技巧整理。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-01-03T05:58:37.774Z">
+<meta property="og:updated_time" content="2019-02-27T09:10:33.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyBatis语法总结">
-<meta name="twitter:description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
+<meta name="twitter:title" content="后端开发开发遇到的问题和总结">
+<meta name="twitter:description" content="背景微服务开发中基础知识整理和技巧整理。">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -147,31 +147,46 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mybatis-exc" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-server-spring-cloud-qa-and-summary" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MyBatis语法总结
+      后端开发开发遇到的问题和总结
     </h1>
   
 
         
-        <a href="/2019/01/02/mybatis-exc/" class="archive-article-date">
-  	<time datetime="2019-01-02T10:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-02</time>
+        <a href="/server-spring-cloud-qa-and-summary/" class="archive-article-date">
+  	<time datetime="2018-12-19T00:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。<a id="more"></a>
-</li>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>微服务开发中基础知识整理和技巧整理。<br><a id="more"></a></p>
+<h2 id="生日跨年查询"><a href="#生日跨年查询" class="headerlink" title="生日跨年查询"></a>生日跨年查询</h2><p>代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"selectByBirthday"</span> parameterType=<span class="string">"com.security.common.entity.PageExample"</span> resultMap=<span class="string">"BaseResultMap"</span>&gt;</span><br><span class="line">    select a.* from (</span><br><span class="line">    SELECT</span><br><span class="line">    t.*, y.position_name</span><br><span class="line">    FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">    LEFT JOIN m_position y ON t.position_id = y.position_id</span><br><span class="line">    WHERE</span><br><span class="line">    t.employee_id IS NOT NULL</span><br><span class="line">    &lt;<span class="keyword">if</span> test=<span class="string">"data.startDataBirthdayPoint != null and data.startDataBirthdayPoint != '' and data.endDataBirthdayPoint != null and data.endDataBirthdayPoint !=''"</span>&gt;</span><br><span class="line">        AND DATE_FORMAT(t.employee_birthday , '%m%d') BETWEEN #&#123;data.startDataBirthdayPoint&#125; AND #&#123;data.endDataBirthdayPoint&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    UNION ALL</span><br><span class="line">    SELECT</span><br><span class="line">    t.*, y.position_name</span><br><span class="line">    FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">    LEFT JOIN m_position y ON t.position_id = y.position_id</span><br><span class="line">    WHERE</span><br><span class="line">    t.employee_id IS NOT NULL</span><br><span class="line">    &lt;<span class="keyword">if</span> test=<span class="string">"data.startDataBirthdayPoint != null and data.startDataBirthdayPoint != '' and data.endDataBirthdayPoint != null and data.endDataBirthdayPoint !=''"</span>&gt;</span><br><span class="line">        <span class="function">AND <span class="title">DATE_FORMAT</span><span class="params">(t.employee_birthday , <span class="string">'%m%d'</span>)</span> BETWEEN #</span>&#123;data.startDataBirthdayPoint&#125; AND <span class="string">'1231'</span></span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    UNION ALL</span><br><span class="line">    SELECT</span><br><span class="line">    t.*, y.position_name</span><br><span class="line">    FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">    LEFT JOIN m_position y ON t.position_id = y.position_id</span><br><span class="line">    WHERE</span><br><span class="line">    t.employee_id IS NOT NULL</span><br><span class="line">    &lt;<span class="keyword">if</span> test=<span class="string">"data.startDataBirthdayPoint != null and data.startDataBirthdayPoint != '' and data.endDataBirthdayPoint != null and data.endDataBirthdayPoint !=''"</span>&gt;</span><br><span class="line">        <span class="function">AND <span class="title">DATE_FORMAT</span><span class="params">(t.employee_birthday , <span class="string">'%m%d'</span>)</span> BETWEEN '0101' AND #</span>&#123;data.endDataBirthdayPoint&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    ) as a</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>查询生日，将年份截取，只传入月和日。</li>
+<li>在跨年处理的时候，需要将时间截断一下。开始的时间到1231，作为一个阶段，从0101到终止的时间，作为第二个阶段。</li>
 </ul>
-<h2 id="MyBatis中的标签"><a href="#MyBatis中的标签" class="headerlink" title="MyBatis中的标签"></a>MyBatis中的<where></where>标签</h2>
+<h4 id="有第二种方法但是不推荐这样写"><a href="#有第二种方法但是不推荐这样写" class="headerlink" title="有第二种方法但是不推荐这样写"></a>有第二种方法但是不推荐这样写</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">    *</span><br><span class="line">FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">WHERE(date_add(t.employee_birthday ,<span class="function">INTERVAL <span class="title">TIMESTAMPDIFF</span><span class="params">(YEAR ,t.employee_birthday ,DATE_FORMAT(now()</span> , '%Y-%m-%d')) YEAR))</span></span><br><span class="line"><span class="function">    BETWEEN '2018-12-01' AND '2019-01-15'</span></span><br><span class="line"><span class="function"><span class="title">OR</span><span class="params">(date_add(t.employee_birthday ,INTERVAL TIMESTAMPDIFF(YEAR ,t.employee_birthday ,DATE_FORMAT(now()</span> , '%Y-%m-%d'))+1 YEAR))</span></span><br><span class="line"><span class="function">    BETWEEN '2018-12-01' AND '2019-01-15'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>上述代码使用Navicat的Beautify SQL功能美化整理</code></li>
+<li>也能实现跨年查询，还需要另外加一部分</li>
+<li>这样的问题是函数比较多，每次将所有的用户的生日全部改成查询起始时间点的所在年份，如果人多，性能会比较低。</li>
+</ul>
+<h2 id="MyBatis映射文件中的注意事项"><a href="#MyBatis映射文件中的注意事项" class="headerlink" title="MyBatis映射文件中的注意事项"></a>MyBatis映射文件中的注意事项</h2><ul>
+<li>ResultMap中子标签<code>&lt;result/&gt;</code>标签中的<code>property</code>和<code>column</code>对应字段必须所在的<code>entity</code>实体类中；</li>
+<li>如果<code>entity</code>实体类中存在，但是没有写在<code>ResultMap</code>中，则不显示；</li>
+<li><code>&lt;if&gt;</code>标签中存在<code>if</code>条件，如果外层关联过许多表的话，查询出的数据结果集可能会用重复，因此，限制条件必须要放到外层，而不是写在<code>&lt;if&gt;</code>标签中；</li>
+<li>在<code>Navicate</code>中的<code>union all</code>语句是能够正确查询的，但是放到<code>mapper</code>映射文件中，需要加一层，<code>select a.* from (...) a</code>；</li>
+<li>MyBatis中不支持通常写法的大于号和小于号，这里需要转义：大于号：<code>&amp;gt;</code>，小于号：<code>&amp;lt;</code>；</li>
+</ul>
+
       
 
       
@@ -184,7 +199,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Spring Cloud</a>
         		</li>
       		
 		</ul>
@@ -203,18 +218,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/01/26/mysql-comtimization/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/issues-reminders/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MySQL常见问题及优化
+          方案解决与思路提示
         
       </div>
     </a>
   
   
-    <a href="/2019/01/02/vue-life-cycle/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue.js生命周期理解</div>
+    <a href="/front-vue-js-qa-and-summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端开发Vue.js问题整理与总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -340,15 +355,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技术</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -356,11 +363,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
+                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Spring Cloud</a>
+                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -369,6 +376,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Spring Cloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
             
             <div class="clearfix"></div>
