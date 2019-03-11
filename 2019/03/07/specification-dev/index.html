@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="优秀">
 <meta property="og:description" content="概要日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-03-08T02:22:17.938Z">
+<meta property="og:updated_time" content="2019-03-11T06:56:53.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开发规范笔记">
 <meta name="twitter:description" content="概要日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；">
@@ -167,7 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；<br><a id="more"></a><br>1、公共类中的方法最好不要动；<br>2、uuid要谨慎使用；<br>3、公共的方法要放到公共的类中；<br>4、业务类的方法比较多，取名字要规范一些，长点不要紧，但是一定要读出来方法的作用是什么；如果表达不出来，加上必要的注释；<br>5、</p>
+        <h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；<br><a id="more"></a><br>1、公共类中的方法最好不要动；<br>2、uuid要谨慎使用；<br>3、公共的方法要放到公共的类中；<br>4、业务类的方法比较多，取名字要规范一些，长点不要紧，但是一定要读出来方法的作用是什么；如果表达不出来，加上必要的注释；<br>5、尽量不要捕获类似Exception通用异常，而是捕获特定的异常，具体到哪一种子类型；<br>6、在复杂的生产系统中，标准出错STERR不是合适的输出选项，尤其是分布式系统，最好使用产品日志；详细的输出到日志系统中；STREE无法找到堆栈轨迹；<br>不要在<b>catch</b>代码块中直接<a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Throwable.html#printStackTrace--" target="_blank" rel="noopener">printStackTrace()</a></p>
 
       
 
@@ -332,11 +332,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
+                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Objective-C</a>
+                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
               </li>
              
               <li class="article-tag-list-item">
