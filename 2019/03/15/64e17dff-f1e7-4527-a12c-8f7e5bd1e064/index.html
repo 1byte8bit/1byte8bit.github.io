@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://by0b.com">
-  <title>Archives: 2018/12 | 优秀</title>
+  <title>MyBatis映射文件中的注意事项 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="优秀">
-<meta property="og:type" content="website">
-<meta property="og:title" content="优秀">
-<meta property="og:url" content="https://by0b.com/archives/2018/12/index.html">
+  <meta name="description" content="1、概要在写MyBatis的xml映射文件的时候，有一些需要注意的点：">
+<meta name="keywords" content="MyBatis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatis映射文件中的注意事项">
+<meta property="og:url" content="https://by0b.com/2019/03/15/64e17dff-f1e7-4527-a12c-8f7e5bd1e064/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="优秀">
+<meta property="og:description" content="1、概要在写MyBatis的xml映射文件的时候，有一些需要注意的点：">
 <meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-03-15T05:22:24.124Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优秀">
-<meta name="twitter:description" content="优秀">
+<meta name="twitter:title" content="MyBatis映射文件中的注意事项">
+<meta name="twitter:description" content="1、概要在写MyBatis的xml映射文件的时候，有一些需要注意的点：">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -145,250 +147,102 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-64e17dff-f1e7-4527-a12c-8f7e5bd1e064" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MyBatis映射文件中的注意事项
+    </h1>
+  
+
+        
+        <a href="/2019/03/15/64e17dff-f1e7-4527-a12c-8f7e5bd1e064/" class="archive-article-date">
+  	<time datetime="2019-03-15T05:20:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h3><p>在写MyBatis的xml映射文件的时候，有一些需要注意的点：<br><a id="more"></a></p>
+<h3 id="2、具体内容："><a href="#2、具体内容：" class="headerlink" title="2、具体内容："></a>2、具体内容：</h3><ul>
+<li>ResultMap中子标签<code>&lt;result/&gt;</code>标签中的<code>property</code>和<code>column</code>对应字段必须所在的<code>entity</code>实体类中；</li>
+<li>如果<code>entity</code>实体类中存在，但是没有写在<code>ResultMap</code>中，则不显示；</li>
+<li><code>&lt;if&gt;</code>标签中存在<code>if</code>条件，如果外层关联过许多表的话，查询出的数据结果集可能会用重复，因此，限制条件必须要放到外层，而不是写在<code>&lt;if&gt;</code>标签中；</li>
+<li>在<code>Navicate</code>中的<code>union all</code>语句是能够正确查询的，但是放到<code>mapper</code>映射文件中，需要加一层，<code>select a.* from (...) a</code>；</li>
+<li>MyBatis中不支持通常写法的大于号和小于号，这里需要转义：大于号：<code>&amp;gt;</code>，小于号：<code>&amp;lt;</code>；</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/29/debugger-skills/" class="archive-article-date">
-  	<time datetime="2018-12-29T06:53:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/29/debugger-skills/">前端后端数据交互过程例解与调试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/25/issues-reminders/" class="archive-article-date">
-  	<time datetime="2018-12-25T12:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/12/517e01df-a412-4fb6-8386-9d91574035f6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git笔记及理解(不断补充)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/25/issues-reminders/">方案解决与思路提示</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/" class="archive-article-date">
-  	<time datetime="2018-12-19T00:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/">EHR系统员工生日提醒（跨年查询）总结与笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Spring Cloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/18/front-vue-js-qa-and-summary/" class="archive-article-date">
-  	<time datetime="2018-12-18T05:37:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/18/front-vue-js-qa-and-summary/">前端开发Vue.js问题整理与总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Vue.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/17/micro-service/" class="archive-article-date">
-  	<time datetime="2018-12-17T06:16:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/17/micro-service/">微服务模块的理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微服务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/ios-init-oc-lang/" class="archive-article-date">
-  	<time datetime="2018-12-11T13:11:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/ios-init-oc-lang/">iOS开发基础之学习Objective-C笔记一</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -411,8 +265,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
