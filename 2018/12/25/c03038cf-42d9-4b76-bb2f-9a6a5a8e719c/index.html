@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://by0b.com">
-  <title>MyBatis语法总结 | 优秀</title>
+  <title>方案解决与思路提示 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
-<meta name="keywords" content="MyBatis">
+  <meta name="description" content="背景旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。">
+<meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MyBatis语法总结">
-<meta property="og:url" content="https://by0b.com/2019/01/02/mybatis-exc/index.html">
+<meta property="og:title" content="方案解决与思路提示">
+<meta property="og:url" content="https://by0b.com/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
+<meta property="og:description" content="背景旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-01-03T05:58:37.774Z">
+<meta property="og:updated_time" content="2019-03-15T05:54:35.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyBatis语法总结">
-<meta name="twitter:description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
+<meta name="twitter:title" content="方案解决与思路提示">
+<meta name="twitter:description" content="背景旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -147,31 +147,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mybatis-exc" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-c03038cf-42d9-4b76-bb2f-9a6a5a8e719c" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MyBatis语法总结
+      方案解决与思路提示
     </h1>
   
 
         
-        <a href="/2019/01/02/mybatis-exc/" class="archive-article-date">
-  	<time datetime="2019-01-02T10:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-02</time>
+        <a href="/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/" class="archive-article-date">
+  	<time datetime="2018-12-25T12:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。<a id="more"></a>
-</li>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>旨在积累一些问题的解决方案和思路，下次出现快速解决。少走弯路；提高效率。<br><a id="more"></a></p>
+<h3 id="微服务分机部署"><a href="#微服务分机部署" class="headerlink" title="微服务分机部署"></a>微服务分机部署</h3><ul>
+<li>分机部署，如果是不同服务商的服务器，加载速度会变得很慢。可以使用CDN加速。即使是同一个运营商不同地域的，也会这样。</li>
+<li>记得开放端口和设置安全组规则（比如阿里云的），想当于设置白名单。</li>
+<li>微服务的占用性能比较大，如果在出现线程被自动kill的现象，要即使查看是不是内存不足导致，从而出发了kill最大内存的进程。</li>
 </ul>
-<h2 id="MyBatis中的标签"><a href="#MyBatis中的标签" class="headerlink" title="MyBatis中的标签"></a>MyBatis中的<where></where>标签</h2>
+<h3 id="整理自己的资料"><a href="#整理自己的资料" class="headerlink" title="整理自己的资料"></a>整理自己的资料</h3><ul>
+<li>学会使用标签。</li>
+<li>Notes是个好东西。</li>
+<li>之后每份重要的文件都要放上标签，便于查找。</li>
+<li>自己的资料库要形成索引。</li>
+</ul>
+
       
 
       
@@ -184,7 +192,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -203,18 +211,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/01/26/mysql-comtimization/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MySQL常见问题及优化
+          前端后端数据交互过程例解与调试
         
       </div>
     </a>
   
   
-    <a href="/2019/01/02/vue-life-cycle/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue.js生命周期理解</div>
+    <a href="/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">EHR系统员工生日提醒（跨年查询）总结与笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,7 +356,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -356,15 +368,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -373,10 +385,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微服务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
             
             <div class="clearfix"></div>

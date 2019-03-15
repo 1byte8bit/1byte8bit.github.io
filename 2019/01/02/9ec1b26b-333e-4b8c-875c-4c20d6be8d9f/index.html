@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://by0b.com">
-  <title>iOS开发基础之学习Objective-C笔记一 | 优秀</title>
+  <title>MyBatis语法总结 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言">
-<meta name="keywords" content="Objective-C">
+  <meta name="description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
+<meta name="keywords" content="MyBatis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS开发基础之学习Objective-C笔记一">
-<meta property="og:url" content="https://by0b.com/2018/12/11/ios-init-oc-lang/index.html">
+<meta property="og:title" content="MyBatis语法总结">
+<meta property="og:url" content="https://by0b.com/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="前言">
+<meta property="og:description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-01-03T05:58:26.454Z">
+<meta property="og:updated_time" content="2019-03-15T05:55:15.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS开发基础之学习Objective-C笔记一">
-<meta name="twitter:description" content="前言">
+<meta name="twitter:title" content="MyBatis语法总结">
+<meta name="twitter:description" content="背景 MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -147,40 +147,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ios-init-oc-lang" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-9ec1b26b-333e-4b8c-875c-4c20d6be8d9f" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      iOS开发基础之学习Objective-C笔记一
+      MyBatis语法总结
     </h1>
   
 
         
-        <a href="/2018/12/11/ios-init-oc-lang/" class="archive-article-date">
-  	<time datetime="2018-12-11T13:11:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
+        <a href="/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/" class="archive-article-date">
+  	<time datetime="2019-01-02T10:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><a id="more"></a>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>学习一门新的手艺。</li>
-<li>做个小的Demo，解决自己对于现有的某些工具不能满足自己需求的痛点。</li>
-<li>Apple Store一些应用需要花钱。</li>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
+<li>MyBatis在一些情况下，与在MySQL里面直接查询两者的运行情况（此处无关结果集）不一定是一样的，有些语句在MyBatis中运行是报错的。<a id="more"></a>
+</li>
 </ul>
-<h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><ul>
-<li>第一、先看书。重点关注一下指针这块。</li>
-<li>第二、照着实例写一写UI。画一画界面。</li>
-<li>第三、写一写后台的逻辑。实现一些小的功能。</li>
-<li>第四、整合记录一下笔记和发布一下源码。提升一下。</li>
-<li>第五、规划一个tools的功能，写计划书，准备开发。</li>
-</ul>
-
+<h2 id="MyBatis中的标签"><a href="#MyBatis中的标签" class="headerlink" title="MyBatis中的标签"></a>MyBatis中的<where></where>标签</h2>
       
 
       
@@ -193,7 +184,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
         		</li>
       		
 		</ul>
@@ -212,15 +203,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/17/micro-service/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/01/26/5a626726-4e1c-41ae-b704-8e4331860a5a/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          微服务模块的理解
+          MySQL常见问题及优化
         
       </div>
     </a>
   
+  
+    <a href="/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue.js生命周期理解</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -352,7 +348,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -360,15 +360,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -377,10 +377,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微服务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
             
             <div class="clearfix"></div>
