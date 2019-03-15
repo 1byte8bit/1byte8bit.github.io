@@ -5,9 +5,9 @@
   <subtitle>烦恼会飞</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://by0b.com/"/>
+  <link href="https://youxiu.net/"/>
   <updated>2019-03-15T05:22:24.124Z</updated>
-  <id>https://by0b.com/</id>
+  <id>https://youxiu.net/</id>
   
   <author>
     <name>腰静.赵</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>MyBatis映射文件中的注意事项</title>
-    <link href="https://by0b.com/2019/03/15/64e17dff-f1e7-4527-a12c-8f7e5bd1e064/"/>
-    <id>https://by0b.com/2019/03/15/64e17dff-f1e7-4527-a12c-8f7e5bd1e064/</id>
+    <link href="https://youxiu.net/2019/03/15/64e17dff-f1e7-4527-a12c-8f7e5bd1e064/"/>
+    <id>https://youxiu.net/2019/03/15/64e17dff-f1e7-4527-a12c-8f7e5bd1e064/</id>
     <published>2019-03-15T05:20:28.000Z</published>
     <updated>2019-03-15T05:22:24.124Z</updated>
     
@@ -32,14 +32,14 @@
     </summary>
     
     
-      <category term="MyBatis" scheme="https://by0b.com/tags/MyBatis/"/>
+      <category term="MyBatis" scheme="https://youxiu.net/tags/MyBatis/"/>
     
   </entry>
   
   <entry>
     <title>Git笔记及理解(不断补充)</title>
-    <link href="https://by0b.com/2019/03/12/517e01df-a412-4fb6-8386-9d91574035f6/"/>
-    <id>https://by0b.com/2019/03/12/517e01df-a412-4fb6-8386-9d91574035f6/</id>
+    <link href="https://youxiu.net/2019/03/12/517e01df-a412-4fb6-8386-9d91574035f6/"/>
+    <id>https://youxiu.net/2019/03/12/517e01df-a412-4fb6-8386-9d91574035f6/</id>
     <published>2019-03-12T02:46:41.000Z</published>
     <updated>2019-03-14T09:22:08.660Z</updated>
     
@@ -52,14 +52,14 @@
     </summary>
     
     
-      <category term="Git" scheme="https://by0b.com/tags/Git/"/>
+      <category term="Git" scheme="https://youxiu.net/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Spring容器和Bean的关系、注解笔记</title>
-    <link href="https://by0b.com/2019/03/12/b2ba0f8c-51ee-4f62-ab87-c572ca411bc7/"/>
-    <id>https://by0b.com/2019/03/12/b2ba0f8c-51ee-4f62-ab87-c572ca411bc7/</id>
+    <link href="https://youxiu.net/2019/03/12/b2ba0f8c-51ee-4f62-ab87-c572ca411bc7/"/>
+    <id>https://youxiu.net/2019/03/12/b2ba0f8c-51ee-4f62-ab87-c572ca411bc7/</id>
     <published>2019-03-12T02:18:25.000Z</published>
     <updated>2019-03-12T02:38:17.029Z</updated>
     
@@ -68,14 +68,14 @@
     </summary>
     
     
-      <category term="Spring" scheme="https://by0b.com/tags/Spring/"/>
+      <category term="Spring" scheme="https://youxiu.net/tags/Spring/"/>
     
   </entry>
   
   <entry>
     <title>开发规范笔记</title>
-    <link href="https://by0b.com/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/"/>
-    <id>https://by0b.com/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/</id>
+    <link href="https://youxiu.net/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/"/>
+    <id>https://youxiu.net/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/</id>
     <published>2019-03-07T08:59:03.000Z</published>
     <updated>2019-03-11T06:56:53.835Z</updated>
     
@@ -88,14 +88,14 @@
     </summary>
     
     
-      <category term="总结" scheme="https://by0b.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://youxiu.net/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>前后端开发中对数据类型的理解和笔记</title>
-    <link href="https://by0b.com/2019/03/07/f34c66e6-28df-4cc4-bac1-ac4e0cf6bb6a/"/>
-    <id>https://by0b.com/2019/03/07/f34c66e6-28df-4cc4-bac1-ac4e0cf6bb6a/</id>
+    <link href="https://youxiu.net/2019/03/07/f34c66e6-28df-4cc4-bac1-ac4e0cf6bb6a/"/>
+    <id>https://youxiu.net/2019/03/07/f34c66e6-28df-4cc4-bac1-ac4e0cf6bb6a/</id>
     <published>2019-03-07T07:55:31.000Z</published>
     <updated>2019-03-14T09:22:22.077Z</updated>
     
@@ -108,14 +108,14 @@
     </summary>
     
     
-      <category term="总结" scheme="https://by0b.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://youxiu.net/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>MySQL常见问题及优化</title>
-    <link href="https://by0b.com/2019/01/26/5a626726-4e1c-41ae-b704-8e4331860a5a/"/>
-    <id>https://by0b.com/2019/01/26/5a626726-4e1c-41ae-b704-8e4331860a5a/</id>
+    <link href="https://youxiu.net/2019/01/26/5a626726-4e1c-41ae-b704-8e4331860a5a/"/>
+    <id>https://youxiu.net/2019/01/26/5a626726-4e1c-41ae-b704-8e4331860a5a/</id>
     <published>2019-01-26T03:35:45.000Z</published>
     <updated>2019-03-15T05:55:38.747Z</updated>
     
@@ -132,14 +132,14 @@
     </summary>
     
     
-      <category term="MySQL" scheme="https://by0b.com/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://youxiu.net/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>MyBatis语法总结</title>
-    <link href="https://by0b.com/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/"/>
-    <id>https://by0b.com/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/</id>
+    <link href="https://youxiu.net/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/"/>
+    <id>https://youxiu.net/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/</id>
     <published>2019-01-02T10:09:31.000Z</published>
     <updated>2019-03-15T05:55:15.381Z</updated>
     
@@ -153,14 +153,14 @@
     </summary>
     
     
-      <category term="MyBatis" scheme="https://by0b.com/tags/MyBatis/"/>
+      <category term="MyBatis" scheme="https://youxiu.net/tags/MyBatis/"/>
     
   </entry>
   
   <entry>
     <title>Vue.js生命周期理解</title>
-    <link href="https://by0b.com/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/"/>
-    <id>https://by0b.com/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/</id>
+    <link href="https://youxiu.net/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/"/>
+    <id>https://youxiu.net/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/</id>
     <published>2019-01-02T07:51:25.000Z</published>
     <updated>2019-03-15T05:56:26.798Z</updated>
     
@@ -169,14 +169,14 @@
     </summary>
     
     
-      <category term="Vue.js" scheme="https://by0b.com/tags/Vue-js/"/>
+      <category term="Vue.js" scheme="https://youxiu.net/tags/Vue-js/"/>
     
   </entry>
   
   <entry>
     <title>前端后端数据交互过程例解与调试</title>
-    <link href="https://by0b.com/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/"/>
-    <id>https://by0b.com/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/</id>
+    <link href="https://youxiu.net/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/"/>
+    <id>https://youxiu.net/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/</id>
     <published>2018-12-29T06:53:48.000Z</published>
     <updated>2019-03-15T05:53:55.794Z</updated>
     
@@ -189,14 +189,14 @@
     </summary>
     
     
-      <category term="技术" scheme="https://by0b.com/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://youxiu.net/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>方案解决与思路提示</title>
-    <link href="https://by0b.com/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/"/>
-    <id>https://by0b.com/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/</id>
+    <link href="https://youxiu.net/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/"/>
+    <id>https://youxiu.net/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/</id>
     <published>2018-12-25T12:08:43.000Z</published>
     <updated>2019-03-15T05:54:35.638Z</updated>
     
@@ -209,14 +209,14 @@
     </summary>
     
     
-      <category term="技术" scheme="https://by0b.com/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://youxiu.net/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>EHR系统员工生日提醒（跨年查询）总结与笔记</title>
-    <link href="https://by0b.com/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/"/>
-    <id>https://by0b.com/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/</id>
+    <link href="https://youxiu.net/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/"/>
+    <id>https://youxiu.net/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/</id>
     <published>2018-12-19T00:26:48.000Z</published>
     <updated>2019-03-15T05:50:33.754Z</updated>
     
@@ -229,18 +229,18 @@
     </summary>
     
     
-      <category term="Spring Cloud" scheme="https://by0b.com/tags/Spring-Cloud/"/>
+      <category term="Spring Cloud" scheme="https://youxiu.net/tags/Spring-Cloud/"/>
     
   </entry>
   
   <entry>
     <title>前端开发Vue.js问题整理与总结</title>
-    <link href="https://by0b.com/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/"/>
-    <id>https://by0b.com/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/</id>
+    <link href="https://youxiu.net/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/"/>
+    <id>https://youxiu.net/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/</id>
     <published>2018-12-18T05:37:16.000Z</published>
-    <updated>2019-03-15T05:57:06.654Z</updated>
+    <updated>2019-03-15T06:28:55.718Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>所在的项目上前端开发使用技术栈为Vue.js。</li><li>本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。</li><li>思路。<a id="more"></a><h2 id="测试代码高亮"><a href="#测试代码高亮" class="headerlink" title="测试代码高亮"></a>测试代码高亮</h2></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单语法</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-simple'</span>, &#123;</span><br><span class="line">  props: [<span class="string">'size'</span>, <span class="string">'myMessage'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象语法，提供校验</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-advanced'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// 检测类型</span></span><br><span class="line">    height: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="comment">// 检测类型 + 其他验证</span></span><br><span class="line">    age: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="number">0</span>,</span><br><span class="line">      required: <span class="literal">true</span>,</span><br><span class="line">      validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value &gt;= <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="组件弹窗"><a href="#组件弹窗" class="headerlink" title="组件弹窗"></a>组件弹窗</h2><ul><li>原因:主要原因是没理解弹窗的原理。写的时候没有按照步骤和关键点进行。</li></ul><h2 id="JavaScript数据结构"><a href="#JavaScript数据结构" class="headerlink" title="JavaScript数据结构"></a>JavaScript数据结构</h2><ul><li>对JavaScript数组的理解不熟悉。</li><li>对返回的数据做不出明确的判断来。</li></ul><h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>所在的项目上前端开发使用技术栈为Vue.js。</li><li>本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。</li><li>思路。<a id="more"></a><h2 id="测试代码高亮"><a href="#测试代码高亮" class="headerlink" title="测试代码高亮"></a>测试代码高亮</h2></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单语法</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-simple'</span>, &#123;</span><br><span class="line">  props: [<span class="string">'size'</span>, <span class="string">'myMessage'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="string">``</span></span><br><span class="line"><span class="comment">// 对象语法，提供校验</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-advanced'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// 检测类型</span></span><br><span class="line">    height: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="comment">// 检测类型 + 其他验证</span></span><br><span class="line">    age: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="number">0</span>,</span><br><span class="line">      required: <span class="literal">true</span>,</span><br><span class="line">      validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value &gt;= <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="组件弹窗"><a href="#组件弹窗" class="headerlink" title="组件弹窗"></a>组件弹窗</h2><ul><li>原因:主要原因是没理解弹窗的原理。写的时候没有按照步骤和关键点进行。</li></ul><h2 id="JavaScript数据结构"><a href="#JavaScript数据结构" class="headerlink" title="JavaScript数据结构"></a>JavaScript数据结构</h2><ul><li>对JavaScript数组的理解不熟悉。</li><li>对返回的数据做不出明确的判断来。</li></ul><h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2>]]></content>
     
     <summary type="html">
     
@@ -252,14 +252,14 @@
     </summary>
     
     
-      <category term="Vue.js" scheme="https://by0b.com/tags/Vue-js/"/>
+      <category term="Vue.js" scheme="https://youxiu.net/tags/Vue-js/"/>
     
   </entry>
   
   <entry>
     <title>微服务模块的理解</title>
-    <link href="https://by0b.com/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/"/>
-    <id>https://by0b.com/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/</id>
+    <link href="https://youxiu.net/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/"/>
+    <id>https://youxiu.net/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/</id>
     <published>2018-12-17T06:16:51.000Z</published>
     <updated>2019-03-15T05:54:57.970Z</updated>
     
@@ -273,14 +273,14 @@
     </summary>
     
     
-      <category term="微服务" scheme="https://by0b.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <category term="微服务" scheme="https://youxiu.net/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>iOS开发基础之学习Objective-C笔记一</title>
-    <link href="https://by0b.com/2018/12/11/f72e9838-7a1a-4f0f-ab4d-0146231490a1/"/>
-    <id>https://by0b.com/2018/12/11/f72e9838-7a1a-4f0f-ab4d-0146231490a1/</id>
+    <link href="https://youxiu.net/2018/12/11/f72e9838-7a1a-4f0f-ab4d-0146231490a1/"/>
+    <id>https://youxiu.net/2018/12/11/f72e9838-7a1a-4f0f-ab4d-0146231490a1/</id>
     <published>2018-12-11T13:11:22.000Z</published>
     <updated>2019-03-15T05:54:16.206Z</updated>
     
@@ -293,7 +293,7 @@
     </summary>
     
     
-      <category term="Objective-C" scheme="https://by0b.com/tags/Objective-C/"/>
+      <category term="Objective-C" scheme="https://youxiu.net/tags/Objective-C/"/>
     
   </entry>
   
