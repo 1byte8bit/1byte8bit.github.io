@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://by0b.com">
-  <title>优秀</title>
+  <title>开发规范笔记 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="优秀">
-<meta property="og:type" content="website">
-<meta property="og:title" content="优秀">
-<meta property="og:url" content="https://by0b.com/page/2/index.html">
+  <meta name="description" content="概要日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；">
+<meta name="keywords" content="总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发规范笔记">
+<meta property="og:url" content="https://by0b.com/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="优秀">
+<meta property="og:description" content="概要日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；">
 <meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-03-11T06:56:53.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优秀">
-<meta name="twitter:description" content="优秀">
+<meta name="twitter:title" content="开发规范笔记">
+<meta name="twitter:description" content="概要日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -145,39 +147,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-front-vue-js-qa-and-summary" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-16d9fb52-dd5b-4339-9b38-a98df48a8b46" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/18/front-vue-js-qa-and-summary/">前端开发Vue.js问题整理与总结</a>
+    <h1 class="article-title" itemprop="name">
+      开发规范笔记
     </h1>
   
 
         
-        <a href="/2018/12/18/front-vue-js-qa-and-summary/" class="archive-article-date">
-  	<time datetime="2018-12-18T05:37:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
+        <a href="/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/" class="archive-article-date">
+  	<time datetime="2019-03-07T08:59:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>所在的项目上前端开发使用技术栈为Vue.js。</li>
-<li>本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。</li>
-<li>思路。
-        
-          <a class="article-more-a" href="/2018/12/18/front-vue-js-qa-and-summary/#more">more >></a>
-        
+        <h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>日常开发中，虽然代码可用性通过，要求的功能实现了，但是有一些规范需要去遵守；避免不注意犯了一些低级错误；本文笔记梳理一些常忽略的点，以免下次再进坑；<br><a id="more"></a><br>1、公共类中的方法最好不要动；<br>2、uuid要谨慎使用；<br>3、公共的方法要放到公共的类中；<br>4、业务类的方法比较多，取名字要规范一些，长点不要紧，但是一定要读出来方法的作用是什么；如果表达不出来，加上必要的注释；<br>5、尽量不要捕获类似Exception通用异常，而是捕获特定的异常，具体到哪一种子类型；<br>6、在复杂的生产系统中，标准出错STERR不是合适的输出选项，尤其是分布式系统，最好使用产品日志；详细的输出到日志系统中；STREE无法找到堆栈轨迹；<br>不要在<b>catch</b>代码块中直接<a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Throwable.html#printStackTrace--" target="_blank" rel="noopener">printStackTrace()</a></p>
+
       
 
       
-    </li></ul></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -186,7 +181,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Vue.js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
@@ -195,16 +190,33 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/18/front-vue-js-qa-and-summary/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/03/12/b2ba0f8c-51ee-4f62-ab87-c572ca411bc7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring容器和Bean的关系、注解笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/07/f34c66e6-28df-4cc4-bac1-ac4e0cf6bb6a/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前后端开发中对数据类型的理解和笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -224,165 +236,14 @@
 
 
 
-
-  
-    <article id="post-micro-service" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/17/micro-service/">微服务模块的理解</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/17/micro-service/" class="archive-article-date">
-  	<time datetime="2018-12-17T06:16:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="项目微服务结构整体理解"><a href="#项目微服务结构整体理解" class="headerlink" title="项目微服务结构整体理解"></a>项目微服务结构整体理解</h2><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>各司其职、集中管理、存在单向或多向调用关系；
-        
-          <a class="article-more-a" href="/2018/12/17/micro-service/#more">more >></a>
-        
-      
-
-      
-    </li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微服务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/17/micro-service/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ios-init-oc-lang" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/11/ios-init-oc-lang/">iOS开发基础之学习Objective-C笔记一</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/11/ios-init-oc-lang/" class="archive-article-date">
-  	<time datetime="2018-12-11T13:11:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
-        
-          <a class="article-more-a" href="/2018/12/11/ios-init-oc-lang/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/11/ios-init-oc-lang/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -405,8 +266,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
