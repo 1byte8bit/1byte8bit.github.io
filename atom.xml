@@ -6,15 +6,35 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://youxiu.net/"/>
-  <updated>2019-03-15T05:22:24.124Z</updated>
+  <updated>2019-03-18T11:51:11.521Z</updated>
   <id>https://youxiu.net/</id>
   
   <author>
-    <name>腰静.赵</name>
+    <name>binarytree</name>
     <email>2binarytree@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Cloud核心组件笔记</title>
+    <link href="https://youxiu.net/2019/03/18/d27015fb-408b-4e82-9827-ec8d7acdd75d/"/>
+    <id>https://youxiu.net/2019/03/18/d27015fb-408b-4e82-9827-ec8d7acdd75d/</id>
+    <published>2019-03-18T06:20:54.000Z</published>
+    <updated>2019-03-18T11:51:11.521Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h3><p>学习微服务模式开发，记录一下对每个组件的理解和笔记；不断按照最新的理解进行修改并补充。本文笔记的Spring Cloud的核心组件包括：Eureka、Ribbon、Zuul、Hystrix、Feign组件。<br><a id="more"></a></p><h3 id="2、Eureka"><a href="#2、Eureka" class="headerlink" title="2、Eureka"></a>2、Eureka</h3><ul><li>Eureka Server:注册中心，里面有一个注册表，保存了各个服务所在的机器和端口号；</li><li>Eureka Client:负责将这个服务的信息注册到Eureka Server中；</li></ul><h3 id="3、Feign"><a href="#3、Feign" class="headerlink" title="3、Feign"></a>3、Feign</h3><ul><li>例如，订单模块调用积分模块，现在订单模块已经知道了积分模块的地址和端口号了。发出请求就需要借助Feign；</li><li>Feign根据指定的服务进行建立链接、构造请求、发起请求、获取响应、解析响应等；</li><li>上述的操作，Feign的一个机制：动态代理；<h3 id="4、Ribbon"><a href="#4、Ribbon" class="headerlink" title="4、Ribbon"></a>4、Ribbon</h3></li><li>服务模块有了地址、端口、和建立连接请求的条件，如果存在多个同行服务在不同机器上，比如：<ul><li>172.1.16.58:9000</li><li>172.1.16.59:9000</li><li>172.1.16.60:9000</li><li>172.1.16.61:9000</li></ul></li><li>Ribbon的作用是负载均衡。每次请求的时候，会通过不同的算法均匀的将请求分发到各个服务上；</li><li>Ribbon会从Eureka Client获取到对应的服务注册表，相对应的知道了服务部署的地址和监听的端口；</li><li>Ribbon可以使用默认的轮询算法，从其中选择一台机器；</li><li>Feign就会针对Ribbon选中的这台机器，进行下一步动作；</li><li>Feign默认是带有Ribbon的依赖的，开发的时候不需要单独引入；</li></ul><h3 id="5、Hystrix"><a href="#5、Hystrix" class="headerlink" title="5、Hystrix"></a>5、Hystrix</h3><ul><li>熔断机制。隔离、熔断、降级；Hystrix会生成很多小的线程池，比如订单的试一个线程池、积分是一个线程池；每个线程池中仅仅用于请求的服务；</li><li>即使积分服务挂掉，订单服务的线程池是正常的，仍旧可以工作，不会受到影响；</li><li>熔断：积分服务挂掉的话，设置时间5分钟内够来的请求直接返回；</li><li>降级：需要对某用户的积分进行操作，但是积分服务挂掉没办法进行。这时候可以设计一个专门存放故障的数据库；来记录对这个用户的积分操作是什么样子的。等积分服务恢复之后，可以手动还原回去；</li></ul><h3 id="6、Zuul"><a href="#6、Zuul" class="headerlink" title="6、Zuul"></a>6、Zuul</h3><ul><li>使用了一个网关，不需要关心后端有多少个微服务，只需要知道网关的地址即可。所有的请求都请过网关进行处理；</li><li>好处：可以做统一的降级、限流、认证授权等；</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h3&gt;&lt;p&gt;学习微服务模式开发，记录一下对每个组件的理解和笔记；不断按照最新的理解进行修改并补充。本文笔记的Spring Cloud的核心组件包括：Eureka、Ribbon、Zuul、Hystrix、Feign组件。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringCloud" scheme="https://youxiu.net/tags/SpringCloud/"/>
+    
+  </entry>
   
   <entry>
     <title>MyBatis映射文件中的注意事项</title>
@@ -178,7 +198,7 @@
     <link href="https://youxiu.net/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/"/>
     <id>https://youxiu.net/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/</id>
     <published>2018-12-29T06:53:48.000Z</published>
-    <updated>2019-03-15T05:53:55.794Z</updated>
+    <updated>2019-03-18T11:47:22.371Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前后端分离项目进行数据交互的时候，出现错误改如何快速定位调试。<br><a id="more"></a></p><h2 id="前后交互数据的过程"><a href="#前后交互数据的过程" class="headerlink" title="前后交互数据的过程"></a>前后交互数据的过程</h2>]]></content>
     
