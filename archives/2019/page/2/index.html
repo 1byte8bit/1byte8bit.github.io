@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://youxiu.net">
-  <title>前端开发Vue.js问题整理与总结 | 优秀</title>
+  <title>Archives: 2019 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="背景 所在的项目上前端开发使用技术栈为Vue.js。 本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。 思路。">
-<meta name="keywords" content="Vue.js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="前端开发Vue.js问题整理与总结">
-<meta property="og:url" content="https://youxiu.net/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/index.html">
+  <meta name="description" content="优秀">
+<meta property="og:type" content="website">
+<meta property="og:title" content="优秀">
+<meta property="og:url" content="https://youxiu.net/archives/2019/page/2/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="背景 所在的项目上前端开发使用技术栈为Vue.js。 本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。 思路。">
+<meta property="og:description" content="优秀">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-03-15T06:28:55.718Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端开发Vue.js问题整理与总结">
-<meta name="twitter:description" content="背景 所在的项目上前端开发使用技术栈为Vue.js。 本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。 思路。">
+<meta name="twitter:title" content="优秀">
+<meta name="twitter:description" content="优秀">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -149,48 +147,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-c03d5240-9bbc-4ce5-83c5-32bace9f8c2b" class="article article-type-post " itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      前端开发Vue.js问题整理与总结
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/" class="archive-article-date">
+  	<time datetime="2019-01-02T07:51:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/">Vue.js生命周期理解</a>
     </h1>
   
 
-        
-        <a href="/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/" class="archive-article-date">
-  	<time datetime="2018-12-18T05:37:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>所在的项目上前端开发使用技术栈为Vue.js。</li>
-<li>本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。</li>
-<li>思路。<a id="more"></a>
-<h2 id="测试代码高亮"><a href="#测试代码高亮" class="headerlink" title="测试代码高亮"></a>测试代码高亮</h2></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单语法</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-simple'</span>, &#123;</span><br><span class="line">  props: [<span class="string">'size'</span>, <span class="string">'myMessage'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="string">``</span></span><br><span class="line"><span class="comment">// 对象语法，提供校验</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-advanced'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// 检测类型</span></span><br><span class="line">    height: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="comment">// 检测类型 + 其他验证</span></span><br><span class="line">    age: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="number">0</span>,</span><br><span class="line">      required: <span class="literal">true</span>,</span><br><span class="line">      validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value &gt;= <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="组件弹窗"><a href="#组件弹窗" class="headerlink" title="组件弹窗"></a>组件弹窗</h2><ul>
-<li>原因:主要原因是没理解弹窗的原理。写的时候没有按照步骤和关键点进行。</li>
-</ul>
-<h2 id="JavaScript数据结构"><a href="#JavaScript数据结构" class="headerlink" title="JavaScript数据结构"></a>JavaScript数据结构</h2><ul>
-<li>对JavaScript数组的理解不熟悉。</li>
-<li>对返回的数据做不出明确的判断来。</li>
-</ul>
-<h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,63 +188,22 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          EHR系统员工生日提醒（跨年查询）总结与笔记
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微服务模块的理解</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -282,8 +227,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
