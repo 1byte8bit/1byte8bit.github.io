@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://youxiu.net">
-  <title>Archives | 优秀</title>
+  <title>Spring中的bean-配置与注入 | 优秀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="优秀">
-<meta property="og:type" content="website">
-<meta property="og:title" content="优秀">
-<meta property="og:url" content="https://youxiu.net/archives/page/2/index.html">
+  <meta name="description" content="1、概要Spring中的bean配置和注入，需要理解透彻，但是没有去总结的很全面，在cnblog.com发现一篇文章，作者总结的很全面，原文地址：https://www.cnblogs.com/wuchanming/p/5426746.html,本文的笔记只是挑出来个人认为重要的部分。">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring中的bean-配置与注入">
+<meta property="og:url" content="https://youxiu.net/2019/03/28/e4d4efd7-c875-4b69-921f-cb6299ef7e72/index.html">
 <meta property="og:site_name" content="优秀">
-<meta property="og:description" content="优秀">
+<meta property="og:description" content="1、概要Spring中的bean配置和注入，需要理解透彻，但是没有去总结的很全面，在cnblog.com发现一篇文章，作者总结的很全面，原文地址：https://www.cnblogs.com/wuchanming/p/5426746.html,本文的笔记只是挑出来个人认为重要的部分。">
 <meta property="og:locale" content="zh">
+<meta property="og:image" content="https://youxiu.net/images/2019032801.png">
+<meta property="og:updated_time" content="2019-03-28T02:42:26.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优秀">
-<meta name="twitter:description" content="优秀">
+<meta name="twitter:title" content="Spring中的bean-配置与注入">
+<meta name="twitter:description" content="1、概要Spring中的bean配置和注入，需要理解透彻，但是没有去总结的很全面，在cnblog.com发现一篇文章，作者总结的很全面，原文地址：https://www.cnblogs.com/wuchanming/p/5426746.html,本文的笔记只是挑出来个人认为重要的部分。">
+<meta name="twitter:image" content="https://youxiu.net/images/2019032801.png">
   
     <link rel="alternative" href="/atom.xml" title="优秀" type="application/atom+xml">
   
@@ -147,339 +151,100 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-e4d4efd7-c875-4b69-921f-cb6299ef7e72" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Spring中的bean-配置与注入
+    </h1>
+  
+
+        
+        <a href="/2019/03/28/e4d4efd7-c875-4b69-921f-cb6299ef7e72/" class="archive-article-date">
+  	<time datetime="2019-03-28T01:45:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h3><p>Spring中的bean配置和注入，需要理解透彻，但是没有去总结的很全面，在cnblog.com发现一篇文章，作者总结的很全面，原文地址：<a href="https://www.cnblogs.com/wuchanming/p/5426746.html" target="_blank" rel="noopener">https://www.cnblogs.com/wuchanming/p/5426746.html</a>,本文的笔记只是挑出来个人认为重要的部分。<br><a id="more"></a></p>
+<h3 id="2、bean的配置"><a href="#2、bean的配置" class="headerlink" title="2、bean的配置"></a>2、bean的配置</h3><p>Bean的配置信息定义了Bean的实现和依赖关系，Spring容器根据各种形式的Bean配置信息在容器内部建立bean定义注册表，然后根据注册表加载、实例化Bean，并建立Bean和Bean的依赖关系，最后将这些准备就绪的Bean放到Bean缓存池中，以供外层的应用程序进行调用。</p>
+<h5 id="Bean的配置有三种方法："><a href="#Bean的配置有三种方法：" class="headerlink" title="Bean的配置有三种方法："></a>Bean的配置有三种方法：</h5><p>①、基于XML来配置Bean；<br>②、使用注解定义Bean；<br>③、基于Java类提供Bean定义信息；</p>
+<h4 id="2-1、基于XML来配置Bean"><a href="#2-1、基于XML来配置Bean" class="headerlink" title="2.1、基于XML来配置Bean"></a>2.1、基于XML来配置Bean</h4><p>放一张截图：<br><img src="../../../../../../images/2019032801.png" alt=""></p>
+<h4 id="2-2、使用注解定义Bean"><a href="#2-2、使用注解定义Bean" class="headerlink" title="2.2、使用注解定义Bean"></a>2.2、使用注解定义Bean</h4><p>Spring容器成功启动的三大要件分别是：①Bean定义信息、②Bean实现类和③Spring本身；如果采用基于XML的配置，Bean定义信息和Bean实现类本身是分离的；而采用基于注解的配置方式时，<b>Bean定义信息即通过在Bean实现类上标注注解实现<b>。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.baobaotao.anno;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Repository;</span><br><span class="line"><span class="comment">//①通过Repository定义一个DAO的Bean</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>(<span class="string">"userDao"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></b></b></p>
+<p>在①处，我们使用@Component注解在UserDao类声明处对类进行标记，它可以被Spring容器识别，Spring容器自动将POJO转换为容器管理的Bean。<br>它和XML是等效的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=<span class="string">"UserDao"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.baobaotao.anno.UserDao"</span>&gt;&lt;bean/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>除了@Component以外，Spring提供了3个功能基本和@Component等效的注解，他们分别应用于DAO、Service以及Web层的Controller的注解；所以也成这些注解为Bean的衍生注解；<br>①、@Repository:用于对DAO实现类进行标注；<br>②、@Service:用于对Service实现类进行标注；<br>③、@Controller:用于对Controller实现类进行标注；<br>之所以要在@Component之外提供这三个特殊的注解，除了让注解类本身的用途更加清晰明白，此外Spring将赋予他们一些特殊的功能；</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/" class="archive-article-date">
-  	<time datetime="2019-01-02T10:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/">MyBatis语法总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/" class="archive-article-date">
-  	<time datetime="2019-01-02T07:51:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/">Vue.js生命周期理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Vue.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/" class="archive-article-date">
-  	<time datetime="2018-12-29T06:53:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/29/205380c3-c733-4f1b-ba14-9bc6274e63ab/">前端后端数据交互过程例解与调试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/" class="archive-article-date">
-  	<time datetime="2018-12-25T12:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/27/18778999-e0d4-4696-9462-88ca98eff534/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java注解笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/25/c03038cf-42d9-4b76-bb2f-9a6a5a8e719c/">方案解决与思路提示</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/" class="archive-article-date">
-  	<time datetime="2018-12-19T00:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/">EHR系统员工生日提醒（跨年查询）总结与笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Spring Cloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/" class="archive-article-date">
-  	<time datetime="2018-12-18T05:37:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/">前端开发Vue.js问题整理与总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Vue.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/" class="archive-article-date">
-  	<time datetime="2018-12-17T06:16:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/">微服务模块的理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微服务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/11/f72e9838-7a1a-4f0f-ab4d-0146231490a1/" class="archive-article-date">
-  	<time datetime="2018-12-11T13:11:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/11/f72e9838-7a1a-4f0f-ab4d-0146231490a1/">iOS开发基础之学习Objective-C笔记一</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Objective-C</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -503,8 +268,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
