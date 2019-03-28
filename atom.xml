@@ -137,29 +137,6 @@
   </entry>
   
   <entry>
-    <title>Spring容器和Bean的关系、注解笔记</title>
-    <link href="https://youxiu.net/2019/03/12/b2ba0f8c-51ee-4f62-ab87-c572ca411bc7/"/>
-    <id>https://youxiu.net/2019/03/12/b2ba0f8c-51ee-4f62-ab87-c572ca411bc7/</id>
-    <published>2019-03-12T02:18:25.000Z</published>
-    <updated>2019-03-22T10:37:07.211Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h3><h3 id="2、bean的"><a href="#2、bean的" class="headerlink" title="2、bean的"></a>2、bean的</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;1、概述&quot;&gt;&lt;a href=&quot;#1、概述&quot; class=&quot;headerlink&quot; title=&quot;1、概述&quot;&gt;&lt;/a&gt;1、概述&lt;/h3&gt;&lt;h3 id=&quot;2、bean的&quot;&gt;&lt;a href=&quot;#2、bean的&quot; class=&quot;headerlink&quot; title=&quot;2、b
-      
-    
-    </summary>
-    
-    
-      <category term="Spring" scheme="https://youxiu.net/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
     <title>开发规范笔记</title>
     <link href="https://youxiu.net/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/"/>
     <id>https://youxiu.net/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/</id>
@@ -241,22 +218,6 @@
     
     
       <category term="MyBatis" scheme="https://youxiu.net/tags/MyBatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue.js生命周期理解</title>
-    <link href="https://youxiu.net/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/"/>
-    <id>https://youxiu.net/2019/01/02/8bc9b211-84b2-41e6-acb6-6597e814bb93/</id>
-    <published>2019-01-02T07:51:25.000Z</published>
-    <updated>2019-03-15T05:56:26.798Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="Vue.js" scheme="https://youxiu.net/tags/Vue-js/"/>
     
   </entry>
   
