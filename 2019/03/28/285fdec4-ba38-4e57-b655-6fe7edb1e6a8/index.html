@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="https://youxiu.net/images/2019032802.png">
 <meta property="og:image" content="https://youxiu.net/images/3.png">
-<meta property="og:updated_time" content="2019-03-28T08:16:25.851Z">
+<meta property="og:updated_time" content="2019-03-31T03:58:01.885Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习JHipster记录笔记(翻译)">
 <meta name="twitter:description" content="1、概要首先自己理解中的JHipster，是一个开发平台，用于生成、开发、部署微服务项目；这篇笔记是在官网学习过程中的记录，基本是依靠自己的理解翻译过来的，其中有部分是自己的理解，记录再次，方便自己理解。">
@@ -195,10 +195,10 @@
 <h4 id="3-2、架构图"><a href="#3-2、架构图" class="headerlink" title="3.2、架构图"></a>3.2、架构图</h4><p>如下图所示：</p>
 <p><img src="../../../../../../images/3.png" alt=""></p>
 <p>分析:</p>
-<h4 id="3-3、HTTP使用网关进行路由请求"><a href="#3-3、HTTP使用网关进行路由请求" class="headerlink" title="3.3、HTTP使用网关进行路由请求"></a>3.3、HTTP使用网关进行路由请求</h4><p>当网关和微服务运行时，他们会注册自己到注册中心上。网关会自动代理所有的请求到微服务上，使用名字即可。<br>例如：你过你的网关运行是：<a href="http://localhost:8080，你可以通过http://localhost:8080/app1/rest/foos来获取foos来获取app1提供的服务；如果您尝试使用浏览器做到这中操作，不要忘记，REST资源在JHipster中默认是安全的，所以你需要正确的JWT头部信息来实现，或者删除微服务中的" target="_blank" rel="noopener">http://localhost:8080，你可以通过http://localhost:8080/app1/rest/foos来获取foos来获取app1提供的服务；如果您尝试使用浏览器做到这中操作，不要忘记，REST资源在JHipster中默认是安全的，所以你需要正确的JWT头部信息来实现，或者删除微服务中的</a><b>MicroserviceSecurityConfiguration</b>这个Java类中的这些URL的安全性。<br>如果一个服务运行着多个实例：网关将会总注册表中获取这些实例：</p>
+<h4 id="3-3、HTTP使用网关进行路由请求"><a href="#3-3、HTTP使用网关进行路由请求" class="headerlink" title="3.3、HTTP使用网关进行路由请求"></a>3.3、HTTP使用网关进行路由请求</h4><p>当网关和微服务运行时，他们会注册自己到注册中心上。网关会自动代理所有的请求到微服务上，使用名字即可。<br>例如：你过你的网关运行是：<b><a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></b>，你可以通过<b><a href="http://localhost:8080/app1/rest/foos" target="_blank" rel="noopener">http://localhost:8080/app1/rest/foos</a></b>来获取foos来获取app1提供的服务；如果您尝试使用浏览器做到这中操作，不要忘记，REST资源在JHipster中默认是安全的，所以你需要正确的JWT头部信息来实现，或者删除微服务中的<b>MicroserviceSecurityConfiguration</b>这个Java类中的这些URL的安全性。<br>如果一个服务运行着多个实例：网关将会总注册表中获取这些实例：</p>
 <ul>
 <li>使用Netflix Ribbon处理HTTP请求的负载均衡</li>
-<li>使用Netflix Hystrix熔断器，当实例崩溃会被安全的、快速的移除<h4 id="3-4、安全"><a href="#3-4、安全" class="headerlink" title="3.4、安全"></a>3.4、安全</h4>略。<h4 id="3-5、JWT"><a href="#3-5、JWT" class="headerlink" title="3.5、JWT"></a>3.5、JWT</h4></li>
+<li>使用Netflix Hystrix熔断器，当实例崩溃会被安全的、快速的移除<h4 id="3-4、安全"><a href="#3-4、安全" class="headerlink" title="3.4、安全"></a>3.4、安全</h4>略。<h4 id="3-5、JWT"><a href="#3-5、JWT" class="headerlink" title="3.5、JWT"></a>3.5、JWT</h4>JWT的简介……..<br>为了能安全考虑，一个JWT的密钥令牌必须在所有的应用之间共享；<h4 id="3-6、速率限制"><a href="#3-6、速率限制" class="headerlink" title="3.6、速率限制"></a>3.6、速率限制</h4>这是一个高级功能；使用<a href="https://github.com/vladimir-bukhtoyarov/bucket4j" target="_blank" rel="noopener">Bucket4j</a>和<a href="https://hazelcast.com/" target="_blank" rel="noopener">Hazelcast</a>来给微服务提供服务。<br>网关提供速率限制的功能，所以REST的请求可以</li>
 </ul>
 
       
@@ -356,15 +356,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JHipster</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
