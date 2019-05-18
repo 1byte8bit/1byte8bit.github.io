@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>好好学习,天天向上</title>
   <icon>https://www.gravatar.com/avatar/3563d1ddc1457652131bef3aa9d25ab0</icon>
-  <subtitle>烦恼会飞</subtitle>
+  <subtitle>haohaoxuexi</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://youxiu.net/"/>
@@ -10,7 +10,7 @@
   <id>https://youxiu.net/</id>
   
   <author>
-    <name>binarytree</name>
+    <name>优秀员工</name>
     <email>2binarytree@gmail.com</email>
   </author>
   
