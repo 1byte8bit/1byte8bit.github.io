@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://youxiu.net/"/>
-  <updated>2019-04-01T01:50:12.730Z</updated>
+  <updated>2019-05-23T14:46:56.704Z</updated>
   <id>https://youxiu.net/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java使用RPC的方式连接SAP,从SAP获取数据</title>
+    <link href="https://youxiu.net/2019/05/23/d31361ba-98d4-4f1b-8ec5-28726292d21b/"/>
+    <id>https://youxiu.net/2019/05/23/d31361ba-98d4-4f1b-8ec5-28726292d21b/</id>
+    <published>2019-05-23T14:42:56.000Z</published>
+    <updated>2019-05-23T14:46:56.704Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h3><p><code>EHR业务系统</code>需要定期从<code>SAP</code>系统库中获取数据。定时任务使用<code>XXL-Job</code>。SAP的lib库不是开源的，需要下载完之后，手动打进去。其中，配置SAP的环境变量也一件复杂的事情。<br><a id="more"></a></p><h3 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h3&gt;&lt;p&gt;&lt;code&gt;EHR业务系统&lt;/code&gt;需要定期从&lt;code&gt;SAP&lt;/code&gt;系统库中获取数据。定时任务使用&lt;code&gt;XXL-Job&lt;/code&gt;。SAP的lib库不是开源的，需要下载完之后，手动打进去。其中，配置SAP的环境变量也一件复杂的事情。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="SAP" scheme="https://youxiu.net/tags/SAP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java中关于数据去重、GROUP BY语句的使用</title>
+    <link href="https://youxiu.net/2019/05/19/5d2ff3d0-1861-46fa-a47d-9b9650c613e9-md/"/>
+    <id>https://youxiu.net/2019/05/19/5d2ff3d0-1861-46fa-a47d-9b9650c613e9-md/</id>
+    <published>2019-05-19T14:07:17.000Z</published>
+    <updated>2019-05-22T05:24:38.914Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><p>之前写过一个生日跨年查询的，后来的业务中，遇到一个根据业务范围需要去重的、还有根据一个去查询的操作。这篇笔记描述出业务场景和如何去解决的（maybe存在更好的解决方案）。<br><a id="more"></a></p><h2 id="2、业务描述"><a href="#2、业务描述" class="headerlink" title="2、业务描述"></a>2、业务描述</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h2&gt;&lt;p&gt;之前写过一个生日跨年查询的，后来的业务中，遇到一个根据业务范围需要去重的、还有根据一个去查询的操作。这篇笔记描述出业务场景和如何去解决的（maybe存在更好的解决方案）。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JHipster笔记之总览和网关(翻译)</title>
