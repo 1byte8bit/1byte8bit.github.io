@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://youxiu.net">
-  <title>MySQL常见问题及优化 | 好好学习,天天向上</title>
+  <title>Tag: Jxls | 好好学习,天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL的优化方案有哪一些？本文介绍一下优化SQL语句和优化索引。 本文记录MySQL 本文梗概如下: 优化SQL 优化索引 开启查询缓存">
-<meta name="keywords" content="MySQL">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL常见问题及优化">
-<meta property="og:url" content="https://youxiu.net/2019/01/26/5a626726-4e1c-41ae-b704-8e4331860a5a/index.html">
+  <meta name="description" content="优秀">
+<meta property="og:type" content="website">
+<meta property="og:title" content="好好学习,天天向上">
+<meta property="og:url" content="https://youxiu.net/tags/Jxls/index.html">
 <meta property="og:site_name" content="好好学习,天天向上">
-<meta property="og:description" content="MySQL的优化方案有哪一些？本文介绍一下优化SQL语句和优化索引。 本文记录MySQL 本文梗概如下: 优化SQL 优化索引 开启查询缓存">
+<meta property="og:description" content="优秀">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-03-15T05:55:38.747Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL常见问题及优化">
-<meta name="twitter:description" content="MySQL的优化方案有哪一些？本文介绍一下优化SQL语句和优化索引。 本文记录MySQL 本文梗概如下: 优化SQL 优化索引 开启查询缓存">
+<meta name="twitter:title" content="好好学习,天天向上">
+<meta name="twitter:description" content="优秀">
   
     <link rel="alternative" href="/atom.xml" title="好好学习,天天向上" type="application/atom+xml">
   
@@ -145,126 +143,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-5a626726-4e1c-41ae-b704-8e4331860a5a" class="article article-type-post " itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      MySQL常见问题及优化
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/23/45fa1046-1905-454c-99d2-7b944d35b378/" class="archive-article-date">
+  	<time datetime="2019-05-23T14:50:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/23/45fa1046-1905-454c-99d2-7b944d35b378/">处理Excel的框架 Jxls 2.6.0 简单笔记。</a>
     </h1>
   
 
-        
-        <a href="/2019/01/26/5a626726-4e1c-41ae-b704-8e4331860a5a/" class="archive-article-date">
-  	<time datetime="2019-01-26T03:35:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="MySQL的优化方案有哪一些？"><a href="#MySQL的优化方案有哪一些？" class="headerlink" title="MySQL的优化方案有哪一些？"></a>MySQL的优化方案有哪一些？</h2><p>本文介绍一下优化SQL语句和优化索引。</p>
-<h3 id="本文记录MySQL-本文梗概如下"><a href="#本文记录MySQL-本文梗概如下" class="headerlink" title="本文记录MySQL 本文梗概如下:"></a>本文记录MySQL 本文梗概如下:</h3><ul>
-<li>优化SQL</li>
-<li>优化索引</li>
-<li>开启查询缓存<a id="more"></a></li>
-<li>配合使用Redis</li>
-<li>MySQL主从复制</li>
-<li>优化MySQL自带的分区表</li>
-<li>垂直拆分,分解大系统,成为小系统,分布式系统</li>
-<li>水平拆分</li>
-<li>硬件上的升级、存储引擎、MySQL本身的配置文件</li>
-</ul>
-<h2 id="（一）优化SQL"><a href="#（一）优化SQL" class="headerlink" title="（一）优化SQL"></a>（一）优化SQL</h2><h4 id="1、通过MySQL自有的优化语句"><a href="#1、通过MySQL自有的优化语句" class="headerlink" title="1、通过MySQL自有的优化语句"></a>1、通过MySQL自有的优化语句</h4><p>优化SQL语句，通过脚本命令来了解执行率较低的语句，显示一下状态等。</p>
-<ul>
-<li>SHOW命令<ul>
-<li>SHOW Status可以了解SQL的执行频率。可以显示日志，显示特定的数据库、表、索引以及进程还有权限表中的信息等等。<br>介绍一些常见的字段</li>
-<li>Innodb_rows_read:Select查询返回的行数。</li>
-<li>Innodb_rows_inserted:执行INSERT操作插入的行数。</li>
-<li>Innodb_rows_updated:执行UPDATE操作更新的行数。</li>
-<li>Innodb_rows_deleted:执行DELETE操作删除的行数。</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Jxls</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/03/07/f34c66e6-28df-4cc4-bac1-ac4e0cf6bb6a/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          前后端开发中对数据类型的理解和笔记
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/01/02/9ec1b26b-333e-4b8c-875c-4c20d6be8d9f/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MyBatis语法总结</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -287,9 +219,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

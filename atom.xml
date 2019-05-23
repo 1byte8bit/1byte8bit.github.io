@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://youxiu.net/"/>
-  <updated>2019-05-23T14:46:56.704Z</updated>
+  <updated>2019-05-23T14:55:16.479Z</updated>
   <id>https://youxiu.net/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>处理Excel的框架 Jxls 2.6.0 简单笔记。</title>
+    <link href="https://youxiu.net/2019/05/23/45fa1046-1905-454c-99d2-7b944d35b378/"/>
+    <id>https://youxiu.net/2019/05/23/45fa1046-1905-454c-99d2-7b944d35b378/</id>
+    <published>2019-05-23T14:50:05.000Z</published>
+    <updated>2019-05-23T14:55:16.479Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h3><p>根据业务的需要，项目中使用的 <code>easy-poi</code> 不能满足一些特殊的 <code>Excel</code> 表格的导出，就希望使用 <code>Jxls</code> 来处理， <code>Jxls</code> 从原生的 <code>Apache POI</code> 演进而来，灵活性高，但是封装通用起来，需要大量写方法，来应对各种情况。本文笔记描述在项目中使用的过程。<br><a id="more"></a></p><h3 id="2、项目中使用"><a href="#2、项目中使用" class="headerlink" title="2、项目中使用"></a>2、项目中使用</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、概述&quot;&gt;&lt;a href=&quot;#1、概述&quot; class=&quot;headerlink&quot; title=&quot;1、概述&quot;&gt;&lt;/a&gt;1、概述&lt;/h3&gt;&lt;p&gt;根据业务的需要，项目中使用的 &lt;code&gt;easy-poi&lt;/code&gt; 不能满足一些特殊的 &lt;code&gt;Excel&lt;/code&gt; 表格的导出，就希望使用 &lt;code&gt;Jxls&lt;/code&gt; 来处理， &lt;code&gt;Jxls&lt;/code&gt; 从原生的 &lt;code&gt;Apache POI&lt;/code&gt; 演进而来，灵活性高，但是封装通用起来，需要大量写方法，来应对各种情况。本文笔记描述在项目中使用的过程。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Jxls" scheme="https://youxiu.net/tags/Jxls/"/>
+    
+  </entry>
   
   <entry>
     <title>Java使用RPC的方式连接SAP,从SAP获取数据</title>
@@ -41,9 +61,9 @@
     <link href="https://youxiu.net/2019/05/19/5d2ff3d0-1861-46fa-a47d-9b9650c613e9-md/"/>
     <id>https://youxiu.net/2019/05/19/5d2ff3d0-1861-46fa-a47d-9b9650c613e9-md/</id>
     <published>2019-05-19T14:07:17.000Z</published>
-    <updated>2019-05-22T05:24:38.914Z</updated>
+    <updated>2019-05-23T14:49:39.165Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><p>之前写过一个生日跨年查询的，后来的业务中，遇到一个根据业务范围需要去重的、还有根据一个去查询的操作。这篇笔记描述出业务场景和如何去解决的（maybe存在更好的解决方案）。<br><a id="more"></a></p><h2 id="2、业务描述"><a href="#2、业务描述" class="headerlink" title="2、业务描述"></a>2、业务描述</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><p>之前写过一个生日跨年查询的，后来的业务中，遇到一个根据业务范围需要去重的、还有根据一个去查询的操作。这篇笔记描述出业务场景和如何去解决的（maybe存在更好的解决方案）。<br><a id="more"></a></p><h2 id="2、业务描述"><a href="#2、业务描述" class="headerlink" title="2、业务描述"></a>2、业务描述</h2><p>举例说明其中一个。</p>]]></content>
     
     <summary type="html">
     
