@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://youxiu.net">
-  <title>Spring Cloud核心组件笔记 | 好好学习,天天向上</title>
+  <title>Tag: Microservices | 好好学习,天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、概要学习微服务模式开发，记录一下对每个组件的理解和笔记；不断按照最新的理解进行修改并补充。本文笔记的Spring Cloud的核心组件包括：Eureka、Ribbon、Zuul、Hystrix、Feign组件。">
-<meta name="keywords" content="SpringCloud">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Spring Cloud核心组件笔记">
-<meta property="og:url" content="https://youxiu.net/2019/03/18/d27015fb-408b-4e82-9827-ec8d7acdd75d/index.html">
+  <meta name="description" content="优秀">
+<meta property="og:type" content="website">
+<meta property="og:title" content="好好学习,天天向上">
+<meta property="og:url" content="https://youxiu.net/tags/Microservices/index.html">
 <meta property="og:site_name" content="好好学习,天天向上">
-<meta property="og:description" content="1、概要学习微服务模式开发，记录一下对每个组件的理解和笔记；不断按照最新的理解进行修改并补充。本文笔记的Spring Cloud的核心组件包括：Eureka、Ribbon、Zuul、Hystrix、Feign组件。">
+<meta property="og:description" content="优秀">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-03-26T07:15:39.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Cloud核心组件笔记">
-<meta name="twitter:description" content="1、概要学习微服务模式开发，记录一下对每个组件的理解和笔记；不断按照最新的理解进行修改并补充。本文笔记的Spring Cloud的核心组件包括：Eureka、Ribbon、Zuul、Hystrix、Feign组件。">
+<meta name="twitter:title" content="好好学习,天天向上">
+<meta name="twitter:description" content="优秀">
   
     <link rel="alternative" href="/atom.xml" title="好好学习,天天向上" type="application/atom+xml">
   
@@ -145,137 +143,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-d27015fb-408b-4e82-9827-ec8d7acdd75d" class="article article-type-post " itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Spring Cloud核心组件笔记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/25/c827ce44-307a-4240-aa90-60fd384e31f4/" class="archive-article-date">
+  	<time datetime="2019-05-25T03:32:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-25</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/25/c827ce44-307a-4240-aa90-60fd384e31f4/">Goodbye Microservices:From 100s of problem children to 1 superstar</a>
     </h1>
   
 
-        
-        <a href="/2019/03/18/d27015fb-408b-4e82-9827-ec8d7acdd75d/" class="archive-article-date">
-  	<time datetime="2019-03-18T06:20:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h3><p>学习微服务模式开发，记录一下对每个组件的理解和笔记；不断按照最新的理解进行修改并补充。本文笔记的Spring Cloud的核心组件包括：Eureka、Ribbon、Zuul、Hystrix、Feign组件。<br><a id="more"></a></p>
-<h3 id="2、Eureka"><a href="#2、Eureka" class="headerlink" title="2、Eureka"></a>2、Eureka</h3><ul>
-<li>Eureka Server:注册中心，里面有一个注册表，保存了各个服务所在的机器和端口号；</li>
-<li>Eureka Client:负责将这个服务的信息注册到Eureka Server中；</li>
-</ul>
-<h3 id="3、Feign"><a href="#3、Feign" class="headerlink" title="3、Feign"></a>3、Feign</h3><ul>
-<li>例如，订单模块调用积分模块，现在订单模块已经知道了积分模块的地址和端口号了。发出请求就需要借助Feign；</li>
-<li>Feign根据指定的服务进行建立链接、构造请求、发起请求、获取响应、解析响应等；</li>
-<li>上述的操作，Feign的一个机制：动态代理；</li>
-</ul>
-<h3 id="4、Ribbon"><a href="#4、Ribbon" class="headerlink" title="4、Ribbon"></a>4、Ribbon</h3><ul>
-<li>服务模块有了地址、端口、和建立连接请求的条件，如果存在多个同行服务在不同机器上，比如：<ul>
-<li>172.1.16.58:9000</li>
-<li>172.1.16.59:9000</li>
-<li>172.1.16.60:9000</li>
-<li>172.1.16.61:9000</li>
-</ul>
-</li>
-<li>Ribbon的作用是负载均衡。每次请求的时候，会通过不同的算法均匀的将请求分发到各个服务上；</li>
-<li>Ribbon会从Eureka Client获取到对应的服务注册表，相对应的知道了服务部署的地址和监听的端口；</li>
-<li>Ribbon可以使用默认的轮询算法，从其中选择一台机器；</li>
-<li>Feign就会针对Ribbon选中的这台机器，进行下一步动作；</li>
-<li>Feign默认是带有Ribbon的依赖的，开发的时候不需要单独引入；</li>
-</ul>
-<h3 id="5、Hystrix"><a href="#5、Hystrix" class="headerlink" title="5、Hystrix"></a>5、Hystrix</h3><ul>
-<li>熔断机制。隔离、熔断、降级；Hystrix会生成很多小的线程池，比如订单的试一个线程池、积分是一个线程池；每个线程池中仅仅用于请求的服务；</li>
-<li>即使积分服务挂掉，订单服务的线程池是正常的，仍旧可以工作，不会受到影响；</li>
-<li>熔断：积分服务挂掉的话，设置时间5分钟内够来的请求直接返回；</li>
-<li>降级：需要对某用户的积分进行操作，但是积分服务挂掉没办法进行。这时候可以设计一个专门存放故障的数据库；来记录对这个用户的积分操作是什么样子的。等积分服务恢复之后，可以手动还原回去；</li>
-</ul>
-<h3 id="6、Zuul"><a href="#6、Zuul" class="headerlink" title="6、Zuul"></a>6、Zuul</h3><ul>
-<li>使用了一个网关，不需要关心后端有多少个微服务，只需要知道网关的地址即可。所有的请求都请过网关进行处理；</li>
-<li>好处：可以做统一的降级、限流、认证授权等；</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">SpringCloud</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Microservices</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/03/22/51cf8560-d04b-4fbd-a04b-d40cc261ca36/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          开发中的解耦与复用
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/03/15/64e17dff-f1e7-4527-a12c-8f7e5bd1e064/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MyBatis映射文件中的注意事项</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -298,9 +219,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
