@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://youxiu.net/"/>
-  <updated>2019-05-25T03:46:39.611Z</updated>
+  <updated>2019-12-24T08:48:44.307Z</updated>
   <id>https://youxiu.net/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Element UI之Cascader 级联选择器多选操作</title>
+    <link href="https://youxiu.net/2019/12/24/48acf05e-5b94-4e18-b62a-f277e34237fb/"/>
+    <id>https://youxiu.net/2019/12/24/48acf05e-5b94-4e18-b62a-f277e34237fb/</id>
+    <published>2019-12-24T08:22:45.000Z</published>
+    <updated>2019-12-24T08:48:44.307Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><h3 id="1-1、级联选择器，树型展示"><a href="#1-1、级联选择器，树型展示" class="headerlink" title="1.1、级联选择器，树型展示"></a>1.1、级联选择器，树型展示</h3><p>Element UI的官网链接：<a href="https://element.eleme.cn/#/zh-CN/component/cascader" target="_blank" rel="noopener">https://element.eleme.cn/#/zh-CN/component/cascader</a><br>使用环境：<br><code>&quot;element-ui&quot;: &quot;2.9.0&quot;,</code><br>需要依赖为2.9.x及以上，配合<br><code>&quot;vue&quot;: &quot;2.5.22&quot;</code> 以上。<br>如果版本不匹配，多选操作是显示不出来的。<br><a id="more"></a></p><h3 id="1-2、需求描述"><a href="#1-2、需求描述" class="headerlink" title="1.2、需求描述"></a>1.2、需求描述</h3><p>数据库中存在两张表，user表和org表，user表中有字段org_id，记录这个人所属的组织id，org表中有org_id，org_name等字段。<br>表结构简介如下<br>user:</p><table><thead><tr><th>id</th><th>name</th><th>org_id</th><th>…</th></tr></thead><tbody><tr><td>1</td><td>admin</td><td>10000</td><td>…</td></tr></tbody></table><p>org</p><table><thead><tr><th>org_id</th><th>org_name</th><th>….</th></tr></thead><tbody><tr><td>10000</td><td>六扇门</td><td>…</td></tr></tbody></table><p>目前每个人只有一个所属组织，管理员，部门负责人在进行组织查询的时候，只能有本部门及其子部门的展示权限，虽然不属于部门B，但是想看到部门B的信息，单选满足不了，靠两个表维护不了多选的信息。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h2&gt;&lt;h3 id=&quot;1-1、级联选择器，树型展示&quot;&gt;&lt;a href=&quot;#1-1、级联选择器，树型展示&quot; class=&quot;headerlink&quot; title=&quot;1.1、级联选择器，树型展示&quot;&gt;&lt;/a&gt;1.1、级联选择器，树型展示&lt;/h3&gt;&lt;p&gt;Element UI的官网链接：&lt;a href=&quot;https://element.eleme.cn/#/zh-CN/component/cascader&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://element.eleme.cn/#/zh-CN/component/cascader&lt;/a&gt;&lt;br&gt;使用环境：&lt;br&gt;&lt;code&gt;&amp;quot;element-ui&amp;quot;: &amp;quot;2.9.0&amp;quot;,&lt;/code&gt;&lt;br&gt;需要依赖为2.9.x及以上，配合&lt;br&gt;&lt;code&gt;&amp;quot;vue&amp;quot;: &amp;quot;2.5.22&amp;quot;&lt;/code&gt; 以上。&lt;br&gt;如果版本不匹配，多选操作是显示不出来的。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="elementui" scheme="https://youxiu.net/tags/elementui/"/>
+    
+  </entry>
   
   <entry>
     <title>Goodbye Microservices:From 100s of problem children to 1 superstar</title>
@@ -384,7 +404,7 @@
     <link href="https://youxiu.net/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/"/>
     <id>https://youxiu.net/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/</id>
     <published>2018-12-18T05:37:16.000Z</published>
-    <updated>2019-03-15T06:28:55.718Z</updated>
+    <updated>2019-12-24T08:48:26.484Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>所在的项目上前端开发使用技术栈为Vue.js。</li><li>本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。</li><li>思路。<a id="more"></a><h2 id="测试代码高亮"><a href="#测试代码高亮" class="headerlink" title="测试代码高亮"></a>测试代码高亮</h2></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单语法</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-simple'</span>, &#123;</span><br><span class="line">  props: [<span class="string">'size'</span>, <span class="string">'myMessage'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="string">``</span></span><br><span class="line"><span class="comment">// 对象语法，提供校验</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-advanced'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// 检测类型</span></span><br><span class="line">    height: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="comment">// 检测类型 + 其他验证</span></span><br><span class="line">    age: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="number">0</span>,</span><br><span class="line">      required: <span class="literal">true</span>,</span><br><span class="line">      validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value &gt;= <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="组件弹窗"><a href="#组件弹窗" class="headerlink" title="组件弹窗"></a>组件弹窗</h2><ul><li>原因:主要原因是没理解弹窗的原理。写的时候没有按照步骤和关键点进行。</li></ul><h2 id="JavaScript数据结构"><a href="#JavaScript数据结构" class="headerlink" title="JavaScript数据结构"></a>JavaScript数据结构</h2><ul><li>对JavaScript数组的理解不熟悉。</li><li>对返回的数据做不出明确的判断来。</li></ul><h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2>]]></content>
     
@@ -399,27 +419,6 @@
     
     
       <category term="Vue.js" scheme="https://youxiu.net/tags/Vue-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微服务模块的理解</title>
-    <link href="https://youxiu.net/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/"/>
-    <id>https://youxiu.net/2018/12/17/ff763a72-1a9f-4896-be36-d6dddd3b7d11/</id>
-    <published>2018-12-17T06:16:51.000Z</published>
-    <updated>2019-03-22T10:35:28.073Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1、项目微服务结构整体理解"><a href="#1、项目微服务结构整体理解" class="headerlink" title="1、项目微服务结构整体理解"></a>1、项目微服务结构整体理解</h3><h3 id="2、背景"><a href="#2、背景" class="headerlink" title="2、背景"></a>2、背景</h3><ul><li>各司其职、集中管理、存在单向或多向调用关系；<a id="more"></a></li></ul><h3 id="3、意义"><a href="#3、意义" class="headerlink" title="3、意义"></a>3、意义</h3><ul><li>提高迭代效率；</li><li>降低开发黏连性；</li><li>节约成本</li></ul><h3 id="4、实现"><a href="#4、实现" class="headerlink" title="4、实现"></a>4、实现</h3><h3 id="5、结构"><a href="#5、结构" class="headerlink" title="5、结构"></a>5、结构</h3><h4 id="5-1、项目启动的入口CenterBootstrap"><a href="#5-1、项目启动的入口CenterBootstrap" class="headerlink" title="5.1、项目启动的入口CenterBootstrap"></a>5.1、项目启动的入口CenterBootstrap</h4><ul><li>各项服务的注册、管理中心。</li><li>微服务请求转发。<h4 id="5-2、鉴权（权限）服务AuthBootstrap"><a href="#5-2、鉴权（权限）服务AuthBootstrap" class="headerlink" title="5.2、鉴权（权限）服务AuthBootstrap"></a>5.2、鉴权（权限）服务AuthBootstrap</h4></li><li>JWT处理权限<h4 id="5-3、字典服务DictBootstrap"><a href="#5-3、字典服务DictBootstrap" class="headerlink" title="5.3、字典服务DictBootstrap"></a>5.3、字典服务DictBootstrap</h4></li><li>管理项目的数据字典。<h4 id="5-4、后台管理服务AdminBootstrap"><a href="#5-4、后台管理服务AdminBootstrap" class="headerlink" title="5.4、后台管理服务AdminBootstrap"></a>5.4、后台管理服务AdminBootstrap</h4></li><li>连接数据库、处理数据。<h4 id="5-5、网关服务GateBootstrap"><a href="#5-5、网关服务GateBootstrap" class="headerlink" title="5.5、网关服务GateBootstrap"></a>5.5、网关服务GateBootstrap</h4></li><li>接收前端的请求并转发至其他服务。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;1、项目微服务结构整体理解&quot;&gt;&lt;a href=&quot;#1、项目微服务结构整体理解&quot; class=&quot;headerlink&quot; title=&quot;1、项目微服务结构整体理解&quot;&gt;&lt;/a&gt;1、项目微服务结构整体理解&lt;/h3&gt;&lt;h3 id=&quot;2、背景&quot;&gt;&lt;a href=&quot;#2、背景&quot; class=&quot;headerlink&quot; title=&quot;2、背景&quot;&gt;&lt;/a&gt;2、背景&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;各司其职、集中管理、存在单向或多向调用关系；
-    
-    </summary>
-    
-    
-      <category term="微服务" scheme="https://youxiu.net/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
