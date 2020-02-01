@@ -2,19 +2,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>好好学习,天天向上</title>
   <icon>https://www.gravatar.com/avatar/3563d1ddc1457652131bef3aa9d25ab0</icon>
-  <subtitle>知其然，知其所以然</subtitle>
+  <subtitle>good good study,day day up</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://youxiu.net/"/>
-  <updated>2019-12-24T08:48:44.307Z</updated>
+  <updated>2019-12-25T08:48:51.350Z</updated>
   <id>https://youxiu.net/</id>
   
   <author>
-    <name>优秀员工</name>
+    <name>q_</name>
     <email>2binarytree@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>角色权限与组织架构权限模型设计-ER模型与表设计</title>
+    <link href="https://youxiu.net/2019/12/25/ad7fb25a-168e-417b-b0cc-557e405b3844/"/>
+    <id>https://youxiu.net/2019/12/25/ad7fb25a-168e-417b-b0cc-557e405b3844/</id>
+    <published>2019-12-25T08:45:22.000Z</published>
+    <updated>2019-12-25T08:48:51.350Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><p>设计一套比较灵活的角色权限与组织架构的数据表，首先要画出ER图，在进行表设计。<br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h2&gt;&lt;p&gt;设计一套比较灵活的角色权限与组织架构的数据表，首先要画出ER图，在进行表设计。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="ER" scheme="https://youxiu.net/tags/ER/"/>
+    
+  </entry>
   
   <entry>
     <title>Element UI之Cascader 级联选择器多选操作</title>
@@ -396,29 +416,6 @@
     
     
       <category term="Spring Cloud" scheme="https://youxiu.net/tags/Spring-Cloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端开发Vue.js问题整理与总结</title>
-    <link href="https://youxiu.net/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/"/>
-    <id>https://youxiu.net/2018/12/18/c03d5240-9bbc-4ce5-83c5-32bace9f8c2b/</id>
-    <published>2018-12-18T05:37:16.000Z</published>
-    <updated>2019-12-24T08:48:26.484Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>所在的项目上前端开发使用技术栈为Vue.js。</li><li>本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。</li><li>思路。<a id="more"></a><h2 id="测试代码高亮"><a href="#测试代码高亮" class="headerlink" title="测试代码高亮"></a>测试代码高亮</h2></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单语法</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-simple'</span>, &#123;</span><br><span class="line">  props: [<span class="string">'size'</span>, <span class="string">'myMessage'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="string">``</span></span><br><span class="line"><span class="comment">// 对象语法，提供校验</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-advanced'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// 检测类型</span></span><br><span class="line">    height: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="comment">// 检测类型 + 其他验证</span></span><br><span class="line">    age: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="number">0</span>,</span><br><span class="line">      required: <span class="literal">true</span>,</span><br><span class="line">      validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value &gt;= <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="组件弹窗"><a href="#组件弹窗" class="headerlink" title="组件弹窗"></a>组件弹窗</h2><ul><li>原因:主要原因是没理解弹窗的原理。写的时候没有按照步骤和关键点进行。</li></ul><h2 id="JavaScript数据结构"><a href="#JavaScript数据结构" class="headerlink" title="JavaScript数据结构"></a>JavaScript数据结构</h2><ul><li>对JavaScript数组的理解不熟悉。</li><li>对返回的数据做不出明确的判断来。</li></ul><h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;所在的项目上前端开发使用技术栈为Vue.js。&lt;/li&gt;
-&lt;li&gt;本文的主要内容开发时候遇到的问题、解决的方案、常用的解决方法。&lt;/li&gt;
-&lt;li&gt;思路。
-    
-    </summary>
-    
-    
-      <category term="Vue.js" scheme="https://youxiu.net/tags/Vue-js/"/>
     
   </entry>
   
