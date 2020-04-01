@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Element UI之Cascader 级联选择器多选操作 · 好好学习,天天向上</title><meta name="description" content="Element UI之Cascader 级联选择器多选操作 - qiu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://youxiu.net/atom.xml" title="好好学习,天天向上"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Element UI之Cascader 级联选择器多选操作</h1><div class="post-info">Dec 24, 2019</div><div class="post-content"><a id="more"></a>
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Element UI之Cascader 级联选择器多选操作 · 秀儿,是你吗?</title><meta name="description" content="Element UI之Cascader 级联选择器多选操作 - qiu_"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://youxiu.net/atom.xml" title="秀儿,是你吗?"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Element UI之Cascader 级联选择器多选操作</h1><div class="post-info">Dec 24, 2019</div><div class="post-content"><a id="more"></a>
 <h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><h3 id="1-1、级联选择器，树型展示"><a href="#1-1、级联选择器，树型展示" class="headerlink" title="1.1、级联选择器，树型展示"></a>1.1、级联选择器，树型展示</h3><p>Element UI的官网链接：<a href="https://element.eleme.cn/#/zh-CN/component/cascader" target="_blank" rel="noopener">https://element.eleme.cn/#/zh-CN/component/cascader</a><br>使用环境：<br><code>&quot;element-ui&quot;: &quot;2.9.0&quot;,</code><br>需要依赖为2.9.x及以上，配合<br><code>&quot;vue&quot;: &quot;2.5.22&quot;</code> 以上。<br>如果版本不匹配，多选操作是显示不出来的。</p>
 <h3 id="1-2、需求描述"><a href="#1-2、需求描述" class="headerlink" title="1.2、需求描述"></a>1.2、需求描述</h3><p>数据库中存在两张表，user表和org表，user表中有字段org_id，记录这个人所属的组织id，org表中有org_id，org_name等字段。<br>表结构简介如下<br>user:</p>
 <table>
@@ -14,7 +14,7 @@
 <tr>
 <td>1</td>
 <td>admin</td>
-<td>10000</td>
+<td>10000000</td>
 <td>…</td>
 </tr>
 </tbody>
@@ -25,16 +25,51 @@
 <tr>
 <th>org_id</th>
 <th>org_name</th>
-<th>….</th>
+<th>parent_org_id</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>10000</td>
+<td>00000000</td>
+<td>刑部</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>10000000</td>
 <td>六扇门</td>
-<td>…</td>
+<td>00000000</td>
+</tr>
+<tr>
+<td>10000001</td>
+<td>总管</td>
+<td>10000000</td>
+</tr>
+<tr>
+<td>10000002</td>
+<td>办公室</td>
+<td>10000000</td>
+</tr>
+<tr>
+<td>10000003</td>
+<td>兵器管理</td>
+<td>10000000</td>
+</tr>
+<tr>
+<td>10000003</td>
+<td>财政</td>
+<td>10000000</td>
+</tr>
+<tr>
+<td>10000003</td>
+<td>保洁</td>
+<td>10000000</td>
 </tr>
 </tbody>
 </table>
-<p>目前每个人只有一个所属组织，管理员，部门负责人在进行组织查询的时候，只能有本部门及其子部门的展示权限，虽然不属于部门B，但是想看到部门B的信息，单选满足不了，靠两个表维护不了多选的信息。</p>
-</div></article></div></main><footer><div class="paginator"><a href="/2020/02/17/2eeba61b-ff4b-4166-ae26-ee61b6002724/" class="prev">PREV</a><a href="/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/" class="next">NEXT</a></div><div class="copyright"><p>© 2014 - 2020 <a href="https://youxiu.net">qiu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
+<ul>
+<li>目前每个人只有一个所属组织</li>
+<li>管理员，部门负责人在进行组织查询的时候，只能有本部门及其子部门的展示权限</li>
+<li>虽然不属于部门B，但是想看到部门B的信息，单选满足不了，靠两个表维护不了多选的信息。</li>
+</ul>
+<p>基于以上来自产品顾问天马星空的想法，对现有的情况进行改造。</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2020/02/17/2eeba61b-ff4b-4166-ae26-ee61b6002724/" class="prev">PREV</a><a href="/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/" class="next">NEXT</a></div><div class="copyright"><p>© 2014 - 2020 <a href="https://youxiu.net">qiu_</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
