@@ -1,67 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>秀儿,是你吗?</title>
-  <icon>https://www.gravatar.com/avatar/3563d1ddc1457652131bef3aa9d25ab0</icon>
+  <title>youxiu</title>
+  <icon>https://www.gravatar.com/avatar/867820a66e980bfd6c174baa3e2ed6a4</icon>
   <subtitle>good good study,day day up</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://youxiu.net/"/>
-  <updated>2020-10-24T06:28:21.715Z</updated>
+  <updated>2020-03-21T08:34:55.181Z</updated>
   <id>https://youxiu.net/</id>
   
   <author>
     <name>qiu_</name>
-    <email>2binarytree@gmail.com</email>
+    <email>notexist@youxiu.net</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>学习工作中常用的Windows命令</title>
-    <link href="https://youxiu.net/2020/07/18/28f8ae96-272e-4613-b3d1-3ec377c5b5c6/"/>
-    <id>https://youxiu.net/2020/07/18/28f8ae96-272e-4613-b3d1-3ec377c5b5c6/</id>
-    <published>2020-07-18T00:30:18.000Z</published>
-    <updated>2020-10-24T06:28:21.715Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><p>积攒学习工作中，使用的Windows命令，记录方便查找，不定期更新积累。包括但不限与VB代码。</p><h2 id="2、具体命令"><a href="#2、具体命令" class="headerlink" title="2、具体命令"></a>2、具体命令</h2><h4 id="1、使用命令压缩Windows文件"><a href="#1、使用命令压缩Windows文件" class="headerlink" title="1、使用命令压缩Windows文件"></a>1、使用命令压缩Windows文件</h4><p>将一下代码拷贝至文件中，文件的后缀名字为.vbs，例如demo.vbs，使用方式为代码Windows的CMD命令，执行 <code>csript demo.vbs target.zip target/</code>，此操作将target/文件夹压缩成为target.zip文件。</p><figure class="highlight vbs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Set</span> objArgs = WScript.Arguments</span><br><span class="line">ZipFile = objArgs(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">' Create empty ZIP file and open for adding</span></span><br><span class="line"><span class="built_in">CreateObject</span>(<span class="string">"Scripting.FileSystemObject"</span>).CreateTextFile(ZipFile, <span class="literal">True</span>).Write <span class="string">"PK"</span> &amp; <span class="built_in">Chr</span>(<span class="number">5</span>) &amp; <span class="built_in">Chr</span>(<span class="number">6</span>) &amp; <span class="built_in">String</span>(<span class="number">18</span>, vbNullChar)</span><br><span class="line"><span class="keyword">Set</span> zip = <span class="built_in">CreateObject</span>(<span class="string">"Shell.Application"</span>).NameSpace(ZipFile)</span><br><span class="line"></span><br><span class="line"><span class="comment">' Add all files/directories to the .zip file</span></span><br><span class="line"><span class="keyword">For</span> i = <span class="number">1</span> <span class="keyword">To</span> objArgs.count<span class="number">-1</span></span><br><span class="line">  zip.CopyHere(objArgs(i))</span><br><span class="line">  WScript.Sleep <span class="number">10000</span> <span class="comment">'REQUIRED!! (Depending on file/dir size)</span></span><br><span class="line"><span class="keyword">Next</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h2&gt;&lt;p&gt;积攒学习工作中，使用的Windows命令，记录方便查找，不定期更新积累。包括但不限与VB
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>常用的Linux命令</title>
-    <link href="https://youxiu.net/2020/07/18/51643aec-7fcd-4170-b219-1845eaf781a2/"/>
-    <id>https://youxiu.net/2020/07/18/51643aec-7fcd-4170-b219-1845eaf781a2/</id>
-    <published>2020-07-18T00:26:15.000Z</published>
-    <updated>2020-10-24T06:30:22.594Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><p>积攒学习工作中，常用到的Linux命令，记录方便查找，不定期更新积累</p><h2 id="2、具体命令"><a href="#2、具体命令" class="headerlink" title="2、具体命令"></a>2、具体命令</h2><h4 id="2-1、压缩文件命令"><a href="#2-1、压缩文件命令" class="headerlink" title="2.1、压缩文件命令"></a>2.1、压缩文件命令</h4><p>tar cvf target</p><h4 id="2-2、查看进程"><a href="#2-2、查看进程" class="headerlink" title="2.2、查看进程"></a>2.2、查看进程</h4>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h2&gt;&lt;p&gt;积攒学习工作中，常用到的Linux命令，记录方便查找，不定期更新积累&lt;/p&gt;
-&lt;h2 i
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://youxiu.net/tags/Linux/"/>
-    
-  </entry>
   
   <entry>
     <title>Java List深拷贝</title>
@@ -84,76 +37,6 @@
     
     
       <category term="java" scheme="https://youxiu.net/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis关于内存和内存优化笔记</title>
-    <link href="https://youxiu.net/2020/03/06/ad5161c0-03f5-4340-9b8e-cc8566503dea/"/>
-    <id>https://youxiu.net/2020/03/06/ad5161c0-03f5-4340-9b8e-cc8566503dea/</id>
-    <published>2020-03-06T04:40:25.000Z</published>
-    <updated>2020-07-20T10:17:40.635Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h1 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h1><p>系统学习Redis的内存和内存优化主题笔记。<br>参考资料：<a href="https://github.com/Weiwf/redis-mindmap" target="_blank" rel="noopener">https://github.com/Weiwf/redis-mindmap</a> 的思维导图。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h1&gt;&lt;p&gt;系统学习Redis的内存和内存优化主题笔记。&lt;br&gt;参考资料：&lt;a href=&quot;http
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java之JVM的总结与对垃圾回收的实践</title>
-    <link href="https://youxiu.net/2020/03/06/e648e796-99ff-4832-9063-21981d0b67d4/"/>
-    <id>https://youxiu.net/2020/03/06/e648e796-99ff-4832-9063-21981d0b67d4/</id>
-    <published>2020-03-06T04:39:59.000Z</published>
-    <updated>2020-07-18T00:28:18.154Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><h3 id="1-1、背景"><a href="#1-1、背景" class="headerlink" title="1.1、背景"></a>1.1、背景</h3><p>出于对Java代码优化的理解和对JVM的深一步理解，借助部分资源，学习、总结；<br>参考资料是(<a href="https://github.com/Weiwf/JVM-mindmap.git)[https://github.com/Weiwf/JVM-mindmap.git]里面的思维导图。" target="_blank" rel="noopener">https://github.com/Weiwf/JVM-mindmap.git)[https://github.com/Weiwf/JVM-mindmap.git]里面的思维导图。</a><br>还有《深入理解Java虚拟机》书籍。</p><h3 id="1-2、实现目标"><a href="#1-2、实现目标" class="headerlink" title="1.2、实现目标"></a>1.2、实现目标</h3><ul><li>总结JVM知识提纲</li><li>开发事习惯打开GC日志，习惯分析</li><li>优化参数多，能够借助第三方工具，进行GC日志分析，通过日志分析，对代码进行改造</li><li>学习与改造第三方工具，加深理解</li></ul><h2 id="2、JVM的内存结构"><a href="#2、JVM的内存结构" class="headerlink" title="2、JVM的内存结构"></a>2、JVM的内存结构</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h2&gt;&lt;h3 id=&quot;1-1、背景&quot;&gt;&lt;a href=&quot;#1-1、背景&quot; class=&quot;header
-      
-    
-    </summary>
-    
-    
-      <category term="jvm" scheme="https://youxiu.net/tags/jvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Easy to Design 设计系统的开发</title>
-    <link href="https://youxiu.net/2020/03/06/2566b127-2c3e-4539-ab75-51dc0a72db16/"/>
-    <id>https://youxiu.net/2020/03/06/2566b127-2c3e-4539-ab75-51dc0a72db16/</id>
-    <published>2020-03-06T04:39:43.000Z</published>
-    <updated>2020-07-29T02:11:30.288Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h1 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h1><p>工作中，会遇到设计UI界面的任务，部分同事会推荐使用Axure，工具挺强大，但是协作性上，还没有找到窍门；<br>1、版本靠SVN来管理，或者是靠文件名字不同来命名；<br>2、软件版本的不同，也是个不方便之处；<br>3、对于后期字段或者逻辑变动，无法进行明显的标注，需要特别标注出来；<br>4、…部分详设文档，和设计的RP文件分离开来，给开发人员带来极大的不方便，需要画面、Excel、IDE切来切去；<br>5、</p><h2 id="1-1、预想实现的功能"><a href="#1-1、预想实现的功能" class="headerlink" title="1.1、预想实现的功能"></a>1.1、预想实现的功能</h2><h3 id="关系与表"><a href="#关系与表" class="headerlink" title="关系与表"></a>关系与表</h3><ul><li>数据库表设计器</li><li>简单的UML图设计</li><li>E-R图的设计，如果E-R设计完毕，能够实现数据库表设计；</li><li>设计数据库表，能够提示设计信息，并生成SQL语句；</li><li></li></ul><h3 id="协作与迭代"><a href="#协作与迭代" class="headerlink" title="协作与迭代"></a>协作与迭代</h3><ul><li>同一份设计UI，支持多人同时在线处理，并能实时显示，效果为腾讯文档编辑效果；</li><li>按钮等添加注释信息，用来标注信息；</li><li>支持Markdown语法写详细设计文档</li><li>支持生成PDF、HTML</li></ul><h3 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h3><h3 id="沟通与提醒"><a href="#沟通与提醒" class="headerlink" title="沟通与提醒"></a>沟通与提醒</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h1&gt;&lt;p&gt;工作中，会遇到设计UI界面的任务，部分同事会推荐使用Axure，工具挺强大，但是协作性上
-      
-    
-    </summary>
-    
-    
-      <category term="Design" scheme="https://youxiu.net/tags/Design/"/>
     
   </entry>
   
@@ -193,30 +76,6 @@
   </entry>
   
   <entry>
-    <title>Element UI之Cascader 级联选择器多选操作</title>
-    <link href="https://youxiu.net/2019/12/24/48acf05e-5b94-4e18-b62a-f277e34237fb/"/>
-    <id>https://youxiu.net/2019/12/24/48acf05e-5b94-4e18-b62a-f277e34237fb/</id>
-    <published>2019-12-24T08:22:45.000Z</published>
-    <updated>2020-03-21T08:37:11.690Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h2 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h2><h3 id="1-1、级联选择器，树型展示"><a href="#1-1、级联选择器，树型展示" class="headerlink" title="1.1、级联选择器，树型展示"></a>1.1、级联选择器，树型展示</h3><p>Element UI的官网链接：<a href="https://element.eleme.cn/#/zh-CN/component/cascader" target="_blank" rel="noopener">https://element.eleme.cn/#/zh-CN/component/cascader</a><br>使用环境：<br><code>&quot;element-ui&quot;: &quot;2.9.0&quot;,</code><br>需要依赖为2.9.x及以上，配合<br><code>&quot;vue&quot;: &quot;2.5.22&quot;</code> 以上。<br>如果版本不匹配，多选操作是显示不出来的。</p><h3 id="1-2、需求描述"><a href="#1-2、需求描述" class="headerlink" title="1.2、需求描述"></a>1.2、需求描述</h3><p>数据库中存在两张表，user表和org表，user表中有字段org_id，记录这个人所属的组织id，org表中有org_id，org_name等字段。<br>表结构简介如下<br>user:</p><table><thead><tr><th>id</th><th>name</th><th>org_id</th><th>…</th></tr></thead><tbody><tr><td>1</td><td>admin</td><td>10000000</td><td>…</td></tr></tbody></table><p>org</p><table><thead><tr><th>org_id</th><th>org_name</th><th>parent_org_id</th></tr></thead><tbody><tr><td>00000000</td><td>刑部</td><td>-1</td></tr><tr><td>10000000</td><td>六扇门</td><td>00000000</td></tr><tr><td>10000001</td><td>总管</td><td>10000000</td></tr><tr><td>10000002</td><td>办公室</td><td>10000000</td></tr><tr><td>10000003</td><td>兵器管理</td><td>10000000</td></tr><tr><td>10000003</td><td>财政</td><td>10000000</td></tr><tr><td>10000003</td><td>保洁</td><td>10000000</td></tr></tbody></table><ul><li>目前每个人只有一个所属组织</li><li>管理员，部门负责人在进行组织查询的时候，只能有本部门及其子部门的展示权限</li><li>虽然不属于部门B，但是想看到部门B的信息，单选满足不了，靠两个表维护不了多选的信息。</li></ul><p>基于以上来自产品顾问天马星空的想法，对现有的情况进行改造。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h2&gt;&lt;h3 id=&quot;1-1、级联选择器，树型展示&quot;&gt;&lt;a href=&quot;#1-1、级联选择器，树型展
-      
-    
-    </summary>
-    
-    
-      <category term="elementui" scheme="https://youxiu.net/tags/elementui/"/>
-    
-  </entry>
-  
-  <entry>
     <title>开发规范笔记与经验</title>
     <link href="https://youxiu.net/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/"/>
     <id>https://youxiu.net/2019/03/07/16d9fb52-dd5b-4339-9b38-a98df48a8b46/</id>
@@ -237,30 +96,6 @@
     
     
       <category term="总结" scheme="https://youxiu.net/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EHR系统员工生日提醒（跨年查询）总结与笔记</title>
-    <link href="https://youxiu.net/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/"/>
-    <id>https://youxiu.net/2018/12/19/81e30f7a-a061-4cfb-aace-39fdf4860955/</id>
-    <published>2018-12-19T00:26:48.000Z</published>
-    <updated>2020-07-20T09:47:07.769Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h3 id="1、概要"><a href="#1、概要" class="headerlink" title="1、概要"></a>1、概要</h3><p>生日跨年提醒，在EHR系统中，用户选择某个时间段都那些人过生日，并发送邮件提醒；本文只描述如何去跨年查询。<br>前端使用Vue.js/Element UI;<br>后端使用Java/Spring Cloud/微服务架构模式<br>本文修改于：2019年03月15日</p><h3 id="2、思路"><a href="#2、思路" class="headerlink" title="2、思路"></a>2、思路</h3><p>1、前端获取的是时间段，用户输入的时间段发送给后端的时候，判断一下用户选择的时间；<br>2、如果没有跨年，则调用函数a；<br>3、如果跨年了，则调用函数b；</p><h3 id="3、实现过程"><a href="#3、实现过程" class="headerlink" title="3、实现过程"></a>3、实现过程</h3><h4 id="3-1、前端实现"><a href="#3-1、前端实现" class="headerlink" title="3.1、前端实现"></a>3.1、前端实现</h4><h6 id="3-1-1、界面效果"><a href="#3-1-1、界面效果" class="headerlink" title="3.1.1、界面效果"></a>3.1.1、界面效果</h6><p><img src="../../../../../../images/2.png" alt=""></p><p>Element UI时间组件：<a href="http://element-cn.eleme.io/#/zh-CN/component/date-picker" target="_blank" rel="noopener">点击这里</a></p><h6 id="3-1-2、前端代码"><a href="#3-1-2、前端代码" class="headerlink" title="3.1.2、前端代码"></a>3.1.2、前端代码</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">handleFilter() &#123;</span><br><span class="line">  <span class="keyword">this</span>.searchkpi();</span><br><span class="line">  <span class="keyword">this</span>.listQuery.startDataBirthdayPoint = <span class="keyword">this</span>.employeeBirthday[<span class="number">0</span>].toString().substring(<span class="number">5</span>, <span class="number">10</span>).replace(<span class="string">'-'</span>, <span class="string">''</span>)</span><br><span class="line">  <span class="keyword">this</span>.listQuery.endDataBirthdayPoint = <span class="keyword">this</span>.employeeBirthday[<span class="number">1</span>].toString().substring(<span class="number">5</span>, <span class="number">10</span>).replace(<span class="string">'-'</span>, <span class="string">''</span>)</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.employeeBirthday[<span class="number">0</span>].toString().substring(<span class="number">0</span>, <span class="number">4</span>) === <span class="keyword">this</span>.employeeBirthday[<span class="number">1</span>].toString().substring(<span class="number">0</span>, <span class="number">4</span>)) &#123;</span><br><span class="line">    <span class="keyword">this</span>.getListNotAcrossYear();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.getList();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 代码片段1</span></span><br></pre></td></tr></table></figure><p>第5行代码，判断了年份是否相同，如果年份是否相同，如果相同，则调用<b>this.getListNotAcrossYear</b>, 调用接口：<b>pageBirthdayNotAcrossYear()</b>, 参数为this.listQuery;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">getListNotAcrossYear() &#123;</span><br><span class="line">  <span class="keyword">this</span>.loading = <span class="literal">true</span>;</span><br><span class="line">  pageBirthdayNotAcrossYear(<span class="keyword">this</span>.listQuery)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.list = response.data.rows;</span><br><span class="line">      <span class="keyword">this</span>.total = response.data.total;</span><br><span class="line">      <span class="keyword">this</span>.loading = <span class="literal">false</span>;</span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(error)</span><br><span class="line">      <span class="keyword">this</span>.loading = <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">// 代码片段2</span></span><br></pre></td></tr></table></figure></p><p><b>this.listQuery</b>包含两个字段：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">startDataBirthdayPoint: <span class="literal">undefined</span>,</span><br><span class="line">endDataBirthdayPoint: <span class="literal">undefined</span></span><br><span class="line"> <span class="comment">// 代码片段3</span></span><br></pre></td></tr></table></figure></p><p>这两个字段，作为listQuery的一部分，作为参数，通过前端的API请求接口，传递给后端:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 生日提醒</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">pageBirthdayNotAcrossYear</span>(<span class="params">query</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    url: <span class="string">'/api/admin/mEmployeeInfo/pageBirthdayNotAcrossYear'</span>,</span><br><span class="line">    method: <span class="string">'get'</span>,</span><br><span class="line">    params: query</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">// 代码片段4</span></span><br></pre></td></tr></table></figure></p><p>从接口中可以看到：传入的参数是<b>query</b>,使用GET的方式传递给后端。<br>相同的，在<b>代码片段1</b>中的第8行，则是请求跨年的，在前端的代码部分都是一样的，这里我是在前端就对其进行了分开，后来想了想，如果日期传递到后端，在后端进行处理，代码量要少很多。</p><h4 id="3-2、后端实现"><a href="#3-2、后端实现" class="headerlink" title="3.2、后端实现"></a>3.2、后端实现</h4><p>先看下不跨年的，包含Java代码和MyBatis的.xml映射文件；</p><h6 id="3-2-1、Java代码"><a href="#3-2-1、Java代码" class="headerlink" title="3.2.1、Java代码"></a>3.2.1、Java代码</h6><p>首先是Controller类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"mEmployeeInfo"</span>)</span><br><span class="line"><span class="comment">// 代码片段5</span></span><br></pre></td></tr></table></figure></p><p>应和了在代码片段4中的请求接口；<br>这是Java代码Controller的函数：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/pageBirthdayNotAcrossYear"</span>, method = RequestMethod.GET)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> TableResultResponse&lt;MEmployeeInfo&gt; <span class="title">selectBirthdayNotAcrossYear</span><span class="params">(@RequestParam Map&lt;String, Object&gt; params)</span> </span>&#123;</span><br><span class="line">    PageQuery query = <span class="keyword">new</span> PageQuery(params, params);</span><br><span class="line">    <span class="keyword">return</span> mEmployeeInfoBiz.selectBirthdayNotAcrossYear(query);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//代码片段6</span></span><br></pre></td></tr></table></figure></p><p>函数的类型是<b>TableResultResponse</b>,返回的是一个结果集；</p><p>这是Java代码Service类的函数：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 生日到期提醒(不跨年)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> TableResultResponse&lt;MEmployeeInfo&gt; <span class="title">selectBirthdayNotAcrossYear</span><span class="params">(PageQuery&lt;MEmployeeInfo&gt; query)</span> </span>&#123;</span><br><span class="line">    PageExample example = <span class="keyword">new</span> PageExample(MEmployeeInfo.class, query.getData());</span><br><span class="line">    Page&lt;MEmployeeInfo&gt; result = PageHelper.startPage(query.getPage(), query.getLimit());</span><br><span class="line">    List&lt;MEmployeeInfo&gt; list = mEmployeeInfoMapper.selectBirthdayNotAcrossYear(example);</span><br><span class="line">    <span class="keyword">if</span> (list.size() &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            mergeCore.mergeResult(MEmployeeInfo.class, list);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>  <span class="keyword">new</span> TableResultResponse&lt;MEmployeeInfo&gt;(result.getTotal(), list);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 代码片段7</span></span><br></pre></td></tr></table></figure></p><p>DAO类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">List&lt;MEmployeeInfo&gt; <span class="title">selectBirthdayNotAcrossYear</span><span class="params">(Object example)</span></span>;</span><br><span class="line"><span class="comment">// 代码片段8</span></span><br></pre></td></tr></table></figure></p><h4 id="3-2-2、MyBatis的映射文件"><a href="#3-2-2、MyBatis的映射文件" class="headerlink" title="3.2.2、MyBatis的映射文件"></a>3.2.2、MyBatis的映射文件</h4><p>接下来是MyBatis的映射文件代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"selectBirthdayNotAcrossYear"</span> parameterType=<span class="string">"com.savor.security.common.entity.PageExample"</span> resultMap=<span class="string">"BaseResultMap"</span>&gt;</span><br><span class="line">    SELECT</span><br><span class="line">    t.*, y.position_name</span><br><span class="line">    FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">    LEFT JOIN m_position y ON t.position_id = y.position_id</span><br><span class="line">    WHERE</span><br><span class="line">    t.employee_id IS NOT NULL</span><br><span class="line">    &lt;<span class="keyword">if</span> test=<span class="string">"data.startDataBirthdayPoint != null and data.startDataBirthdayPoint != '' and data.endDataBirthdayPoint != null and data.endDataBirthdayPoint !=''"</span>&gt;</span><br><span class="line">        AND DATE_FORMAT(t.employee_birthday , '%m%d') BETWEEN #&#123;data.startDataBirthdayPoint&#125; AND #&#123;data.endDataBirthdayPoint&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">-- 代码片段<span class="number">9</span></span><br></pre></td></tr></table></figure></p><p>跨年的请求处理，跟上面的代码没有区别，不同之处体现在最后的映射文件这里：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"selectByBirthday"</span> parameterType=<span class="string">"com.savor.security.common.entity.PageExample"</span> resultMap=<span class="string">"BaseResultMap"</span>&gt;</span><br><span class="line">    select a.* from (</span><br><span class="line">    SELECT</span><br><span class="line">    t.*, y.position_name</span><br><span class="line">    FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">    LEFT JOIN m_position y ON t.position_id = y.position_id</span><br><span class="line">    WHERE</span><br><span class="line">    t.employee_id IS NOT NULL</span><br><span class="line">    &lt;<span class="keyword">if</span> test=<span class="string">"data.startDataBirthdayPoint != null and data.startDataBirthdayPoint != '' and data.endDataBirthdayPoint != null and data.endDataBirthdayPoint !=''"</span>&gt;</span><br><span class="line">        AND DATE_FORMAT(t.employee_birthday , '%m%d') BETWEEN #&#123;data.startDataBirthdayPoint&#125; AND #&#123;data.endDataBirthdayPoint&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    UNION ALL</span><br><span class="line">    SELECT</span><br><span class="line">    t.*, y.position_name</span><br><span class="line">    FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">    LEFT JOIN m_position y ON t.position_id = y.position_id</span><br><span class="line">    WHERE</span><br><span class="line">    t.employee_id IS NOT NULL</span><br><span class="line">    &lt;<span class="keyword">if</span> test=<span class="string">"data.startDataBirthdayPoint != null and data.startDataBirthdayPoint != '' and data.endDataBirthdayPoint != null and data.endDataBirthdayPoint !=''"</span>&gt;</span><br><span class="line">        <span class="function">AND <span class="title">DATE_FORMAT</span><span class="params">(t.employee_birthday , <span class="string">'%m%d'</span>)</span> BETWEEN #</span>&#123;data.startDataBirthdayPoint&#125; AND <span class="string">'1231'</span></span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    UNION ALL</span><br><span class="line">    SELECT</span><br><span class="line">    t.*, y.position_name</span><br><span class="line">    FROM</span><br><span class="line">    m_employee_info t</span><br><span class="line">    LEFT JOIN m_position y ON t.position_id = y.position_id</span><br><span class="line">    WHERE</span><br><span class="line">    t.employee_id IS NOT NULL</span><br><span class="line">    &lt;<span class="keyword">if</span> test=<span class="string">"data.startDataBirthdayPoint != null and data.startDataBirthdayPoint != '' and data.endDataBirthdayPoint != null and data.endDataBirthdayPoint !=''"</span>&gt;</span><br><span class="line">        <span class="function">AND <span class="title">DATE_FORMAT</span><span class="params">(t.employee_birthday , <span class="string">'%m%d'</span>)</span> BETWEEN '0101' AND #</span>&#123;data.endDataBirthdayPoint&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    ) as a</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure></p><p>其中也分成了三段，第一段就是正常的输入日期，但是不会去调用了。<br>后两段是：<br>如果跨年的时候，比如选择这个时间段2018-12-05~2019-03-15进行查询，那么数据流到映射文件这里的时候，会被分成两段（因为生日是考虑月日的，不考虑年）：就是12-05~12-31一部分人；01-01~03-15第二部分人；最后加起来，就是要的人数；</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;1、概要&quot;&gt;&lt;a href=&quot;#1、概要&quot; class=&quot;headerlink&quot; title=&quot;1、概要&quot;&gt;&lt;/a&gt;1、概要&lt;/h3&gt;&lt;p&gt;生日跨年提醒，在EHR系统中，用户选择某个时间段都那些人过生日，并发送邮件提醒；本文只描
-      
-    
-    </summary>
-    
-    
-      <category term="Spring Cloud" scheme="https://youxiu.net/tags/Spring-Cloud/"/>
     
   </entry>
   
